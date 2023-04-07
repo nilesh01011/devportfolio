@@ -43,8 +43,45 @@ h6 {
   font-family: 'Jakarta_Sans_ExtraBold';
 } */
 
+#fontWeight {
+  font-weight: 900 !important;
+}
+
 html,
 body {
   max-width: 100vw;
   overflow-x: hidden;
+}
+
+::selection {
+  background: #03e5b7;
+  color: #000;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #e7edef;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background: #037ade;
+}
+
+.dark::-webkit-scrollbar-thumb {
+  background: #0e1623;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #058bf9;
+}
+
+#overFlowXAxies::-webkit-scrollbar {
+  display: none;
+  --webkit-scrollbar-width: none;
+  -ms-scrollbar-width: none; /* IE and Edge */
+  scrollbar-width: none;
 }

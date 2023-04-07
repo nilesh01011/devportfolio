@@ -20,9 +20,10 @@ function Tabs() {
                 {
                     skillsTabs.map((ele) => {
                         const { id, title } = ele;
+                        {/* bg-gradient-to-r from-[#037ADE] to-[#03E5B7] */ }
 
                         return (
-                            <button type='button' onClick={() => handleIdContent(id)} key={title} className={`h-max whitespace-nowrap relative w-max text-[18px] px-[22px] py-[6px] rounded-full ${activeSkills === id ? ` bg-gradient-to-r from-[#037ADE] to-[#03E5B7] shadow-md text-white` : ``} capitalize`}>
+                            <button type='button' onClick={() => handleIdContent(id)} key={title} className={`h-max whitespace-nowrap relative w-max text-[18px] px-[26px] py-[8px] rounded-full ${activeSkills === id ? `bg-[#037ADE] shadow-md text-white` : ``} capitalize`}>
                                 {title}
                             </button>
                         )
@@ -32,7 +33,7 @@ function Tabs() {
 
             {/* contents */}
 
-            <div className='w-[80%] mx-auto h-full'>
+            <div className='md:w-[80%] w-full md:mx-auto h-full'>
                 {
 
                     skillsTabs.map((ele) => {
@@ -40,15 +41,18 @@ function Tabs() {
 
                         if (activeSkills === id) {
                             return (
-                                <div key={id} className="w-[80%] mx-auto flex flex-wrap items-center justify-center gap-[20px] mt-[40px]">
+                                <div key={id} className="md:w-[80%] md:mx-auto w-full flex flex-wrap items-center justify-center sm:gap-[20px] gap-x-[10px] gap-y-[20px] mt-[45px]">
                                     {
                                         contents.map((el) => {
                                             const { id, icons, name } = el;
 
+                                            {/* hover:bg-[#037ADE] hover:text-white */ }
                                             return (
-                                                <div key={id} className="w-max py-[12px] px-[14px] h-[40px] rounded-full border-[2px] border-[#037ADE] flex items-center justify-center gap-[4px]">
+                                                <div key={id} className="w-max py-[8px] px-[16px] h-max rounded-full border-[2px] border-[#037ADE] shadow-md cursor-pointer flex items-center justify-center gap-[6px]">
                                                     <span className=''>{icons}</span>
-                                                    {name}
+                                                    <span className='text-[14px]'>
+                                                        {name}
+                                                    </span>
                                                 </div>
                                             )
                                         })

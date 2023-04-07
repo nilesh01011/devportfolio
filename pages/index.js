@@ -16,13 +16,13 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main className={`w-full h-full relative max-w-[1200px] mx-auto`}>
+      <main className={`w-full h-full 1x1:max-w-[1280px] max-w-[1200px] mx-auto`}>
         <Banner />
         <AboutSections />
         <ProjectsWorks />
         <Experiences />
       </main>
-      <Footer />
+      {/* <Footer /> */}
       {/* theme changes */}
       <ThemeSet />
     </>

@@ -5,8 +5,12 @@ function Buttons({ title, link }) {
     const urlLinks = link ? link : '';
     // hover:bg-[rgb(3,122,222,0.9)]
 
+    const handleClicks = (e) => {
+        e.preventDefault();
+    }
+
     return (
-        <button className='font-[550] w-full h-max md:py-[0.9rem] py-[0.7rem] px-[2.6rem] rounded-full bg-[#037ADE] text-[#e7edef] select-none cursor-pointer'>
+        <button onClick={(e) => handleClicks(e)} className='font-[550] w-full h-max py-[0.8rem] px-[3.5rem] rounded-full shadow-md bg-[#037ADE] hover:bg-[#037cded8] text-[#e7edef] select-none cursor-pointer'>
             {title}
 
             <style jsx>

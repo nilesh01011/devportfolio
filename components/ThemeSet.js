@@ -1,8 +1,19 @@
 import { useTheme } from 'next-themes'
+import { useRouter } from 'next/router';
 import React, { useEffect, useState } from 'react'
 import { CiDark, CiLight } from 'react-icons/ci'
 
 function ThemeSet() {
+
+    const router = useRouter();
+
+    const [detailsPage, setDetailsPage] = useState(false);
+
+    useEffect(() => {
+        if (router.pathname !== '/') {
+            setDetailsPage(true)
+        }
+    }, [router.pathname])
 
     const { theme, setTheme } = useTheme();
     const [mounted, setMounted] = useState(false);
@@ -10,8 +21,6 @@ function ThemeSet() {
     useEffect(() => {
         setMounted(true)
     }, [])
-
-    if (!mounted) return null
 
     const currentTheme = theme === 'system' ? systemTheme : theme;
 
@@ -25,12 +34,25 @@ function ThemeSet() {
         }
     }
 
+    useEffect(() => {
+        if (theme === "dark") {
+            document.querySelector("body").style.backgroundColor = '#0E1623'
+        }
+
+        if (theme === "light") {
+            document.querySelector("body").style.backgroundColor = '#e7edef'
+        }
+    })
+
+    if (!mounted) return null
+
+
     return (
         <>
-            {/* fixed buttons */}
-            {/* 1x1:bottom-[50px] bottom-[30px] */}
-            <div className='fixed top-[40px] 1x1:right-[42px] right-[22px] rounded-full'>
-                <button onClick={() => handleThemeChange()} className='shadow-lg w-[35px] h-[35px] bg-[#037ADE] rounded-full flex items-center justify-center'>
+
+            {/* ${detailsPage === true ? '1x1:right-[42px] sm:right-[22px]' : '1x1:right-[42px] sm:right-[22px]'} */}
+            <div className={`fixed top-[40px] 1x1:right-[42px] sm:right-[22px] right-[15px] rounded-full z-50`}>
+                <button onClick={() => handleThemeChange()} className='shadow-lg w-[40px] h-[40px] bg-[#037ADE] hover:bg-[#037cded8] rounded-full flex items-center justify-center'>
                     {
                         currentTheme === "dark" ? (
                             <CiLight className="text-white" size={22} />
