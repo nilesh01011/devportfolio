@@ -216,21 +216,21 @@ const bestEats = {
     ],
 }
 
-const proshop = {
-    id: 11,
-    name: 'Proshop',
-    imgScr: '/E-commerce2.png',
-    category: 'E-commerce',
-    links: '',
-    desc: '',
-    bgLinear: '#b24592, #f15f79',
-    languages: [
-        {
-            id: 1,
-            name: MERN
-        },
-    ],
-}
+// const proshop = {
+//     id: 11,
+//     name: 'Proshop',
+//     imgScr: '/E-commerce2.png',
+//     category: 'E-commerce',
+//     links: '',
+//     desc: '',
+//     bgLinear: '#b24592, #f15f79',
+//     languages: [
+//         {
+//             id: 1,
+//             name: MERN
+//         },
+//     ],
+// }
 
 const amazonClone = {
     id: 12,
@@ -264,7 +264,7 @@ const Gaming = {
     name: '&Gaming',
     imgScr: '/LandingPage1.png',
     category: 'LandingPage',
-    links: 'https://nilesh01011.github.io/-Gaming/',
+    links: 'https://game-apps.netlify.app/',
     desc: '',
     bgLinear: '#ff8c0f, #ffc21c',
     languages: [
@@ -326,7 +326,7 @@ export const projects = [
         contents: [
             wishBin,
             amazonClone,
-            proshop,
+            // proshop,
             singlepay,
             fluxGame,
             mMovies,
@@ -369,7 +369,7 @@ export const projects = [
         title: 'E-commerce',
         contents: [
             wishBin,
-            proshop
+            // proshop
         ]
     },
     // {

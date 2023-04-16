@@ -40,8 +40,8 @@ function Banner() {
                     </div>
                     {/* mobile view */}
                     <div className='xl:hidden block'>
-                        <p className='dark:text-[#B6BCCA] text-[#0B0B0C] font-[400] text-center md:text-[20px] text-[16px] md:leading-[35px] leading-[22px] flex flex-col items-center'>
-                            I passionate in Full Stack Developer 🚀 having a specialinterest in Front-end technologies and experience of building Web applications
+                        <p className='dark:text-[#B6BCCA] text-[#0B0B0C] font-[400] text-center md:text-[20px] text-[16px] md:leading-[35px] leading-[26px] flex flex-col items-center'>
+                            I passionate in Full Stack Developer 🚀 having a special interest in Front-end technologies and experience of building Web applications
                             👨‍💻.
                             {/* <span className='flex items-baseline'>
                                 <Image width={35} height={30} src="/man-tech-emoji.png" className='w-[30px] h-[20px] object-contain' alt='man-tech-emoji' />.</span> */}
