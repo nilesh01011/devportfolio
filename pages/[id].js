@@ -75,7 +75,7 @@ function Index() {
                 <div className='h-full w-full relative mt-8'>
                     {/* Projects Title*/}
                     <div className='flex items-center justify-center flex-col'>
-                        <h1 className='sm:text-[2.5rem] xss:text-[1.8rem] xsxs:text-[1.6rem] text-[1.4rem] font-semibold'><span className=''>{titleName}</span> Projects</h1>
+                        <h2 className='sm:text-[2.5rem] xss:text-[1.8rem] xsxs:text-[1.6rem] text-[1.4rem] font-semibold'><span className=''>{titleName}</span> Projects</h2>
                         <p className='text-center md:w-[65%] mx-auto mt-[1.2rem] md:block hidden'>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution.</p>
                     </div>
 

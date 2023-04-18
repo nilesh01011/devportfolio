@@ -64,7 +64,7 @@ const wishBin = {
     name: 'WishBin',
     imgScr: '/E-commerce.png',
     category: 'E-commerce',
-    links: '',
+    links: 'https://wishbin-store.onrender.com/',
     desc: '',
     bgLinear: ' #ffc371, #ff5f6d, rgba(241, 101, 101, 1)',
     // bgLinear: '#ff5e62, #ff9966, rgba(241, 101, 101, 1)'
