@@ -2,8 +2,7 @@ import { skills } from '@/pages/api/Skills';
 import { useTheme } from 'next-themes';
 import React, { useEffect, useState } from 'react'
 
-function Tabs() {
-    const [skillsTabs, setSkillsTabs] = useState(skills);
+function Tabs({ skillsTabs }) {
 
     const [activeSkills, setActiveSkills] = useState(1);
 

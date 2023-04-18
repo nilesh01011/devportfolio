@@ -1,6 +1,7 @@
 import Image from 'next/image'
 import React from 'react'
 import SkillsTabs from './SkillsTabs'
+import { skills } from '@/pages/api/Skills'
 
 function AboutSections() {
     return (
@@ -45,7 +46,7 @@ function AboutSections() {
 
                 {/* tabs views */}
                 <div className='w-full md:h-[200px] md:mt-[100px] mt-[60px]'>
-                    <SkillsTabs />
+                    <SkillsTabs skillsTabs={skills} />
                 </div>
             </div>
         </>
