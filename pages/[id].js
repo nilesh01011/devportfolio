@@ -35,6 +35,9 @@ function Index() {
     const [activePages, setActivePages] = useState([]);
     const [isActive, setIsActive] = useState(1);
 
+    // projects links
+    const [projectsLinks, setProjectLinks] = useState('');
+
     const showRecommedPolicies = (id) => {
         setIsActive(id)
     }
@@ -55,6 +58,7 @@ function Index() {
                     setCategoryName(el.category);
                     setActivePages(el.pages);
                     setSkillTabs(el.skills);
+                    setProjectLinks(el.links);
                 }
             })
         })
@@ -70,6 +74,8 @@ function Index() {
             }
         });
     }, [activePages]);
+
+    console.log(mainProjects.links)
 
     return (
         <>
@@ -186,8 +192,8 @@ function Index() {
                                 Live demo
                             </Link> */}
                             {/* <Buttons title="Live Demo" link='' /> */}
-                            {/* onClick={(e) => handleClicks(e)} */}
-                            <button className='font-[550] w-full h-max py-[0.8rem] px-[3.5rem] rounded-full shadow-md bg-[#037ADE] hover:bg-[#037cded8] text-[#e7edef] select-none cursor-pointer'>
+                            {/* onClick={() => router.push(mainProjects.links)} */}
+                            <Link href={projectsLinks} target='_black' className='font-[550] w-full h-max py-[0.8rem] px-[3.5rem] rounded-full shadow-md bg-[#037ADE] hover:bg-[#037cded8] text-[#e7edef] select-none cursor-pointer'>
                                 View Site Demo
 
                                 <style jsx>
@@ -197,7 +203,7 @@ function Index() {
                                     }
                                     `}
                                 </style>
-                            </button>
+                            </Link>
                         </div>
                     </div>
                 </div>
