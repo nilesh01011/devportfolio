@@ -19,10 +19,10 @@ export const companyName = [
                 id: 3,
                 text: 'And, I also created a UI components with the help of Custom Design and SalesForce (LWC) for the design preference.'
             },
-            {
-                id: 4,
-                text: 'And I also, Suggest the developer to add a new languages is best for their applications to better results.'
-            }
+            // {
+            //     id: 4,
+            //     text: 'And I also, Suggest the developer to add a new languages is best for their applications to better results.'
+            // }
         ],
         links: 'https://auto.mahindra.com/'
     },
@@ -45,11 +45,11 @@ export const companyName = [
                 id: 3,
                 text: 'And, I also created a UI components for the custom design.'
             },
-            {
-                id: 4,
-                text: 'And I learned, To how NextJS and Tailwind-CSS is better for the industry projects.'
-                // text: 'And I learned, To how collaboration with the teams for the industry projects.'
-            },
+            // {
+            //     id: 4,
+            //     text: 'And I learned, To how NextJS and Tailwind-CSS is better for the industry projects.'
+            //     // text: 'And I learned, To how collaboration with the teams for the industry projects.'
+            // },
         ],
         links: 'https://www.ajackus.com/'
     }
