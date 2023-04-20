@@ -64,14 +64,12 @@ function Index() {
     // const [eyeClose, setEyeClose] = useState(false);
 
     useEffect(() => {
-
         activePages?.map((ele) => {
             if (ele.id === 1) {
                 setCarouselImages(ele.sliders)
             }
         });
-
-    }, [activePages])
+    }, [activePages]);
 
     return (
         <>
@@ -105,7 +103,7 @@ function Index() {
 
                     {/* main contents */}
 
-                    <div className='h-full xl:mb-[10rem] md:mb-[8rem] mb-[3rem]'>
+                    <div className={`h-full ${activePages.length < 5 ? 'mb-[4rem]' : 'xl:mb-[10rem] md:mb-[8rem] mb-[3rem]'}`}>
                         <div className='w-full relative flex md:items-center flex-col md:justify-center sm:mt-[3rem] mt-[1rem]'>
 
                             {/* laptop and desktop view absolute contents */}
@@ -116,11 +114,11 @@ function Index() {
                                         const { id, page, sliders } = ele;
 
                                         return (
-                                            <div key={id} className={`xl:w-[25%] w-[26%] flex items-center justify-center absolute ${id === 1 && '1x1:left-[8%] left-0 top-14'} ${id === 2 && '1x1:left-[8%] left-0 bottom-14'} ${id === 3 && '1x1:right-[8%] right-0 top-14'} ${id === 4 && '1x1:right-[8%] right-0 bottom-14'} ${id === 5 && 'left-[20%] 1x1:-bottom-[5.5rem] -bottom-[5rem]'} ${id === 6 && 'right-[20%] 1x1:-bottom-[5.5rem] -bottom-[5rem]'}`}>
+                                            <div key={id} className={`xl:w-[25%] w-[26%] flex items-center justify-center absolute ${id === 1 && '1x1:left-[8%] left-0 top-14'} ${id === 2 && '1x1:left-[8%] left-0 bottom-14'} ${id === 3 && '1x1:right-[8%] right-0 top-14'} ${id === 4 && '1x1:right-[8%] right-0 bottom-14'} ${activePages.length === 6 ? `${id === 5 && 'left-[22%] 1x1:-bottom-[5.5rem] -bottom-[5rem]'} ${id === 6 && 'right-[22%] 1x1:-bottom-[5.5rem] -bottom-[5rem]'}` : `${id === 5 && 'xl:left-[37.5%] left-[37%] xl:-bottom-[5.5rem] -bottom-[4rem]'}`}`}>
                                                 <button onClick={() => { showRecommedPolicies(id), setCarouselImages(sliders) }} type='button' className={`flex items-center flex-col gap-[8px] group ${isActive === id ? 'bg-[#037ADE] text-white shadow-md' : 'bg-[#037ADE]/5 dark:bg-[#037ADE]/20 hover:text-black dark:hover:text-white text-black/50 dark:text-white/50'} p-[8px_26px] rounded-full`}>
                                                     {/* <span className={`text-[12px] flex items-center justify-center rounded-full w-[20px] h-[20px] ${isActive === id ? 'bg-white text-black' : ''}`}>{id}</span> */}
                                                     {/* ${isActive === id ? 'bg-[#037ADE] text-white' : 'bg-[#037ADE]/30 text-black/50 dark:text-white/50'} */}
-                                                    <span className={`text-sm ${isActive === id && 'underline'} hover:underline`}>
+                                                    <span className={`text-sm`}>
                                                         {/* ${isActive === id ? 'underline dark:text-white text-black' : 'dark:text-white/50 text-black/50'} */}
                                                         {page}
                                                     </span>
@@ -157,7 +155,7 @@ function Index() {
 
                             {/* middle images */}
                             {/* <div className='lg:w-[400px] sm:w-[350px] w-full h-[300px] shadow-md bg-gray-100 rounded-md xl:mb-0 md:mb-[2rem] mx-auto'></div> */}
-                            <div className='overflow-hidden w-full lg:w-[460px] sm:w-[360px] mx-auto h-[340px] xl:mb-0 md:mb-[2rem] rounded-md'>
+                            <div className='overflow-hidden w-full lg:w-[460px] sm:w-[360px] mx-auto xs:h-[340px] h-max xl:mb-0 md:mb-[2rem] rounded-md'>
                                 <SwiperComponents carouselImages={carouselImages && carouselImages} />
                             </div>
 
@@ -169,12 +167,12 @@ function Index() {
 
                     {/* languages uses with tabs views */}
                     {/* xl:mt-[12rem] md:mt-[8rem] mt-[3rem] */}
-                    <div className='w-full md:h-[200px] '>
+                    <div className='w-full h-max'>
                         <SkillsTabs skillsTabs={skillTabs} />
                     </div>
 
                     {/* footer buttons */}
-                    <div className='flex items-center justify-center xl:mt-[2rem] mmd:mt-[6rem] md:mt-[10rem] mt-[3.5rem]'>
+                    <div className='flex items-center justify-center mt-[4rem]'>
                         <div className='sm:w-max w-full'>
                             {/* <Link onMouseOver={() => setEyeClose(true)} onMouseLeave={() => setEyeClose(false)} href='#' className='flex items-center gap-3 justify-center font-[550] w-full h-max md:py-[0.7rem] py-[0.5rem] px-[2.6rem] rounded-full shadow-md bg-[#037ADE] hover:bg-[#037cded8] text-[#e7edef] select-none cursor-pointer capitalize'>
                                 <span>

@@ -22,7 +22,7 @@ function Tabs({ skillsTabs }) {
                         {/* bg-gradient-to-r from-[#037ADE] to-[#03E5B7] */ }
 
                         return (
-                            <button type='button' onClick={() => handleIdContent(id)} key={title} className={`h-max whitespace-nowrap relative w-max text-[18px] px-[26px] py-[8px] rounded-full ${activeSkills === id ? `bg-[#037ADE] shadow-md text-white` : ``} capitalize`}>
+                            <button type='button' onClick={() => handleIdContent(id)} key={title} className={`h-max whitespace-nowrap relative w-max text-[18px] px-[26px] py-[8px] rounded-full ${activeSkills === id ? `bg-[#037ADE] shadow-md text-white` : `hover:text-black dark:hover:text-white text-black/50 dark:text-white/50`} capitalize`}>
                                 {title}
                             </button>
                         )
