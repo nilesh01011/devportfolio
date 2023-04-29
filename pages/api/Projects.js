@@ -1066,6 +1066,132 @@ const mMovies = {
     ]
 }
 
+const Gaming = {
+    id: 5,
+    name: '&Gaming',
+    imgScr: '/LandingPage1.png',
+    category: 'LandingPage',
+    links: 'https://game-apps.netlify.app/',
+    desc: '&Games templates for the game that show the all playstions games.',
+    bgLinear: '#ff8c0f, #ffc21c',
+    languages: [
+        {
+            id: 1,
+            name: next
+        },
+        {
+            id: 2,
+            name: tailwind
+        }
+    ],
+    skills: [
+        {
+            id: 1,
+            title: 'languages',
+            contents: [
+                {
+                    id: 1,
+                    name: next,
+                    icons: nextjsIcons
+                },
+                {
+                    id: 2,
+                    name: tailwind,
+                    icons: tailwindIcons
+                },
+                {
+                    id: 3,
+                    name: 'SwiperJS',
+                    icons: swiperjsIcons
+                }
+            ],
+        },
+        {
+            id: 2,
+            title: 'software skills',
+            contents: [
+                {
+                    id: 1,
+                    name: 'VS Code',
+                    icons: vscodeIcons
+                },
+                {
+                    id: 2,
+                    name: 'GitHub',
+                    icons: githubIcons
+                },
+                {
+                    id: 3,
+                    name: 'Netlify',
+                    icons: netlifyIcons
+                },
+            ],
+        }
+    ],
+    pages: [
+        {
+            id: 1,
+            page: 'Home Page',
+            sliders: [
+                {
+                    id: 1,
+                    imgSrc: '/LandingPage1.png'
+                },
+            ]
+        },
+        {
+            id: 2,
+            page: 'Store Section',
+            sliders: [
+                {
+                    id: 1,
+                    imgSrc: '/landingpage1/store.png'
+                },
+            ]
+        },
+        {
+            id: 3,
+            page: 'Games Section',
+            sliders: [
+                {
+                    id: 1,
+                    imgSrc: '/landingpage1/games.png'
+                },
+            ]
+        },
+        {
+            id: 4,
+            page: 'Games PS5 Section',
+            sliders: [
+                {
+                    id: 1,
+                    imgSrc: '/landingpage1/ps5.png'
+                },
+            ]
+        },
+        {
+            id: 5,
+            page: 'VR Section',
+            sliders: [
+                {
+                    id: 1,
+                    imgSrc: '/landingpage1/vr.png'
+                },
+            ]
+        },
+        {
+            id: 6,
+            page: 'Contact Section',
+            sliders: [
+                {
+                    id: 1,
+                    imgSrc: '/landingpage1/help.png'
+                },
+            ]
+        },
+    ]
+}
+
 const onePlus = {
     id: 6,
     name: 'OnePlus',
@@ -1348,125 +1474,8 @@ const adminDashboard = {
     ]
 }
 
-const bestEats = {
-    id: 9,
-    name: 'Best Eats',
-    imgScr: '/LandingPage2.png',
-    category: 'LandingPage',
-    links: 'https://shiny-cajeta-c89474.netlify.app/',
-    desc: 'We hear the best things in life are free, but considering today’s economic situation, we’re taking the liberty of saying the best things in life are under 200 rupees. This is the guide to my favourite cheap eats in Theatre Road, something for the food-lovers on a budget to rejoice about.',
-    bgLinear: '#dd2476, #ff512f',
-    languages: [
-        {
-            id: 1,
-            name: react
-        },
-        {
-            id: 2,
-            name: tailwind
-        }
-    ],
-    skills: [
-        {
-            id: 1,
-            title: 'languages',
-            contents: [
-                {
-                    id: 1,
-                    name: react,
-                    icons: reactjsIcons
-                },
-                {
-                    id: 3,
-                    name: tailwind,
-                    icons: tailwindIcons
-                },
-            ],
-        },
-        {
-            id: 2,
-            title: 'software skills',
-            contents: [
-                {
-                    id: 1,
-                    name: 'VS Code',
-                    icons: vscodeIcons
-                },
-                {
-                    id: 2,
-                    name: 'GitHub',
-                    icons: githubIcons
-                },
-                {
-                    id: 3,
-                    name: 'Netlify',
-                    icons: netlifyIcons
-                },
-            ],
-        }
-    ],
-    pages: [
-        {
-            id: 1,
-            page: 'Home Page',
-            sliders: [
-                {
-                    id: 1,
-                    imgSrc: '/LandingPage2.png'
-                },
-            ]
-        },
-        {
-            id: 2,
-            page: 'Category Section',
-            sliders: [
-                {
-                    id: 1,
-                    imgSrc: '/landingpage2/category.png'
-                },
-            ]
-        },
-        {
-            id: 3,
-            page: 'Top Menu List Section',
-            sliders: [
-                {
-                    id: 1,
-                    imgSrc: '/landingpage2/menuitems.png'
-                },
-            ]
-        },
-        {
-            id: 4,
-            page: 'Top Menu Section',
-            sliders: [
-                {
-                    id: 1,
-                    imgSrc: '/landingpage2/menu.png'
-                },
-            ]
-        },
-    ]
-}
-
-// const proshop = {
-//     id: 11,
-//     name: 'Proshop',
-//     imgScr: '/E-commerce2.png',
-//     category: 'E-commerce',
-//     links: '',
-//     desc: '',
-//     bgLinear: '#b24592, #f15f79',
-//     languages: [
-//         {
-//             id: 1,
-//             name: MERN
-//         },
-//     ],
-// }
-
 const amazonClone = {
-    id: 12,
+    id: 8,
     name: 'Amazon Clone',
     imgScr: '/clone.png',
     category: 'Clone',
@@ -1613,21 +1622,18 @@ const amazonClone = {
     ]
 }
 
-
-// &Gaming || crudBlogs || chatIt are comments
-
-const Gaming = {
-    id: 5,
-    name: '&Gaming',
-    imgScr: '/LandingPage1.png',
+const bestEats = {
+    id: 9,
+    name: 'Best Eats',
+    imgScr: '/LandingPage2.png',
     category: 'LandingPage',
-    links: 'https://game-apps.netlify.app/',
-    desc: '&Games templates for the game that show the all playstions games.',
-    bgLinear: '#ff8c0f, #ffc21c',
+    links: 'https://shiny-cajeta-c89474.netlify.app/',
+    desc: 'We hear the best things in life are free, but considering today’s economic situation, we’re taking the liberty of saying the best things in life are under 200 rupees. This is the guide to my favourite cheap eats in Theatre Road, something for the food-lovers on a budget to rejoice about.',
+    bgLinear: '#dd2476, #ff512f',
     languages: [
         {
             id: 1,
-            name: next
+            name: react
         },
         {
             id: 2,
@@ -1641,17 +1647,14 @@ const Gaming = {
             contents: [
                 {
                     id: 1,
-                    name: next
-                },
-                {
-                    id: 2,
-                    name: tailwind
+                    name: react,
+                    icons: reactjsIcons
                 },
                 {
                     id: 3,
-                    name: 'SwiperJS',
-                    icons: swiperjsIcons
-                }
+                    name: tailwind,
+                    icons: tailwindIcons
+                },
             ],
         },
         {
@@ -1683,101 +1686,45 @@ const Gaming = {
             sliders: [
                 {
                     id: 1,
-                    imgSrc: '/LandingPage1.png'
+                    imgSrc: '/LandingPage2.png'
                 },
             ]
         },
         {
             id: 2,
-            page: 'Store Section',
+            page: 'Category Section',
             sliders: [
                 {
                     id: 1,
-                    imgSrc: '/landingpage1/store.png'
+                    imgSrc: '/landingpage2/category.png'
                 },
             ]
         },
         {
             id: 3,
-            page: 'Games Section',
+            page: 'Top Menu List Section',
             sliders: [
                 {
                     id: 1,
-                    imgSrc: '/landingpage1/games.png'
+                    imgSrc: '/landingpage2/menuitems.png'
                 },
             ]
         },
         {
             id: 4,
-            page: 'Games PS5 Section',
+            page: 'Top Menu Section',
             sliders: [
                 {
                     id: 1,
-                    imgSrc: '/landingpage1/ps5.png'
-                },
-            ]
-        },
-        {
-            id: 5,
-            page: 'VR Section',
-            sliders: [
-                {
-                    id: 1,
-                    imgSrc: '/landingpage1/vr.png'
-                },
-            ]
-        },
-        {
-            id: 6,
-            page: 'Contact Section',
-            sliders: [
-                {
-                    id: 1,
-                    imgSrc: '/landingpage1/help.png'
+                    imgSrc: '/landingpage2/menu.png'
                 },
             ]
         },
     ]
 }
 
-// const crudBlogs = {
-//     id: 8,
-//     name: 'CRUD Blogs',
-//     imgScr: '/Templates3.png',
-//     category: 'Templates',
-//     links: '',
-//     desc: '',
-//     bgLinear: '#2980b9, #64b3f4',
-//     languages: [
-//         {
-//             id: 1,
-//             name: MERN
-//         },
-//     ],
-// }
-
-// const chatIt = {
-//     id: 10,
-//     name: 'Chat-It',
-//     imgScr: '/chatapp.png',
-//     category: 'ChatApp',
-//     links: '',
-//     desc: '',
-//     bgLinear: '#25D5E3, #ADF0A3',
-//     languages: [
-//         {
-//             id: 1,
-//             name: MERN
-//         },
-//         {
-//             id: 2,
-//             name: "Socket.io"
-//         },
-//     ],
-// }
-
 const NShoes = {
-    id: 5,
+    id: 10,
     name: 'N-Shoes',
     imgScr: '/E-commerce3.png',
     category: 'E-commerce',
@@ -1960,6 +1907,58 @@ const NShoes = {
         },
     ]
 }
+
+// const proshop = {
+//     id: 11,
+//     name: 'Proshop',
+//     imgScr: '/E-commerce2.png',
+//     category: 'E-commerce',
+//     links: '',
+//     desc: '',
+//     bgLinear: '#b24592, #f15f79',
+//     languages: [
+//         {
+//             id: 1,
+//             name: MERN
+//         },
+//     ],
+// }
+
+// const crudBlogs = {
+//     id: 12,
+//     name: 'CRUD Blogs',
+//     imgScr: '/Templates3.png',
+//     category: 'Templates',
+//     links: '',
+//     desc: '',
+//     bgLinear: '#2980b9, #64b3f4',
+//     languages: [
+//         {
+//             id: 1,
+//             name: MERN
+//         },
+//     ],
+// }
+
+// const chatIt = {
+//     id: 13,
+//     name: 'Chat-It',
+//     imgScr: '/chatapp.png',
+//     category: 'ChatApp',
+//     links: '',
+//     desc: '',
+//     bgLinear: '#25D5E3, #ADF0A3',
+//     languages: [
+//         {
+//             id: 1,
+//             name: MERN
+//         },
+//         {
+//             id: 2,
+//             name: "Sfocket.io"
+//         },
+//     ],
+// }
 
 export const projects = [
     {
