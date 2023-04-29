@@ -179,7 +179,7 @@ function Index() {
 
                     {/* footer buttons */}
                     <div className='flex items-center justify-center mt-[4rem]'>
-                        <div className='sm:w-max w-full'>
+                        <div className='sm:w-max w-full flex items-center'>
                             {/* <Link onMouseOver={() => setEyeClose(true)} onMouseLeave={() => setEyeClose(false)} href='#' className='flex items-center gap-3 justify-center font-[550] w-full h-max md:py-[0.7rem] py-[0.5rem] px-[2.6rem] rounded-full shadow-md bg-[#037ADE] hover:bg-[#037cded8] text-[#e7edef] select-none cursor-pointer capitalize'>
                                 <span>
                                     {
@@ -193,7 +193,7 @@ function Index() {
                             </Link> */}
                             {/* <Buttons title="Live Demo" link='' /> */}
                             {/* onClick={() => router.push(mainProjects.links)} */}
-                            <Link href={projectsLinks} target='_black' className='font-[550] w-full h-max py-[0.8rem] px-[3.5rem] rounded-full shadow-md bg-[#037ADE] hover:bg-[#037cded8] text-[#e7edef] select-none cursor-pointer'>
+                            <Link href={projectsLinks} target='_black' className='font-[550] w-full flex items-center justify-center h-max py-[0.8rem] px-[3.5rem] rounded-full shadow-md bg-[#037ADE] hover:bg-[#037cded8] text-[#e7edef] select-none cursor-pointer'>
                                 View Site Demo
 
                                 <style jsx>
