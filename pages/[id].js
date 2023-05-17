@@ -75,8 +75,6 @@ function Index() {
         });
     }, [activePages]);
 
-    console.log(mainProjects.links)
-
     return (
         <>
             <Head>

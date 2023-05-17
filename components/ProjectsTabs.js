@@ -51,7 +51,7 @@ function ProjectsTabs() {
                                                 <div key={id} className="w-full h-max rounded-[8px] dark:bg-[#1d2738] bg-[#F4F4F4] shadow-md ">
                                                     {/* images */}
                                                     <div className="h-[70%] w-full rounded-[8px_8px_0_0]">
-                                                        <Image src={imgScr && imgScr} width={240} height={170} className="w-full h-full object-cover rounded-[8px_8px_0_0]" alt="projects-images" />
+                                                        <Image src={imgScr && imgScr} width={240} height={170} className="w-full h-[148px] object-cover rounded-[8px_8px_0_0]" alt="projects-images" />
                                                     </div>
                                                     {/* titles */}
                                                     <div className='h-[30%] flex flex-col items-center md:p-[10px] py-[10px] px-[12px]'>
@@ -82,7 +82,7 @@ function ProjectsTabs() {
 
                                                         {/* buttons */}
                                                         <div className='mt-4 mb-2'>
-                                                            <Link href={`/id:${id}`} className='text-[14px] rounded-full border-[1px] hover:bg-[#037ADE] border-[#037ADE] py-[8px] px-[22px] capitalize shadow-md dark:text-white text-black hover:text-white'>show details</Link>
+                                                            <Link href={`/id:${id}`} className='text-[14px] rounded-full border-[1px] hover:bg-[#037ADE] border-[#037ADE] py-[8px] px-[22px] capitalize shadow-md dark:text-white text-black hover:text-white'>view details</Link>
                                                         </div>
                                                     </div>
                                                 </div>
