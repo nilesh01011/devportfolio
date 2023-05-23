@@ -31,6 +31,7 @@
   padding: 0;
   margin: 0;
   /* font-family: 'Jakarta_Sans_Regular'; */
+  scroll-behavior: smooth;
 }
 
 /* #aboutText,

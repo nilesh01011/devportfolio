@@ -81,7 +81,7 @@ function Index() {
                 <title>{titleName} | {categoryName} Projects</title>
                 <meta name="description" content="Developer ? MERN Stack : Front End" />
                 <meta name="viewport" content="width=device-width, initial-scale=1" />
-                <link rel="icon" href="/favicon.ico" />
+                <link rel="icon" href="/devLogo.png" />
             </Head>
             {/* contents */}
             <div className={`w-full h-full pt-[2.5rem] pb-[3.5rem] 1x1:max-w-[1280px] max-w-[1200px] mx-auto xl:px-0 px-[15px]`}>
@@ -198,6 +198,7 @@ function Index() {
                                     {`
                                     button {
                                         box-shadow: 0px 0px 2px 0px rgba(0,0,0,0.3);
+                                        font-weight: bold;
                                     }
                                     `}
                                 </style>

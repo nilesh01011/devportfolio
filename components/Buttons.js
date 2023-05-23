@@ -7,6 +7,7 @@ function Buttons({ title, link }) {
 
     const handleClicks = (e) => {
         e.preventDefault();
+        window.location.href = `${link}`
     }
 
     return (

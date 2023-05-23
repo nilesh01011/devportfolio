@@ -63,7 +63,7 @@ function Banner() {
                                     `}
                         </style>
                     </button> */}
-                    <Buttons title="Do You Want to Work With Me" link='/' />
+                    <Buttons title="Do You Want to Work With Me" link='#about' />
                 </div>
             </div>
         </div>

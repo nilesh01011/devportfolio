@@ -7,7 +7,7 @@ import Link from 'next/link'
 function AboutSections() {
     return (
         <>
-            <div className='h-full px-[15px]'>
+            <div id="about" className='h-full px-[15px]'>
                 <div className='w-full flex items-center md:flex-row flex-col justify-center gap-[20px]'>
                     {/* left sides images */}
                     <div className='md:w-1/2 w-full'>
