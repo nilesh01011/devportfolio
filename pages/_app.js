@@ -1,18 +1,19 @@
-import { Poppins } from '@next/font/google'
-import { ThemeProvider, useTheme } from 'next-themes'
+import { ThemeProvider } from 'next-themes'
 import '@/styles/globals.css';
-import ThemeSet from '@/components/ThemeSet';
 import Footer from '@/components/Footer';
+// import { Poppins } from '@next/font/google'
 
-const lato = Poppins({
-  subsets: ['latin'],
-  weight: ['100', '300', '400', '700', '800', '900']
-})
+// const poppins = Poppins({
+//   subsets: ['latin'],
+//   weight: ['100', '300', '400', '700', '800', '900']
+// })
 
 export default function App({ Component, pageProps }) {
 
   return (
-    <main className={lato.className}>
+    <main
+    //  className={poppins.className}
+    >
       <div className={``}>
         <ThemeProvider enableSystem={false} attribute='class'>
           {/* components */}

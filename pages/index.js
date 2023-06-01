@@ -4,10 +4,10 @@ import Experiences from '@/components/Experiences'
 import Footer from '@/components/Footer'
 import ProjectsWorks from '@/components/ProjectsWorks'
 import ThemeSet from '@/components/ThemeSet'
-import Head from 'next/head'
+import Head from 'next/head';
+import { createClient } from "next-sanity";
 
-export default function Home() {
-
+export default function Home({ languages, software, project }) {
   return (
     <>
       <Head>
@@ -18,7 +18,7 @@ export default function Home() {
       </Head>
       <main className={`w-full h-full 1x1:max-w-[1280px] max-w-[1200px] mx-auto`}>
         <Banner />
-        <AboutSections />
+        <AboutSections languages={languages} software={software} />
         <ProjectsWorks />
         <Experiences />
       </main>
@@ -28,3 +28,30 @@ export default function Home() {
     </>
   )
 }
+
+export async function getServerSideProps() {
+  const client = createClient({
+    projectId: "q5etd0xs",
+    dataset: "production",
+    useCdn: true
+  })
+
+  const query = `*[_type == "languages"]`;
+  const languages = await client.fetch(query);
+
+  const query_2 = `*[_type == "software"]`;
+  const software = await client.fetch(query_2);
+
+  const query_3 = `*[_type == "project"]`;
+  const project = await client.fetch(query_3);
+
+  return {
+    props: {
+      languages,
+      software,
+      project
+    }
+  };
+}
+
+

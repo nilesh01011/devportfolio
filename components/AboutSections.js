@@ -4,7 +4,7 @@ import SkillsTabs from './SkillsTabs'
 import { skills } from '@/pages/api/Skills'
 import Link from 'next/link'
 
-function AboutSections() {
+function AboutSections({ languages, software }) {
     return (
         <>
             <div id="about" className='h-full px-[15px]'>
@@ -52,7 +52,7 @@ function AboutSections() {
 
                 {/* tabs views */}
                 <div className='w-full md:h-[200px] md:mt-[100px] mt-[60px]'>
-                    <SkillsTabs skillsTabs={skills} />
+                    <SkillsTabs skillsTabs={skills} languages={languages} software={software} />
                 </div>
             </div>
         </>
