@@ -9,19 +9,19 @@ export const companyName = [
         contents: [
             {
                 id: 1,
-                text: 'I create a front end parts with the help of using NextJS and Tailwind-CSS.'
+                text: 'Create a front end parts with the help of using NextJS and Tailwind-CSS.'
             },
             {
                 id: 2,
-                text: 'I created a reused components to optimized the performance of web apps.'
+                text: 'Created a reused components to optimized the performance of web apps.'
             },
             {
                 id: 3,
-                text: 'And, I also created a UI components with the help of Custom Design and SalesForce (LWC) for the design preference.'
+                text: 'And also created a UI components with the help of Custom Design and SalesForce (LWC) for the design preference.'
             },
             {
                 id: 4,
-                text: 'And I also, Create a App UI with the help of React-Native and tailwind-CSS for enhance my skills.'
+                text: 'And also create a App UI with the help of React-Native and tailwind-CSS for enhance my skills.'
             }
         ],
         links: 'https://auto.mahindra.com/'
@@ -35,15 +35,15 @@ export const companyName = [
         contents: [
             {
                 id: 1,
-                text: 'I created the UI parts with the help of using NextJS and Tailwind-CSS.'
+                text: 'Created the UI parts with the help of using NextJS and Tailwind-CSS.'
             },
             {
                 id: 2,
-                text: 'I created a reused components to optimized the code and speed of web apps.'
+                text: 'Created a reused components to optimized the code and speed of web apps.'
             },
             {
                 id: 3,
-                text: 'And, I also created a UI components for the custom design.'
+                text: 'And also created a UI components for the custom design.'
             },
             // {
             //     id: 4,

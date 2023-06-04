@@ -14,6 +14,14 @@ function Index() {
     const router = useRouter();
     const idSplite = router.query.id?.slice(3);
 
+    useEffect(() => {
+        if (idSplite) {
+
+        } else {
+            router.push('/')
+        }
+    })
+
     const [projectsList, setProjectsList] = useState(
         projects.map((ele) => {
             if (ele.title === "all") {
