@@ -5,7 +5,7 @@ export const companyName = [
         months: 'December - June',
         company: 'Mahindra & Mahindra Ltd',
         // subtitle: 'Software-Developer-Interns',
-        subtitle: 'Front-End-Developer-Interns',
+        subtitle: 'Front-End-Developer',
         contents: [
             {
                 id: 1,
@@ -19,10 +19,10 @@ export const companyName = [
                 id: 3,
                 text: 'And, I also created a UI components with the help of Custom Design and SalesForce (LWC) for the design preference.'
             },
-            // {
-            //     id: 4,
-            //     text: 'And I also, Suggest the developer to add a new languages is best for their applications to better results.'
-            // }
+            {
+                id: 4,
+                text: 'And I also, Create a App UI with the help of React-Native and tailwind-CSS for enhance my skills.'
+            }
         ],
         links: 'https://auto.mahindra.com/'
     },
