@@ -30,12 +30,12 @@ function AboutSections({ languages, software }) {
                                 {/* <span id='aboutText' className='text-transparent bg-clip-text bg-gradient-to-r from-[#f0b2af] to-[#fb839e] pl-[5px]'>Nilesh Rathod</span>. */}
                             </h2>
 
-                            <p className='mb-[1rem] mt-[0.5rem] font-bold'>Developer ? <span className='text-[#01D9D2]'>Front </span>Stack : <span className='text-[#01D9D2]'>MERN </span>End</p>
+                            <p className='mb-[1rem] mt-[0.5rem] font-bold'>Developer ? <span className='text-[#01D9D2]'>Front </span>End : <span className='text-[#01D9D2]'>Back </span>End</p>
                             {/* <p className='mb-[1rem] mt-[0.5rem] font-bold'>Developer ? <span className='text-[#03e5b7]'>MERN </span>Stack : <span className='text-[#03e5b8]'>Front </span>End</p> */}
 
                             {/* <span className='flex items-baseline'><Image width={35} height={30} src="/man-tech-emoji.png" className='w-[20px] h-[20px] mr-[5px] object-contain' alt='man-tech-emoji' />I&apos;ve been coding for nearly 1 years. I&apos;m a software developer</span> */}
                             <p className='dark:text-[#B6BCCA] text-[#0B0B0C] md:leading-[35px] leading-[25px] flex items-center flex-col xs:text-[16px] text-[14px]'>
-                                👨‍💻 I&apos;ve been coding for nearly 1 years. I&apos;m a software developer who loves to build a full-stack applications & learn new technologies.
+                                👨‍💻 I&apos;ve been coding for nearly 1+ years. I&apos;m a software developer who loves to build a full-stack applications & learn new technologies.
                             </p>
 
                             <p className='mt-[1rem] dark:text-[#B6BCCA] text-[#0B0B0C] md:leading-[35px] leading-[25px] xs:text-[16px] text-[14px]'>

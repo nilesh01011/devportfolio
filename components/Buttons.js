@@ -11,7 +11,7 @@ function Buttons({ title, link }) {
     }
 
     return (
-        <button onClick={(e) => handleClicks(e)} className='font-[550] w-full h-max py-[0.8rem] px-[3.5rem] rounded-full shadow-md bg-[#037ADE] hover:bg-[#037cded8] text-[#e7edef] select-none cursor-pointer'>
+        <button onClick={(e) => handleClicks(e)} className='font-[550] w-full h-max py-[0.8rem] px-[3.5rem] xsxs:text-[16px] text-[14px] rounded-full shadow-md bg-[#037ADE] hover:bg-[#037cded8] text-[#e7edef] select-none cursor-pointer'>
             {title}
 
             <style jsx>

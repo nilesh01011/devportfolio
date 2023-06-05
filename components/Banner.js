@@ -18,9 +18,9 @@ function Banner() {
                 {/* dark:text-[#939ba8] text-[#342C2C] */}
                 <h6 className={`dark:text-[#939ba8] text-[#747476] uppercase tracking-[3px] md:text-[16px] text-[14px] font-[600]`}>Hi, My name is</h6>
                 {/* name and roles */}
-                <div className='block text-center 1x1:my-[1.4rem] md:mt-[1.5rem] mt-[0.8rem] md:mb-[1.5rem] mb-[1rem] leading-[48px] text-transparent bg-clip-text bg-gradient-to-r from-[#037ADE] to-[#03E5B7]'>
-                    <h1 id='fontWeight' style={{ fontWeight: '900' }} className='font-black lg:text-6xl md:text-5xl xsxs:text-[42px] text-[26px]'>Nilesh Rathod.</h1>
-                    <h1 id='fontWeight' style={{ fontWeight: '900' }} className='font-black lg:text-6xl md:text-5xl xsxs:text-[42px] text-[26px] md:mt-[1.3rem]'>I am a full-stack developer.</h1>
+                <div className='block text-center 1x1:my-[2rem] md:mt-[1.5rem] mt-[0.8rem] md:mb-[1.8rem] mb-[1rem] leading-[38px] text-transparent bg-clip-text bg-gradient-to-r from-[#037ADE] to-[#03E5B7]'>
+                    <h1 id='fontWeight' style={{ fontWeight: '900' }} className='font-black lg:text-6xl md:text-5xl xsxs:text-[42px] text-[36px]'>Nilesh Rathod.</h1>
+                    <h1 id='fontWeight' style={{ fontWeight: '900' }} className='font-black lg:text-6xl md:text-5xl xsxs:text-[42px] text-[36px] md:mt-[1.3rem]'>I am a full-stack developer.</h1>
                 </div>
 
                 {/* small definations about */}
