@@ -2,7 +2,7 @@ export const companyName = [
     {
         id: 1,
         year: '2022 - 2023',
-        months: 'December - June',
+        months: 'Present',
         company: 'Mahindra & Mahindra Ltd',
         // subtitle: 'Software-Developer-Interns',
         subtitle: 'Front-End-Developer',

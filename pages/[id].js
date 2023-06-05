@@ -127,7 +127,7 @@ function Index() {
 
                                         return (
                                             <div key={id} className={`xl:w-[25%] w-[26%] flex items-center justify-center absolute ${id === 1 && '1x1:left-[8%] left-0 top-14'} ${id === 2 && '1x1:left-[8%] left-0 bottom-14'} ${id === 3 && '1x1:right-[8%] right-0 top-14'} ${id === 4 && '1x1:right-[8%] right-0 bottom-14'} ${activePages.length === 6 ? `${id === 5 && 'left-[22%] 1x1:-bottom-[5.5rem] -bottom-[5rem]'} ${id === 6 && 'right-[22%] 1x1:-bottom-[5.5rem] -bottom-[5rem]'}` : `${id === 5 && 'xl:left-[37.5%] left-[37%] xl:-bottom-[5.5rem] -bottom-[4rem]'}`}`}>
-                                                <button onClick={() => { showRecommedPolicies(id), setCarouselImages(sliders) }} type='button' className={`flex items-center flex-col gap-[8px] group ${isActive === id ? 'bg-[#037ADE] text-white shadow-md' : 'bg-[#037ADE]/5 dark:bg-[#037ADE]/20 hover:text-black dark:hover:text-white text-black/50 dark:text-white/50'} p-[8px_26px] rounded-full`}>
+                                                <button onClick={() => { showRecommedPolicies(id), setCarouselImages(sliders) }} type='button' className={`flex items-center flex-col gap-[8px] group ${isActive === id ? 'bg-[#037ADE] text-white shadow-md' : 'bg-[#037ADE]/5 dark:bg-[#037ADE]/20 hover:text-black dark:hover:text-white text-black/50 dark:text-white/50'} p-[8px_26px] rounded-full outline-none`}>
                                                     {/* <span className={`text-[12px] flex items-center justify-center rounded-full w-[20px] h-[20px] ${isActive === id ? 'bg-white text-black' : ''}`}>{id}</span> */}
                                                     {/* ${isActive === id ? 'bg-[#037ADE] text-white' : 'bg-[#037ADE]/30 text-black/50 dark:text-white/50'} */}
                                                     <span className={`text-sm`}>
@@ -150,7 +150,7 @@ function Index() {
                                         activePages?.map((ele) => {
                                             const { id, page, sliders } = ele;
                                             return (
-                                                <button key={id} type='button' onClick={() => { showRecommedPolicies(id), setCarouselImages(sliders) }} className={`flex items-center gap-[8px] text-[14px] h-max whitespace-nowrap relative w-max px-[26px] pb-[6px] ${isActive === id ? 'bg-[#037ADE] text-white shadow-md' : 'bg-[#037ADE]/10 dark:bg-[#037ADE]/20 hover:text-black dark:hover:text-white text-black/50 dark:text-white/50'} p-[8px_26px] rounded-full`}>
+                                                <button key={id} type='button' onClick={() => { showRecommedPolicies(id), setCarouselImages(sliders) }} className={`flex items-center gap-[8px] text-[14px] h-max whitespace-nowrap relative w-max px-[26px] pb-[6px] ${isActive === id ? 'bg-[#037ADE] text-white shadow-md' : 'bg-[#037ADE]/10 dark:bg-[#037ADE]/20 hover:text-black dark:hover:text-white text-black/50 dark:text-white/50'} p-[8px_26px] rounded-full outline-none`}>
                                                     {/* h-[26px] */}
                                                     {/* ${isActive === id ? ' dark:text-white text-black' : ' text-black/50 dark:text-white/50'} */}
 

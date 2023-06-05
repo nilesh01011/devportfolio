@@ -18,9 +18,9 @@ function Banner() {
                 {/* dark:text-[#939ba8] text-[#342C2C] */}
                 <h6 className={`dark:text-[#939ba8] text-[#747476] uppercase tracking-[3px] md:text-[16px] text-[14px] font-[600]`}>Hi, My name is</h6>
                 {/* name and roles */}
-                <div className='block text-center 1x1:my-[1.4rem] md:mt-[1.5rem] mt-[0.8rem] md:mb-[1.5rem] mb-[1rem] leading-[43px] text-transparent bg-clip-text bg-gradient-to-r from-[#037ADE] to-[#03E5B7]'>
-                    <h1 id='fontWeight' style={{ fontWeight: '900' }} className='font-black lg:text-6xl md:text-5xl text-[40px]'>Nilesh Rathod.</h1>
-                    <h1 id='fontWeight' style={{ fontWeight: '900' }} className='font-black lg:text-6xl md:text-5xl text-[40px] md:mt-[1.3rem]'>I am a full-stack developer.</h1>
+                <div className='block text-center 1x1:my-[1.4rem] md:mt-[1.5rem] mt-[0.8rem] md:mb-[1.5rem] mb-[1rem] leading-[48px] text-transparent bg-clip-text bg-gradient-to-r from-[#037ADE] to-[#03E5B7]'>
+                    <h1 id='fontWeight' style={{ fontWeight: '900' }} className='font-black lg:text-6xl md:text-5xl xsxs:text-[42px] text-[26px]'>Nilesh Rathod.</h1>
+                    <h1 id='fontWeight' style={{ fontWeight: '900' }} className='font-black lg:text-6xl md:text-5xl xsxs:text-[42px] text-[26px] md:mt-[1.3rem]'>I am a full-stack developer.</h1>
                 </div>
 
                 {/* small definations about */}
@@ -40,7 +40,7 @@ function Banner() {
                     </div>
                     {/* mobile view */}
                     <div className='xl:hidden block'>
-                        <p className='dark:text-[#B6BCCA] text-[#0B0B0C] font-[400] text-center md:text-[20px] text-[16px] md:leading-[35px] leading-[26px] flex flex-col items-center'>
+                        <p className='dark:text-[#B6BCCA] text-[#0B0B0C] font-[400] text-center md:text-[20px] text-[17px] md:leading-[35px] leading-[26px] flex flex-col items-center'>
                             I passionate in Full Stack Developer 🚀 having a special interest in Front-end technologies and experience of building Web applications
                             👨‍💻.
                             {/* <span className='flex items-baseline'>

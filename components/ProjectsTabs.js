@@ -21,7 +21,7 @@ function ProjectsTabs() {
                         {/* bg-gradient-to-r from-[#037ADE] to-[#03E5B7] */ }
 
                         return (
-                            <button type='button' onClick={() => setActiveProjects(id)} key={title} className={`h-max whitespace-nowrap relative w-max text-[18px] px-[22px] py-[6px] rounded-full ${activeProjects === id ? `bg-[#037ADE] shadow-md text-white` : ``} capitalize`}>
+                            <button type='button' onClick={() => setActiveProjects(id)} key={title} className={`h-max whitespace-nowrap relative w-max text-[18px] px-[22px] py-[6px] rounded-full ${activeProjects === id ? `bg-[#037ADE] shadow-md text-white` : ``} capitalize outline-none`}>
                                 {title}
                             </button>
                         )
