@@ -1749,7 +1749,7 @@ const NShoes = {
     imgScr: '/E-commerce3.png',
     category: 'E-commerce',
     links: 'https://n-store-frontend.vercel.app/',
-    desc: 'N-Shoes Stores for all Running, Sneakers, Jordan and Football Shoes Category types.',
+    desc: 'N-Shoes Stores for all Running, Sneakers, Jordan and Football Shoes Category types and also include a payment gateway with Stripe',
     bgLinear: '#ff8c0f, #ffc21c',
     languages: [
         {
