@@ -12,7 +12,7 @@ function Experiences() {
             <Image height={100} width={300} className="absolute md:-right-[15%] -right-[45%] md:top-[5%] top-0" src="/bannerBGTwo.svg" alt='bannerBGOne' /> */}
             {/* titles */}
             <h1 className='capitalize sm:text-[2.5rem] xss:text-[2rem] text-[1.8rem] font-bold flex items-center justify-center sm:gap-[15px] gap-[7px] sm:mb-[100px] mb-[50px]'>
-                My Experiences
+                Experiences
                 <div className='sm:h-[45px] xs:h-[35px] h-[25px]'>
                     <Image width={50} height={45} src={manTechEmoji && manTechEmoji} className="w-full h-full object-contain" alt="projects-works" />
                 </div>
