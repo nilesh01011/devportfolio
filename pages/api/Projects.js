@@ -653,7 +653,7 @@ const wishBin = {
     imgScr: '/E-commerce.png',
     category: 'E-commerce',
     links: 'https://wishbin-store.onrender.com/',
-    desc: 'WishBin-Store | Online Shopping site in India: Shop Online for Mobiles, Cloths, Groceries, Electronics and More - WishBin',
+    desc: 'Ecommerce website: Built an online store with Next.js, Sanity CMS, and Stripe payments. Handles product listings, checkout, and payments.',
     bgLinear: ' #ffc371, #ff5f6d, rgba(241, 101, 101, 1)',
     // bgLinear: '#ff5e62, #ff9966, rgba(241, 101, 101, 1)'
     skills: [
