@@ -24,8 +24,8 @@ function ExperienceTabs() {
                                         const { id, text } = el;
 
                                         return (
-                                            <li key={id} className='text-center xs:text-[16px] text-[14px] list-inside list-decimal hover:text-black hover:bg-[#03e5b7] cursor-pointer'>
-                                                {text}
+                                            <li key={id} className='text-center xs:text-[16px] text-[14px] list-inside hover:text-black hover:bg-[#03e5b7] cursor-pointer'>
+                                                • {text}
                                             </li>
                                         )
                                     })

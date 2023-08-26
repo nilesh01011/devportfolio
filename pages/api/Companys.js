@@ -9,20 +9,16 @@ export const companyName = [
         contents: [
             {
                 id: 1,
-                text: 'Create a front end parts with the help of using NextJS and Tailwind-CSS.'
+                text: 'Managed frontend codebase with Next.js and Created a reusable UI components with Tailwind CSS with Optimized.'
             },
             {
                 id: 2,
-                text: 'Created a reused components to optimized the performance of web apps.'
+                text: 'Learned Salesforce development and Built apps and components with Salesforce Lightning Web Components LWC Studio.'
             },
             {
                 id: 3,
-                text: 'And also created a UI components with the help of Custom Design and SalesForce (LWC) for the design preference.'
+                text: 'Learned Sanity headless CMS and Implemented as backend for projects.'
             },
-            {
-                id: 4,
-                text: 'And also create a App UI with the help of React-Native and tailwind-CSS for enhance my skills.'
-            }
         ],
         links: 'https://auto.mahindra.com/'
     },
@@ -35,7 +31,7 @@ export const companyName = [
         contents: [
             {
                 id: 1,
-                text: 'Created the UI parts with the help of using NextJS and Tailwind-CSS.'
+                text: 'Managed frontend codebase with Next.js and Created a reusable UI components with Tailwind CSS with Optimized.'
             },
             {
                 id: 2,
@@ -45,11 +41,6 @@ export const companyName = [
                 id: 3,
                 text: 'And also created a UI components for the custom design.'
             },
-            // {
-            //     id: 4,
-            //     text: 'And I learned, To how NextJS and Tailwind-CSS is better for the industry projects.'
-            //     // text: 'And I learned, To how collaboration with the teams for the industry projects.'
-            // },
         ],
         links: 'https://www.ajackus.com/'
     }
