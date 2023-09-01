@@ -52,12 +52,12 @@ function ThemeSet() {
 
             {/* ${detailsPage === true ? '1x1:right-[42px] sm:right-[22px]' : '1x1:right-[42px] sm:right-[22px]'} */}
             <div className={`fixed top-[40px] 1x1:right-[42px] sm:right-[22px] right-[15px] rounded-full z-50`}>
-                <button onClick={() => handleThemeChange()} className='shadow-md w-[40px] h-[40px] bg-[#037ADE] hover:bg-[#037cded8] outline-none rounded-full flex items-center justify-center'>
+                <button onClick={() => handleThemeChange()} className='shadow-md w-[50px] h-[50px] bg-[#037ADE] hover:bg-[#037cded8] outline-none rounded-full flex items-center justify-center'>
                     {
                         currentTheme === "dark" ? (
-                            <CiLight className="text-white" size={22} />
+                            <CiLight className="text-white" size={26} />
                         ) : (
-                            <CiDark className="text-white" size={22} />
+                            <CiDark className="text-white" size={26} />
                         )
                     }
 

@@ -5,7 +5,7 @@ import Buttons from './Buttons'
 function Banner() {
 
     return (
-        <div className='w-full h-screen flex items-center flex-col justify-center px-[15px] relative'>
+        <div className='w-full min-h-screen flex items-center flex-col justify-center px-[15px] relative'>
             {/* before:content-[""] before:absolute before:left-0 before:top-0 before:bottom-0 before:right-0 before:h-full before:w-full before:bg-[url("/bannerIcons.svg")] before:bg-no-repeat before:bg-cover */}
             {/* <Image height={800} width={630} className="h-screen absolute -left-[5%] top-0 bottom-0" src="/leftSideBanner.svg" alt='bannerBGOne' /> */}
             {/* absolutes */}
@@ -28,10 +28,10 @@ function Banner() {
                     {/* md:text-[20px] */}
 
                     <div className='xl:block hidden'>
-                        <p className=' font-[400] dark:text-[#B6BCCA] text-[#0B0B0C] md:text-[20px] text-[16px] md:leading-[40px] leading-[22px] flex items-center flex-col'>
-                            <span>I passionate in Full Stack Developer 🚀 having a special</span>
-                            <span>interest in Front-end technologies and experience of</span>
-                            <span className='flex items-baseline'>
+                        <p className=' font-[400] dark:text-[#B6BCCA] text-[#0B0B0C] md:leading-[40px] leading-[22px] flex items-center flex-col'>
+                            <span className='1x1:text-[18px] text-[16px]'>I passionate in Full Stack Developer 🚀 having a special</span>
+                            <span className='1x1:text-[18px] text-[16px]'>interest in Front-end technologies and experience of</span>
+                            <span className='flex items-baseline 1x1:text-[18px] text-[16px]'>
                                 building Web applications
                                 👨‍💻
                                 {/* <Image width={35} height={30} src="/man-tech-emoji.png" className='w-[30px] h-[25px] object-contain' alt='man-tech-emoji' /> */}

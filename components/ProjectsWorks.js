@@ -5,7 +5,7 @@ import ProjectsTabs from './ProjectsTabs'
 function ProjectsWorks() {
     const hammerImg = '/hammerImg.svg'
     return (
-        <div className='w-full h-full 1x1:px-0 px-[15px] dark:text-white text-black md:mt-[200px] mt-[60px] py-[3rem]'>
+        <div className='w-full h-full 1x1:px-0 px-[15px] dark:text-white text-black mt-[60px] py-[3rem]'>
             {/* titles */}
             <h1 className='capitalize sm:text-[2.5rem] xss:text-[2rem] text-[1.8rem] font-bold flex items-center justify-center sm:gap-[15px] gap-[7px] sm:mb-[100px] mb-[50px]'>
                 coding projects

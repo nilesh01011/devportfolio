@@ -47,9 +47,9 @@ function Tabs({ skillsTabs, languages, software }) {
 
                                             {/* hover:bg-[#037ADE] hover:text-white */ }
                                             return (
-                                                <div key={id} className="w-max py-[8px] px-[16px] h-max rounded-full border-[2px] border-[#037ADE] shadow-md cursor-pointer flex items-center justify-center gap-[6px]">
+                                                <div key={id} className="w-max py-[8px] px-[16px] h-max rounded-full border-[2px] border-[#037ADE] shadow-md cursor-pointer flex items-center justify-center gap-[8px]">
                                                     <span className=''>{icons}</span>
-                                                    <span className='text-[14px]'>
+                                                    <span className='1x1:text-[18px] text-[16px]'>
                                                         {name}
                                                     </span>
                                                 </div>

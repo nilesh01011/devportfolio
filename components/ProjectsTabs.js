@@ -54,8 +54,8 @@ function ProjectsTabs() {
                                                         <Image src={imgScr && imgScr} width={240} height={170} className="w-full h-[148px] object-cover rounded-[8px_8px_0_0]" alt="projects-images" />
                                                     </div>
                                                     {/* titles */}
-                                                    <div className='h-[30%] flex flex-col items-center md:p-[10px] py-[10px] px-[12px]'>
-                                                        <p className='capitalize w-max flex font-bold items-center justify-center relative'>
+                                                    <div className='h-[30%] flex flex-col items-center md:p-[10px] py-[10px] px-[12px] mt-2'>
+                                                        <p className='1x1:text-[18px] text-[16px] capitalize w-max flex font-bold items-center justify-center relative'>
                                                             {name}
                                                             {/* links icons */}
                                                             {/* <span className='absolute -right-[17px] top-0'>
@@ -70,7 +70,7 @@ function ProjectsTabs() {
                                                                     const { id, name } = el;
 
                                                                     return (
-                                                                        <li key={id} className={`text-[14px] pl-[5px] pr-[6px] relative before:content-[""] before:absolute before:-left-[6px] before:top-[37%] before:w-[5px] before:h-[5px] before:rounded-full before:bg-black dark:before:bg-white ${id <= 4 ? 'block' : 'hidden'}`}>
+                                                                        <li key={id} className={`1x1:text-[16px] text-[14px] pl-[5px] pr-[6px] relative before:content-[""] before:absolute before:-left-[6px] before:top-[37%] before:w-[5px] before:h-[5px] before:rounded-full before:bg-black dark:before:bg-white ${id <= 4 ? 'block' : 'hidden'}`}>
                                                                             {id === 4 ? '...' : name}
                                                                         </li>
                                                                     );
@@ -81,8 +81,8 @@ function ProjectsTabs() {
                                                         </ul>
 
                                                         {/* buttons */}
-                                                        <div className='mt-4 mb-2'>
-                                                            <Link href={`/id:${id}`} className='text-[14px] rounded-full border-[1px] hover:bg-[#037ADE] border-[#037ADE] py-[8px] px-[22px] capitalize shadow-md dark:text-white text-black hover:text-white'>view details</Link>
+                                                        <div className='mt-6 mb-4'>
+                                                            <Link href={`/id:${id}`} className='1x1:text-[16px] text-[14px] rounded-full border-[1px] hover:bg-[#037ADE] border-[#037ADE] py-[8px] px-[22px] capitalize shadow-md dark:text-white text-black hover:text-white'>view details</Link>
                                                         </div>
                                                     </div>
                                                 </div>

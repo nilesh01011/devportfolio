@@ -835,18 +835,18 @@ const wishBin = {
     languages: [
         {
             id: 1,
-            name: html,
-            icons: htmlIcons
+            name: 'Next.js',
+            icons: nextjsIcons
         },
         {
             id: 2,
-            name: 'Tailwind-CSS',
-            icons: tailwindIcons
+            name: 'Stripe',
+            icons: stripeIcons
         },
         {
             id: 3,
-            name: 'Next.js',
-            icons: nextjsIcons
+            name: 'SWR',
+            icons: swrIcons
         },
         {
             id: 4,
@@ -1505,7 +1505,7 @@ const amazonClone = {
     imgScr: '/clone.png',
     category: 'Clone',
     links: 'https://nilesh01011.github.io/amazonClone/',
-    desc: 'E-commerce Website Amazon UI Clone. Customer buying there products and purchase it. I create a Front-End Project only, no Back-End is involved.',
+    desc: 'Built ecommerce platform inspired by Amazon. Used HTML5, SCSS, Javascript (ES6) and Swiper.js for frontend. Styled components using SCSS is a CSS Preprocessor. Features are Product listings, Search, Add to Cart, Login and Register.',
     bgLinear: '#ef629f, #eecda3',
     languages: [
         {
