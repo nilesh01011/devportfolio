@@ -699,7 +699,7 @@ const wishBin = {
     name: 'WishBin Store',
     imgScr: '/ecommerce/homePage.jpg',
     category: 'E-commerce',
-    links: 'https://wishbin-store.onrender.com/',
+    links: 'https://wishbin-store.vercel.app/',
     desc: 'Ecommerce website: Built an online store with Next.js, Sanity CMS, and Stripe payments. Handles product listings, checkout, Order Status and payments.',
     bgLinear: ' #ffc371, #ff5f6d, rgba(241, 101, 101, 1)',
     // bgLinear: '#ff5e62, #ff9966, rgba(241, 101, 101, 1)'
