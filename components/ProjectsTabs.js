@@ -82,7 +82,7 @@ function ProjectsTabs() {
 
                                                         {/* buttons */}
                                                         <div className='mt-6 mb-4'>
-                                                            <Link href={`/id:${id}`} className='1x1:text-[16px] text-[14px] rounded-full border-[1px] hover:bg-[#037ADE] border-[#037ADE] py-[8px] px-[22px] capitalize shadow-md dark:text-white text-black hover:text-white'>view details</Link>
+                                                            <Link href={`/id:${id}`} className='1x1:text-[16px] text-[14px] rounded-full border-[1px] bg-[#037ADE] hover:bg-[#037cded8] border-[#037ADE] py-[8px] px-[22px] capitalize shadow-md hover:shadow-none text-white'>view details</Link>
                                                         </div>
                                                     </div>
                                                 </div>

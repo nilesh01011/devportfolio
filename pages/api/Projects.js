@@ -1938,7 +1938,7 @@ const TravelApp = {
     name: 'Travel-App',
     imgScr: '/travel-app.jpg',
     category: 'App',
-    links: 'https://expo.dev/accounts/nilesh08/projects/travel-react-native-projects/builds/a02a2eca-1223-4d69-aebe-f0bf254e6808',
+    links: '/apk-download/travel-app.apk',
     desc: 'Travel-App discover the Hotels, Restaurants and Attraction and discover the beauty at today.',
     bgLinear: '#ff8c0f, #ffc21c',
     languages: [
@@ -2042,7 +2042,7 @@ const pvrCinema = {
     name: 'PVR Cinemas',
     imgScr: '/pvr-cinema.jpg',
     category: 'App',
-    links: 'https://expo.dev/artifacts/eas/teg1Tyo8YP3JTNprZx97Um.apk',
+    links: '/apk-download/pvr.apk',
     desc: 'PVR Cinemas, is an Indian multiplex chain based in Gurgaon. User can choose there own locations to view there favourite movies with there free times.',
     bgLinear: '#ff8c0f, #ffc21c',
     languages: [
