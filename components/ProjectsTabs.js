@@ -51,7 +51,18 @@ function ProjectsTabs() {
                                                 <div key={id} className="w-full h-max rounded-[8px] dark:bg-[#1d2738] bg-[#F4F4F4] shadow-md ">
                                                     {/* images */}
                                                     <div className="h-[70%] w-full rounded-[8px_8px_0_0]">
-                                                        <Image src={imgScr && imgScr} width={240} height={170} className="w-full h-[148px] object-cover rounded-[8px_8px_0_0]" alt="projects-images" />
+                                                        <Image
+                                                            src={imgScr && imgScr}
+                                                            width={240} height={170}
+                                                            title={`${name} projects`}
+                                                            className="w-full h-[148px] object-cover rounded-[8px_8px_0_0]"
+                                                            alt="projects-images"
+                                                            loading="lazy"
+                                                            decoding="async"
+                                                            quality={50}
+                                                            importance="high"
+                                                            rel="none"
+                                                        />
                                                     </div>
                                                     {/* titles */}
                                                     <div className='h-[30%] flex flex-col items-center md:p-[10px] py-[10px] px-[12px] mt-2'>
@@ -82,7 +93,7 @@ function ProjectsTabs() {
 
                                                         {/* buttons */}
                                                         <div className='mt-6 mb-4'>
-                                                            <Link href={`/id:${id}`} className='1x1:text-[16px] text-[14px] rounded-full border-[1px] bg-[#037ADE] hover:bg-[#037cded8] border-[#037ADE] py-[8px] px-[22px] capitalize shadow-md hover:shadow-none text-white'>view details</Link>
+                                                            <Link href={`/id:${id}`} title={`${name} Projects Details`} className='1x1:text-[16px] text-[14px] rounded-full border-[1px] bg-[#037ADE] hover:bg-[#037cded8] border-[#037ADE] py-[8px] px-[22px] capitalize shadow-md hover:shadow-none text-white'>view details</Link>
                                                         </div>
                                                     </div>
                                                 </div>
