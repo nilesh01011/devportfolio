@@ -94,9 +94,9 @@ function Index() {
             {/* contents */}
             <div className={`w-full h-full pt-[2.5rem] pb-[3.5rem] 1x1:max-w-[1280px] max-w-[1200px] mx-auto xl:px-0 px-[15px]`}>
                 {/* back buttons */}
-                <Link href='/' className='capitalize py-[8px] font-[500] text-sm px-[22px] shadow-md hover:shadow-none border-[1px] border-[#037ADE] text-black dark:text-white hover:text-white rounded-full hover:bg-[#037cded8] flex items-center gap-[6px] w-max'>
+                <Link href='/' className='capitalize text-[16px] py-[8px] font-[500] px-[22px] shadow-md hover:shadow-none border-[1px] border-[#037ADE] text-black dark:text-white hover:text-white rounded-full hover:bg-[#037cded8] flex items-center gap-[6px] w-max'>
                     <span>
-                        <TiArrowLeft size={20} />
+                        <TiArrowLeft size={24} />
                     </span>
                     go back
                 </Link>
@@ -107,9 +107,10 @@ function Index() {
                     {/* Projects Title*/}
                     <div className='flex items-center justify-center flex-col'>
                         <div className='text-transparent bg-clip-text bg-gradient-to-r from-[#037ADE] to-[#03E5B7]'>
-                            <h1 className='sm:text-[2.5rem] xss:text-[1.8rem] xsxs:text-[1.6rem] text-[1.4rem] font-semibold'><span className=''>{titleName}</span> Projects</h1>
+                            {/* sm:text-[2.5rem] xss:text-[1.8rem] xsxs:text-[1.6rem] text-[1.4rem] */}
+                            <h1 className='text-[34px] font-semibold'><span className=''>{titleName}</span> Projects</h1>
                         </div>
-                        <p className='text-center 1x1:w-[50%] md:w-[65%] mx-auto mt-[1.2rem] mb-[2.1rem] md:block hidden'>{mainProjects && mainProjects.desc}</p>
+                        <p className='text-center 1x1:w-[50%] md:w-[65%] mx-auto mt-[1.2rem] mb-[2.1rem]'>{mainProjects && mainProjects.desc}</p>
                         <Link href={projectsLinks} target='_black' className='font-[500] w-max flex items-center justify-center h-max py-[0.8rem] px-[3.5rem] rounded-full shadow-md bg-[#037ADE] hover:bg-[#037cded8] text-[#e7edef] select-none cursor-pointer'>
                             View Site Demo
 
@@ -128,7 +129,7 @@ function Index() {
                     {/* main contents */}
 
                     <div className={`h-full ${activePages.length < 5 ? 'mb-[4rem]' : 'xl:mb-[10rem] md:mb-[8rem] mb-[3rem]'}`}>
-                        <div className='w-full relative flex md:items-center flex-col md:justify-center sm:mt-[3rem] mt-[1rem]'>
+                        <div className='w-full relative flex md:items-center flex-col md:justify-center mt-[3rem]'>
 
                             {/* laptop and desktop view absolute contents */}
                             <div className='md:block hidden'>
@@ -178,9 +179,9 @@ function Index() {
                                 <SwiperComponents carouselImages={carouselImages && carouselImages} />
                             </div>
 
-                            <div className='md:hidden block mt-[1.5rem]'>
+                            {/* <div className='md:hidden block mt-[1.5rem]'>
                                 <p className='xs:text-[16px] text-[14px] text-center xs:w-[80%] w-full mx-auto mt-[0.3rem]'>{mainProjects && mainProjects.desc}</p>
-                            </div>
+                            </div> */}
                         </div>
                     </div>
 

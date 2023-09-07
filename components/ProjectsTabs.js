@@ -66,7 +66,7 @@ function ProjectsTabs() {
                                                     </div>
                                                     {/* titles */}
                                                     <div className='h-[30%] flex flex-col items-center md:p-[10px] py-[10px] px-[12px] mt-2'>
-                                                        <p className='1x1:text-[18px] text-[16px] capitalize w-max flex font-bold items-center justify-center relative'>
+                                                        <p className='text-[18px] capitalize w-max flex font-bold items-center justify-center relative'>
                                                             {name}
                                                             {/* links icons */}
                                                             {/* <span className='absolute -right-[17px] top-0'>
@@ -81,7 +81,7 @@ function ProjectsTabs() {
                                                                     const { id, name } = el;
 
                                                                     return (
-                                                                        <li key={id} className={`1x1:text-[16px] text-[14px] pl-[5px] pr-[6px] relative before:content-[""] before:absolute before:-left-[6px] before:top-[37%] before:w-[5px] before:h-[5px] before:rounded-full before:bg-black dark:before:bg-white ${id <= 4 ? 'block' : 'hidden'}`}>
+                                                                        <li key={id} className={`text-[16px] pl-[5px] pr-[6px] relative before:content-[""] before:absolute before:-left-[6px] before:top-[37%] before:w-[5px] before:h-[5px] before:rounded-full before:bg-black dark:before:bg-white ${id <= 4 ? 'block' : 'hidden'}`}>
                                                                             {id === 4 ? '...' : name}
                                                                         </li>
                                                                     );
@@ -93,7 +93,7 @@ function ProjectsTabs() {
 
                                                         {/* buttons */}
                                                         <div className='mt-6 mb-4'>
-                                                            <Link href={`/id:${id}`} title={`${name} Projects Details`} className='1x1:text-[16px] text-[14px] rounded-full border-[1px] bg-[#037ADE] hover:bg-[#037cded8] border-[#037ADE] py-[8px] px-[22px] capitalize shadow-md hover:shadow-none text-white'>view details</Link>
+                                                            <Link href={`/id:${id}`} title={`${name} Projects Details`} className='text-[16px] rounded-full border-[1px] bg-[#037ADE] hover:bg-[#037cded8] border-[#037ADE] py-[8px] px-[22px] capitalize shadow-md hover:shadow-none text-white'>view details</Link>
                                                         </div>
                                                     </div>
                                                 </div>
