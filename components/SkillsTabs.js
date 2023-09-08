@@ -2,7 +2,7 @@ import { skills } from '@/pages/api/Skills';
 import { useTheme } from 'next-themes';
 import React, { useEffect, useState } from 'react'
 
-function Tabs({ skillsTabs, languages, software }) {
+function Tabs({ skillsTabs }) {
 
     const [activeSkills, setActiveSkills] = useState(1);
 
