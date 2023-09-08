@@ -5,7 +5,7 @@ import { skills } from '@/pages/api/Skills'
 import Link from 'next/link'
 import { FaDownload } from 'react-icons/fa'
 
-function AboutSections({ languages, software }) {
+function AboutSections() {
     return (
         <>
             <div id="about" className='h-full px-[15px]'>
@@ -67,7 +67,7 @@ function AboutSections({ languages, software }) {
 
                 {/* tabs views */}
                 <div className='w-full h-max md:mt-[100px] mt-[60px]'>
-                    <SkillsTabs skillsTabs={skills} languages={languages} software={software} />
+                    <SkillsTabs skillsTabs={skills} />
                 </div>
             </div>
         </>
