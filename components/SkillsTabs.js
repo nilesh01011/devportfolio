@@ -1,29 +1,21 @@
-import { skills } from '@/pages/api/Skills';
-import { useTheme } from 'next-themes';
-import React, { useEffect, useState } from 'react'
+// import { skills } from '@/pages/api/Skills';
+import React, { useState } from 'react'
+import SkillsImage from './skillsImage';
 
-function Tabs({ skillsTabs, languages, software }) {
+function Tabs({ skills }) {
 
-    const [activeSkills, setActiveSkills] = useState(1);
-
-    const handleIdContent = (id) => {
-        setActiveSkills(id)
-    }
-
-    const { theme, setTheme } = useTheme();
-
+    const [activeSkills, setActiveSkills] = useState('languages');
 
     return (
         <>
-            <nav className='w-full h-[20px] flex items-center justify-center' aria-label="Tabs">
+            <nav className='w-full h-max flex items-center gap-5 justify-center flex-wrap' aria-label="Tabs">
                 {
-                    skillsTabs.map((ele) => {
-                        const { id, title } = ele;
-                        {/* bg-gradient-to-r from-[#037ADE] to-[#03E5B7] */ }
+                    skills?.skillstabs?.map((ele) => {
+                        const { _key, tabsname } = ele;
 
                         return (
-                            <button type='button' onClick={() => handleIdContent(id)} key={title} className={`h-max whitespace-nowrap relative w-max text-[18px] px-[26px] py-[8px] rounded-full ${activeSkills === id ? `bg-[#037ADE] shadow-md text-white` : `hover:text-black dark:hover:text-white text-black/50 dark:text-white/50`} capitalize outline-none`}>
-                                {title}
+                            <button type='button' title={tabsname} onClick={() => setActiveSkills(tabsname)} key={_key} className={`h-max whitespace-nowrap font-[500] relative w-max xsxs:text-xl text-lg xsxs:px-[3.5rem] px-[2.5rem] xsxs:py-[0.8rem] py-[0.6rem] rounded-full shadow-md ${activeSkills === tabsname ? `bg-[#037ADE] text-white` : `hover:text-black dark:hover:text-white text-black/50 dark:text-white/50 bg-[#037ADE]/10 dark:bg-[#037ADE]/20`} capitalize`}>
+                                {tabsname}
                             </button>
                         )
                     })
@@ -35,22 +27,19 @@ function Tabs({ skillsTabs, languages, software }) {
             <div className='md:w-[80%] w-full md:mx-auto h-full'>
                 {
 
-                    skillsTabs.map((ele) => {
-                        const { id, contents } = ele;
+                    skills?.skillstabs?.map((ele) => {
 
-                        if (activeSkills === id) {
+                        if (ele.tabsname === activeSkills) {
                             return (
-                                <div key={id} className="md:w-[80%] md:mx-auto w-full flex flex-wrap items-center justify-center sm:gap-[20px] gap-x-[10px] gap-y-[20px] mt-[45px]">
+                                <div key={ele._key} className=" w-full flex flex-wrap items-center justify-center gap-[20px] mt-[45px]">
                                     {
-                                        contents.map((el) => {
-                                            const { id, icons, name } = el;
-
-                                            {/* hover:bg-[#037ADE] hover:text-white */ }
+                                        ele.tabsarray?.map((el) => {
+                                            const { skillstabsname, _key, skillstabsimage } = el;
                                             return (
-                                                <div key={id} className="w-max py-[8px] px-[16px] h-max rounded-full border-[2px] border-[#037ADE] shadow-md cursor-pointer flex items-center justify-center gap-[8px]">
-                                                    <span className=''>{icons}</span>
-                                                    <span className='1x1:text-[18px] text-[16px]'>
-                                                        {name}
+                                                <div key={_key} className="w-max py-[12px] px-[24px] h-max shadow-md rounded-2xl bg-[#e1e9eb] dark:bg-[#131d2d] cursor-pointer flex flex-col items-center justify-center gap-[8px] group">
+                                                    <SkillsImage imgSrc={skillstabsimage} name={skillstabsname} />
+                                                    <span className='xsxs:text-lg text-md whitespace-nowrap font-[500] group-hover:text-[#037ADE] transition-color ease-in'>
+                                                        {skillstabsname}
                                                     </span>
                                                 </div>
                                             )

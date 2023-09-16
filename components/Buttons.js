@@ -11,16 +11,8 @@ function Buttons({ title, link }) {
     }
 
     return (
-        <button onClick={(e) => handleClicks(e)} aria-label={title} className='font-[500] w-full h-max py-[0.8rem] px-[3.5rem] xsxs:text-[16px] text-[14px] rounded-full shadow-md hover:shadow-none bg-[#037ADE] hover:bg-[#037cded8] text-[#e7edef] select-none cursor-pointer'>
+        <button onClick={(e) => handleClicks(e)} aria-label={title} title={title} className='font-[500] w-full h-max py-[0.8rem] px-[3.5rem] xss:text-xl xsxs:text-lg text-sm rounded-full shadow-md hover:shadow-none bg-[#037ADE] hover:bg-[#037cded8] text-[#e7edef] select-none cursor-pointer'>
             {title}
-
-            <style jsx>
-                {`
-                button {
-                    box-shadow: 0px 0px 2px 0px rgba(0,0,0,0.3);
-                }
-                `}
-            </style>
         </button>
     )
 }

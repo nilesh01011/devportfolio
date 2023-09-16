@@ -5,7 +5,7 @@ export const companyName = [
         months: 'Present',
         company: 'Mahindra & Mahindra Ltd',
         // subtitle: 'Software-Developer-Interns',
-        subtitle: 'Front-End-Developer',
+        subtitle: 'Front End Developer',
         contents: [
             {
                 id: 1,
@@ -27,7 +27,7 @@ export const companyName = [
         year: '2022',
         months: 'September - November',
         company: 'AjackUS',
-        subtitle: 'Remote-Software-Developer-Interns',
+        subtitle: 'Remote Software Developer Interns',
         contents: [
             {
                 id: 1,
