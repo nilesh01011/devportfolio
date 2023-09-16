@@ -12,7 +12,7 @@ function Banner() {
                 <h6 className={`dark:text-[#B6BCCA] text-[#0B0B0C] uppercase tracking-[2px] xsxs:text-[18px] text-[16px] font-[600]`}>👋 Hi, My name is</h6>
                 {/* name and roles */}
                 {/* md:mt-[1.8rem] mt-[1.5rem] */}
-                <div className='block text-center 1x1:my-[2rem] mt-[1rem] md:mb-[2rem] mb-[1.8rem] md:leading-[38px] leading-[48px] tracking-[1px] text-transparent bg-clip-text bg-gradient-to-r from-[#037ADE] to-[#03E5B7]'>
+                <div className='block text-center 1x1:my-[2rem] mt-[1rem] md:mb-[2rem] mb-[1.8rem] md:leading-[38px] leading-[50px] tracking-[1px] text-transparent bg-clip-text bg-gradient-to-r from-[#037ADE] to-[#03E5B7]'>
                     <h1 id='fontWeight' style={{ fontWeight: '900' }} className='font-black lg:text-6xl md:text-5xl xsxs:text-[48px] text-[35px]'>Nilesh Rathod</h1>
                     <h1 id='fontWeight' style={{ fontWeight: '900' }} className='font-black lg:text-6xl md:text-5xl xsxs:text-[48px] text-[35px] md:mt-[1rem]'>I'm a full-stack developer</h1>
                 </div>
