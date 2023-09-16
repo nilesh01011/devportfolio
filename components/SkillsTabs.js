@@ -2,7 +2,19 @@
 import React, { useState } from 'react'
 import SkillsImage from './skillsImage';
 
+<<<<<<< HEAD
 function Tabs({ skills }) {
+=======
+function Tabs({ skillsTabs }) {
+
+    const [activeSkills, setActiveSkills] = useState(1);
+
+    const handleIdContent = (id) => {
+        setActiveSkills(id)
+    }
+
+    const { theme, setTheme } = useTheme();
+>>>>>>> cb68779dac979b2f41e5569c1c10bd73aac4b99f
 
     const [activeSkills, setActiveSkills] = useState('languages');
 
