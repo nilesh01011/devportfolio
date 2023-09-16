@@ -30,7 +30,6 @@ export default function Home({ skills, projects_tabs, projects, topProjects }) {
         <AboutSections skills={skills} />
         <ProjectsWorks allProjects={projects} tabs={projects_tabs} />
         <AboutSections />
-        <ProjectsWorks />
         <Experiences />
         {/* theme changes */}
         <ThemeSet />
