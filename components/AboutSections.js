@@ -5,11 +5,7 @@ import SkillsTabs from './SkillsTabs'
 import { FaDownload } from 'react-icons/fa'
 import Link from 'next/link'
 
-<<<<<<< HEAD
 function AboutSections({ skills }) {
-=======
-function AboutSections() {
->>>>>>> cb68779dac979b2f41e5569c1c10bd73aac4b99f
     return (
         <>
             <div id="about" className='h-full px-[15px] sm:mt-[100px] mt-[50px]'>
@@ -78,11 +74,8 @@ function AboutSections() {
 
                 {/* tabs views */}
                 <div className='w-full h-max md:mt-[100px] mt-[60px]'>
-<<<<<<< HEAD
                     <SkillsTabs skills={skills} />
-=======
                     <SkillsTabs skillsTabs={skills} />
->>>>>>> cb68779dac979b2f41e5569c1c10bd73aac4b99f
                 </div>
             </div>
         </>

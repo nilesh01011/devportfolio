@@ -15,12 +15,6 @@ export default function Home({ skills, projects_tabs, projects, topProjects }) {
     window.scrollTo(0, 0)
   }, []);
 
-  // console.log(projects)
-
-<<<<<<< HEAD
-=======
-export default function Home() {
->>>>>>> cb68779dac979b2f41e5569c1c10bd73aac4b99f
   return (
     <>
       <Head>
@@ -33,13 +27,10 @@ export default function Home() {
       <Header topProjects={topProjects} />
       <main className={`w-full h-full 1x1:max-w-[1280px] max-w-[1200px] mx-auto`}>
         <Banner />
-<<<<<<< HEAD
         <AboutSections skills={skills} />
         <ProjectsWorks allProjects={projects} tabs={projects_tabs} />
-=======
         <AboutSections />
         <ProjectsWorks />
->>>>>>> cb68779dac979b2f41e5569c1c10bd73aac4b99f
         <Experiences />
         {/* theme changes */}
         <ThemeSet />
@@ -48,7 +39,6 @@ export default function Home() {
   )
 }
 
-<<<<<<< HEAD
 export async function getStaticProps() {
   const client = createClient({
     projectId: process.env.NEXT_PUBLIC_SANITY_PROJECTID,
@@ -79,7 +69,4 @@ export async function getStaticProps() {
     }
   };
 }
-
-=======
->>>>>>> cb68779dac979b2f41e5569c1c10bd73aac4b99f
 
