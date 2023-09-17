@@ -33,12 +33,12 @@ function ProjectsData({ data }) {
             </div>
             {/* titles */}
             <div className='h-[30%] flex flex-col items-center py-[1rem] px-[12px] mt-2'>
-                <p className='xsxs:text-2xl text-xl capitalize w-max flex font-bold items-center justify-center relative'>
+                <p className='xsxs:text-[22px] text-xl capitalize w-max flex font-bold items-center justify-center relative'>
                     {name}
                 </p>
 
                 {/* languages */}
-                <ul className='w-full flex items-center justify-center gap-[5px] mt-[14px] flex-wrap'>
+                <ul className='w-full flex items-center justify-center gap-[5px] mt-[10px] flex-wrap'>
                     {
                         skillstabs?.map((el) => {
 
@@ -47,7 +47,7 @@ function ProjectsData({ data }) {
                                 return el.tabsarray.slice(0, 4).map((ele, index) => {
 
                                     return (
-                                        <li key={ele._key} className={`xsxs:text-xl text-[14px] pl-[5px] pr-[6px] relative before:content-[""] before:absolute before:-left-[6px] before:top-[37%] before:w-[5px] before:h-[5px] before:rounded-full before:bg-black dark:before:bg-white`}>
+                                        <li key={ele._key} className={`1x1:text-[18px] lg:text-[16px] xsxs:text-[18px] text-[14px] pl-[5px] pr-[6px] relative before:content-[""] before:absolute before:-left-[6px] before:top-[37%] before:w-[5px] before:h-[5px] before:rounded-full before:bg-black dark:before:bg-white`}>
                                             {index === 3 ? '...' : ele.skillstabsname}
                                         </li>
                                     )
@@ -58,7 +58,7 @@ function ProjectsData({ data }) {
                 </ul>
 
                 {/* buttons */}
-                <div className='mt-7 mb-4'>
+                <div className='mt-6 mb-4'>
                     <Link href={`/projects/${_id}`} title={`${name} Projects Details`} aria-label={`${name} Projects Details`} className='xsxs:text-lg text-md rounded-full font-[500] bg-[#037ADE] hover:bg-[#037cded8] slg:px-[3.5rem] px-[2.4rem] py-[0.8rem] capitalize shadow-md hover:shadow-none text-white'>view details</Link>
                 </div>
             </div>

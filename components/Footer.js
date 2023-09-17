@@ -14,7 +14,7 @@ function Footer() {
                 {/* address and number */}
                 <div className="my-[15px] flex items-center justify-center flex-col gap-3">
                     <p className='text-[#939BA8] font-bold xsxs:text-[1.6rem] text-[1.2rem]'>Mumbai, Maharashtra</p>
-                    <h5 className='xsxs:text-[1.8rem] text-[1.4rem] font-bold'>nrrathodnr818@gmail.com</h5>
+                    <h5 className='xss:text-[1.8rem] text-[1.4rem] font-bold'>nrrathodnr818@gmail.com</h5>
                     <p className='text-[#939BA8] font-bold xsxs:text-[1.6rem] text-[1.2rem]'>(+91) 9359872268</p>
                 </div>
 

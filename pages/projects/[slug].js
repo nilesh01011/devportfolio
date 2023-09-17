@@ -48,16 +48,15 @@ function Index({ projects }) {
 
                 {/* main div */}
 
-                <div className='h-full w-full relative mt-8'>
+                <div className='h-full w-full relative mt-10'>
                     {/* Projects Title*/}
                     <div className='flex items-center justify-center flex-col'>
                         <div className='text-transparent bg-clip-text bg-gradient-to-r from-[#037ADE] to-[#03E5B7]'>
-                            {/* sm:text-[2.5rem] xss:text-[1.8rem] xsxs:text-[1.6rem] text-[1.4rem] */}
-                            <h1 className='xsxs:text-[2.5rem] text-[2rem] font-semibold text-center'>
+                            <h1 className='xsxs:text-[2.6rem] text-[2.2rem] leading-[45px] font-semibold text-center'>
                                 <span className=''>{name}</span> Projects
                             </h1>
                         </div>
-                        <p className='text-center xsxs:text-xl text-lg 1x1:w-[50%] md:w-[65%] mx-auto mt-[1.2rem] mb-[2.1rem]'>
+                        <p style={{ lineHeight: '35px' }} className='text-center xsxs:text-xl text-lg 1x1:w-[50%] md:w-[65%] mx-auto mt-[1.2rem] mb-[2.3rem]'>
                             {description}
                         </p>
                         <Link href={projectslinks && projectslinks} title={`Click to view Project Details`} aria-label="Project Details" target='_black' className='font-[500] xsxs:text-xl text-lg w-max flex items-center justify-center h-max xsxs:px-[3.5rem] px-[2.5rem] xsxs:py-[0.8rem] py-[0.6rem] rounded-full shadow-md bg-[#037ADE] hover:bg-[#037cded8] text-[#e7edef] select-none cursor-pointer'>
@@ -70,9 +69,9 @@ function Index({ projects }) {
                     <div className={`h-full`}>
                         <div className='w-full relative flex mt-[3rem]'>
 
-                            <div className='h-max w-full flex lg:flex-row flex-col gap-7 items-center justify-between'>
+                            <div className='h-max w-full flex xl:flex-row flex-col gap-7 items-center justify-between'>
                                 {/* left side */}
-                                <div className='lg:w-[30%] w-full h-full flex xl:items-start text-center flex-col'>
+                                <div className='xl:w-[30%] w-full h-full flex xl:items-start text-center flex-col'>
                                     <h1 className='capitalize xsxs:text-[1.8rem] text-[1.6rem] font-bold flex items-center justify-center mb-[30px]'>
                                         Project Pages
                                     </h1>
@@ -98,7 +97,7 @@ function Index({ projects }) {
                                     </div>
                                 </div>
                                 {/* right side */}
-                                <div className='lg:w-[70%] w-full'>
+                                <div className='xl:w-[70%] w-full'>
                                     <div className='overflow-hidden w-full h-max rounded-md'>
                                         <SwiperComponents name={isActive} data={projectstabs} />
                                     </div>
@@ -108,7 +107,7 @@ function Index({ projects }) {
                     </div>
 
                     {/* languages uses with tabs views */}
-                    <div className='w-full h-max mt-[3rem]'>
+                    <div className='w-full h-max mt-[3rem] mb-6'>
                         <SkillsTabs skills={projects} />
                     </div>
                 </div>

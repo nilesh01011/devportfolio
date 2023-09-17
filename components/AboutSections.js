@@ -9,7 +9,7 @@ function AboutSections({ skills }) {
     return (
         <>
             <div id="about" className='h-full px-[15px] sm:mt-[100px] mt-[50px]'>
-                <h1 className='capitalize sm:text-[2.5rem] xss:text-[2rem] text-[1.8rem] font-bold flex items-center justify-center sm:gap-[15px] gap-[7px] sm:mb-[100px] mb-[50px]'>
+                <h1 className='capitalize sm:text-[2.5rem] xss:text-[2.2rem] text-[2rem] font-bold flex items-center justify-center sm:gap-[15px] gap-[7px] sm:mb-[100px] mb-[50px]'>
                     About Me
                     <div className='sm:h-[70px] xs:h-[60px] h-[50px]'>
                         <Image width={50} height={60} src='/faceAvatar.png' className="w-full h-full object-contain" alt="projects-works" />
@@ -43,7 +43,7 @@ function AboutSections({ skills }) {
                         </div>
                         {/* buttons */}
                         <button className='font-[500] my-10 w-max h-max'>
-                            <Link href='/MyResume.pdf' title='Download Resume' className='xsxs:text-xl text-lg w-full h-full xsxs:px-[3.5rem] px-[2.5rem] xsxs:py-[0.8rem] py-[0.6rem] flex items-center justify-center gap-[0.8rem] rounded-full shadow-md hover:shadow-none bg-[#037ADE] hover:bg-[#037cded8] text-[#e7edef] select-none cursor-pointer' download='nrResume'>
+                            <Link href='/MyResume.pdf' title='Download Resume' className='font-semibold xsxs:text-xl text-lg w-full h-full xsxs:px-[3.5rem] px-[2.5rem] xsxs:py-[0.8rem] py-[0.6rem] flex items-center justify-center gap-[0.8rem] rounded-full shadow-md hover:shadow-none bg-[#037ADE] hover:bg-[#037cded8] text-[#e7edef] select-none cursor-pointer' download='nrResume'>
                                 Download Resume
                                 <span>
                                     <FaDownload size={16} />

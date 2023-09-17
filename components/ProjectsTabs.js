@@ -13,7 +13,7 @@ function ProjectsTabs({ tabs, allProjects }) {
                     tabs?.map((ele) => {
                         const { _id, projecttabsname } = ele;
                         return (
-                            <button type='button' title={projecttabsname} onClick={() => setActiveProjects(projecttabsname)} key={_id} className={`h-max whitespace-nowrap font-[500] relative w-max xsxs:text-xl text-lg xsxs:px-[3.5rem] px-[2.2rem] xsxs:py-[0.8rem] py-[0.5rem] rounded-full shadow-md ${activeProjects === projecttabsname ? `bg-[#037ADE] text-white` : `bg-[#037ADE]/10 dark:bg-[#037ADE]/20 hover:text-black dark:hover:text-white text-black/50 dark:text-white/50`} capitalize`}>
+                            <button type='button' title={projecttabsname} onClick={() => setActiveProjects(projecttabsname)} key={_id} className={`h-max whitespace-nowrap font-semibold relative w-max xsxs:text-xl text-lg xsxs:px-[3.5rem] px-[2.2rem] xsxs:py-[0.8rem] py-[0.5rem] rounded-full shadow-md ${activeProjects === projecttabsname ? `bg-[#037ADE] text-white` : `bg-[#037ADE]/10 dark:bg-[#037ADE]/20 hover:text-black dark:hover:text-white text-black/50 dark:text-white/50`} capitalize`}>
                                 {projecttabsname}
                             </button>
                         )

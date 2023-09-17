@@ -11,7 +11,7 @@ function Buttons({ title, link }) {
     }
 
     return (
-        <button onClick={(e) => handleClicks(e)} aria-label={title} title={title} className='font-[500] w-full h-max py-[0.8rem] px-[3.5rem] xss:text-xl xsxs:text-lg text-sm rounded-full shadow-md hover:shadow-none bg-[#037ADE] hover:bg-[#037cded8] text-[#e7edef] select-none cursor-pointer'>
+        <button onClick={(e) => handleClicks(e)} aria-label={title} title={title} className='font-[600] w-full h-max py-[0.8rem] px-[3.5rem] md:text-xl xss:text-lg text-sm rounded-full shadow-md hover:shadow-none bg-[#037ADE] hover:bg-[#037cded8] text-[#e7edef] select-none cursor-pointer'>
             {title}
         </button>
     )

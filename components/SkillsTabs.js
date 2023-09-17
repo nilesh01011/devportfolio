@@ -20,7 +20,7 @@ function Tabs({ skills }) {
                         const { _key, tabsname } = ele;
 
                         return (
-                            <button type='button' title={tabsname} onClick={() => setActiveSkills(tabsname)} key={_key} className={`h-max whitespace-nowrap font-[500] relative w-max xsxs:text-xl text-lg xsxs:px-[3.5rem] px-[2.5rem] xsxs:py-[0.8rem] py-[0.6rem] rounded-full shadow-md ${activeSkills === tabsname ? `bg-[#037ADE] text-white` : `hover:text-black dark:hover:text-white text-black/50 dark:text-white/50 bg-[#037ADE]/10 dark:bg-[#037ADE]/20`} capitalize`}>
+                            <button type='button' title={tabsname} onClick={() => setActiveSkills(tabsname)} key={_key} className={`h-max whitespace-nowrap font-semibold relative w-max xsxs:text-xl text-lg xsxs:px-[3.5rem] px-[2.5rem] xsxs:py-[0.8rem] py-[0.6rem] rounded-full shadow-md ${activeSkills === tabsname ? `bg-[#037ADE] text-white` : `hover:text-black dark:hover:text-white text-black/50 dark:text-white/50 bg-[#037ADE]/10 dark:bg-[#037ADE]/20`} capitalize`}>
                                 {tabsname}
                             </button>
                         )
