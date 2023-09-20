@@ -1,39 +1,55 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import Buttons from './Buttons'
 import Link from 'next/link'
 import { FiGithub, FiLinkedin, FiTwitter } from 'react-icons/fi'
+import Image from 'next/image'
 
 function Banner() {
 
+    const [socialMediaIconDirection, setSocialMediaIconDirection] = useState(false)
+
+    useEffect(() => {
+        const iconsDirection = () => {
+            if (window.scrollY >= 100) {
+                setSocialMediaIconDirection(true);
+            } else {
+                setSocialMediaIconDirection(false);
+            }
+        };
+
+        window.addEventListener('scroll', iconsDirection);
+    }, [])
+
     return (
-        <div id="banner" className='w-full min-h-screen flex items-center flex-col justify-center px-[15px] relative'>
+        <div id="banner" className='w-full min-h-screen flex items-center justify-center gap-5 xl:px-0 px-[15px] relative'>
             {/* h-[800px] */}
-            <div className='h-full flex items-center flex-col justify-center'>
+            <div className='xl:w-[70%] h-full flex xl:items-start items-center flex-col justify-center'>
                 <h6 className={`dark:text-[#B6BCCA] text-[#0B0B0C] uppercase tracking-[2px] xsxs:text-[18px] text-[16px] font-[600]`}>👋 Hi, My name is</h6>
                 {/* name and roles */}
                 {/* md:mt-[1.8rem] mt-[1.5rem] */}
-                <div className='block text-center 1x1:my-[2rem] mt-[1.2rem] md:mb-[2rem] mb-[1.8rem] md:leading-[38px] xss:leading-[52px] leading-[46px] tracking-[1px] text-transparent bg-clip-text bg-gradient-to-r from-[#037ADE] to-[#03E5B7]'>
-                    <h1 id='fontWeight' style={{ fontWeight: '900' }} className='font-black lg:text-6xl md:text-5xl xs:text-[48px] xsxs:text-[46px] text-[38px]'>Nilesh Rathod</h1>
-                    <h1 id='fontWeight' style={{ fontWeight: '900' }} className='font-black lg:text-6xl md:text-5xl xs:text-[48px] xsxs:text-[46px] text-[38px] md:mt-[1rem] capitalize'>Full-Stack web developer</h1>
+                <div className='block xl:text-left text-center 1x1:my-[2rem] mt-[1.2rem] md:mb-[2rem] mb-[1.8rem] md:leading-[38px] small-device:leading-[54px] leading-[40px] tracking-[1px] text-transparent bg-clip-text bg-gradient-to-r from-[#037ADE] to-[#03E5B7]'>
+                    <h1 id='fontWeight' style={{ fontWeight: '900' }} className='font-black lg:text-6xl md:text-5xl xs:text-[48px] small-device:text-[45px] text-[35px]'>Nilesh Rathod</h1>
+                    <h1 id='fontWeight' style={{ fontWeight: '900' }} className='font-black lg:text-6xl md:text-5xl xs:text-[48px] small-device:text-[45px] text-[35px] md:mt-[1rem] capitalize'>Full-Stack developer</h1>
                 </div>
 
                 {/* small definations about */}
-                <div className='xs:w-[80%] mx-auto'>
+                <div className='1x1:w-[90%] xs:w-[80%] xl:mr-auto xl:mx-0 mx-auto'>
                     {/* md:text-[20px] */}
 
-                    <div className=''>
-                        {/* xl:block hidden */}
+                    {/* xl:block hidden */}
 
-                        {/* leading-[45px] */}
-                        <p className='font-[500] dark:text-[#B6BCCA] text-[#0B0B0C] flex items-center flex-col'>
-                            {/* <span className='text-xl'>Passionate in Full Stack Developer 🚀 having a special</span>
+                    {/* leading-[45px] */}
+                    <p className='font-[500] dark:text-[#B6BCCA] text-[#0B0B0C] flex items-start flex-col'>
+                        {/* <span className='text-xl'>Passionate in Full Stack Developer 🚀 having a special</span>
                             <span className='text-xl my-3'>interest in Front-end technologies and experience of</span>
                             <span className='flex items-baseline text-xl'>building Web applications 👨‍💻</span> */}
-                            <span className='xss:text-xl xsxs:text-lg text-md text-center lg:w-[60%] md:w-[80%] sm:w-[85%] w-full mx-auto leading-[35px]'>
-                                Passionate full-stack developer 🚀 with a special interest in front-end technologies and experience building responsive web applications 👨‍💻
-                            </span>
-                        </p>
-                    </div>
+
+
+                        <span className='xss:text-xl small-device:text-lg text-md xl:text-left text-center w-full mx-auto' style={{ lineHeight: '35px' }}>
+                            {/* lg:w-[60%] md:w-[80%] sm:w-[85%] */}
+                            Passionate full-stack web developer 🚀 with a special interest in front-end technologies and experience building responsive web applications 👨‍💻
+                        </span>
+                    </p>
                     {/* mobile view */}
                     {/* <div className='xl:hidden block'>
                         <p className='dark:text-[#B6BCCA] text-[#0B0B0C] font-[500] text-center xsxs:text-xl text-[14px]' style={{ lineHeight: '36px' }}>
@@ -52,11 +68,26 @@ function Banner() {
                 </div>
             </div>
 
+            <div className='w-max xl:block hidden 1x1:h-[70vh] lg:h-[480px] xsxs:h-[420px] h-[300px] mx-auto'>
+                <Image
+                    width={300}
+                    height={200}
+                    title="My Avatar Image"
+                    src="/about_1.svg"
+                    loading="lazy"
+                    decoding="async"
+                    quality={50}
+                    importance="high"
+                    rel="none"
+                    className='w-full h-full object-contain'
+                    alt="aboutMe" />
+            </div>
+
             {/* fixed links */}
             {/* md:block hidden */}
-            <div className='fixed xl:left-[25px] xs:left-2 left-0 bottom-0 z-[10]'>
+            <div className={`fixed xl:left-[25px] xs:left-2 left-0 bottom-[40px] z-[10]`}>
                 {/* dark:text-[#B6BCCA] text-[#0B0B0C] */}
-                <ul className='relative flex items-center flex-col text-[#037ADE]'>
+                <ul className={`relative flex items-center ${socialMediaIconDirection ? 'flex-col' : 'flex-row'} transition-all duration-500 text-[#037ADE]`}>
                     <li className='p-[10px]'>
                         <Link
                             href="https://github.com/nilesh01011"
@@ -93,7 +124,7 @@ function Banner() {
                         </Link>
                     </li>
                     {/* bg-[#0B0B0C] dark:bg-[#B6BCCA] */}
-                    <li className='w-[2px] h-[100px] mt-[10px] bg-[#037ADE]'></li>
+                    <li className={`${socialMediaIconDirection ? 'w-[2px] h-[100px]' : 'w-[100px] h-[2px]'} mt-[10px] rounded-full bg-[#037ADE]`}></li>
                 </ul>
             </div>
         </div>

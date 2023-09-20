@@ -85,7 +85,9 @@ function Index({ projects }) {
                                                     <div key={_key} className={`h-max flex items-center justify-center`}>
                                                         <button
                                                             onClick={() => { setIsActive(projectstabsname) }}
-                                                            type='button' className={`flex items-center flex-col gap-[8px] group shadow-md ${isActive === projectstabsname ? 'bg-[#037ADE] text-white' : 'bg-[#037ADE]/5 dark:bg-[#037ADE]/20 hover:text-black dark:hover:text-white text-black/50 dark:text-white/50'} xsxs:px-[3.5rem] px-[2.5rem] xsxs:py-[0.8rem] py-[0.6rem] rounded-full`}>
+                                                            type='button'
+                                                            title={projectstabsname}
+                                                            className={`flex items-center flex-col gap-[8px] group shadow-md ${isActive === projectstabsname ? 'bg-[#037ADE] text-white' : 'bg-[#037ADE]/5 dark:bg-[#037ADE]/20 hover:text-black dark:hover:text-white text-black/50 dark:text-white/50'} xsxs:px-[3.5rem] px-[2.5rem] xsxs:py-[0.8rem] py-[0.6rem] rounded-full`}>
                                                             <span className={`xsxs:text-xl text-lg font-[500] whitespace-nowrap`}>
                                                                 {projectstabsname}
                                                             </span>

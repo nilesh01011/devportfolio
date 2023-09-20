@@ -2,6 +2,7 @@ import Link from 'next/link';
 import React from 'react'
 import imageUrlBuilder from '@sanity/image-url'
 import Image from 'next/image';
+import { useRouter } from 'next/router';
 
 const builder = imageUrlBuilder({
     projectId: process.env.NEXT_PUBLIC_SANITY_PROJECTID,
@@ -11,6 +12,8 @@ const builder = imageUrlBuilder({
 const urlFor = (source) => builder.image(source);
 
 function ProjectsData({ data }) {
+
+    const router = useRouter();
 
     const { _id, name, image, skillstabs } = data;
 
@@ -29,6 +32,7 @@ function ProjectsData({ data }) {
                     quality={50}
                     importance="high"
                     rel="none"
+                    onClick={() => router.push(`/projects/${_id}`)}
                 />
             </div>
             {/* titles */}

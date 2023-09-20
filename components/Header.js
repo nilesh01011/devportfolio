@@ -92,12 +92,12 @@ function Header({ topProjects }) {
             <div className={`w-full flex items-center justify-between fixed top-0 bg-[#E7EDEF] dark:bg-[#0E1623] z-[10] ${headerShadow && 'shadow-md'}`}>
                 {/* md:p-[1rem_3rem] p-[1rem_1.5rem] */}
                 {/* 1x1:max-w-[1280px] max-w-[1200px] mx-auto */}
-                <nav className='w-full flex items-center justify-between xsxs:py-[1.5rem] py-[0.8rem] xl:px-[2rem] px-[15px]'>
+                <nav className='w-full flex items-center justify-between small-device:py-[1.3rem] py-[0.8rem] xl:px-[2rem] px-[15px]'>
                     {/* logo */}
                     <span
                         // onClick={(e) => handleRedirect(e, "/")}
                         onClick={() => scrollToTop()}
-                        className='text-[26px] font-black cursor-pointer text-transparent bg-clip-text bg-gradient-to-r from-[#037ADE] to-[#03E5B7] hover:from-[#03E5B7] hover:to-[#037ADE] transition-all ease-in duration-500'>
+                        className='text-[30px] font-black cursor-pointer text-transparent bg-clip-text bg-gradient-to-r from-[#037ADE] to-[#03E5B7] hover:from-[#03E5B7] hover:to-[#037ADE] transition-all ease-in duration-500'>
                         NR.
                     </span>
                     {/* sidebar menu */}

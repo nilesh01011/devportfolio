@@ -31,7 +31,8 @@ function ProjectsTabs({ tabs, allProjects }) {
                         if (activeProjects === projecttabsname) {
 
                             return (
-                                <div key={_id} className="w-full grid xl:grid-cols-3 md:grid-cols-2 grid-cols-1 justify-center gap-6 mt-[45px] px-3">
+                                <div key={_id} className="w-full grid xl:grid-cols-3 md:grid-cols-2 grid-cols-1 justify-center gap-6 mt-[45px]">
+                                    {/* px-3 */}
                                     {
                                         projecttab.map((el) => {
 

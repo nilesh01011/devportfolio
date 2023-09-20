@@ -70,7 +70,7 @@ function SideBar({ isOpen, setIsOpen, topProjects, items, activeItems, handleRed
             <div className='w-full h-[1.5px] bg-[#037ade] my-7 px-[18px]'></div>
 
             <div className='w-full flex flex-col mt-4 text-black dark:text-white'>
-              <h3 className='text-[26px] font-bold text-[#037ade] px-[18px]'>My Details</h3>
+              <h3 className='text-[26px] font-bold text-[#037ade] px-[18px]'>Links</h3>
               <ul className='w-full flex flex-col mt-4'>
                 {
                   items.map((ele) => {
