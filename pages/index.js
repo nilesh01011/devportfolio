@@ -37,7 +37,7 @@ export default function Home({ skills, projects_tabs, projects, topProjects }) {
   )
 }
 
-export async function getStaticProps() {
+export async function getServerSideProps() {
   const client = createClient({
     projectId: process.env.NEXT_PUBLIC_SANITY_PROJECTID,
     dataset: process.env.NEXT_PUBLIC_SANITY_DATASET,
