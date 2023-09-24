@@ -1,7 +1,7 @@
 'use client'
 
+import { motion } from 'framer-motion';
 import PropTypes from 'prop-types';
-import ThemeSet from '@/components/ThemeSet'
 import Head from 'next/head'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
@@ -11,6 +11,7 @@ import { TiArrowLeft } from 'react-icons/ti'
 import SwiperComponents from '@/components/SwiperComponents';
 import SkillsTabs from '@/components/SkillsTabs';
 import { createClient } from "next-sanity";
+import { staggerContainer, textVariant, zoomIn } from '@/utils/motion';
 
 function Index({ projects }) {
     const router = useRouter();
@@ -37,31 +38,33 @@ function Index({ projects }) {
                 <link rel="icon" href="/devLogo.png" />
             </Head>
             {/* contents */}
-            <div className={`w-full h-full pt-[2.5rem] pb-[3.5rem] 1x1:max-w-[1280px] max-w-[1200px] mx-auto xl:px-0 px-[15px]`}>
+            <motion.div variants={staggerContainer} initial="hidden" whileInView="show" className={`w-full h-full pt-[2.5rem] pb-[3.5rem] 1x1:max-w-[1280px] max-w-[1200px] mx-auto xl:px-0 px-[15px]`}>
                 {/* back buttons */}
-                <button onClick={() => router.push('/')} className='capitalize text-[16px] xsxs:px-[2.5rem] px-[2rem] xsxs:py-[0.8rem] py-[0.5rem] font-[500] shadow-md hover:shadow-none border-[1px] border-[#037ADE] text-black dark:text-white hover:text-white rounded-full hover:bg-[#037cded8] flex items-center gap-[6px] w-max'>
+                <motion.button variants={textVariant(0.9)} onClick={() => router.push('/')} className='capitalize text-[16px] xsxs:px-[2.5rem] px-[2rem] xsxs:py-[0.8rem] py-[0.5rem] font-[500] shadow-md hover:shadow-none border-[1px] border-[#037ADE] text-black dark:text-white hover:text-white rounded-full hover:bg-[#037cded8] flex items-center gap-[6px] w-max'>
                     <span>
                         <TiArrowLeft size={24} />
                     </span>
                     go back
-                </button>
+                </motion.button>
 
                 {/* main div */}
 
-                <div className='h-full w-full relative mt-10'>
+                <motion.div variants={staggerContainer} initial="hidden" whileInView="show" className='h-full w-full relative mt-10'>
                     {/* Projects Title*/}
                     <div className='flex items-center justify-center flex-col'>
-                        <div className='text-transparent bg-clip-text bg-gradient-to-r from-[#037ADE] to-[#03E5B7]'>
+                        <motion.div variants={textVariant(0.9)} className='text-transparent bg-clip-text bg-gradient-to-r from-[#037ADE] to-[#03E5B7]'>
                             <h1 className='xsxs:text-[2.6rem] text-[2.2rem] leading-[45px] font-semibold text-center'>
                                 <span className=''>{name}</span> Projects
                             </h1>
-                        </div>
-                        <p style={{ lineHeight: '35px' }} className='text-center xsxs:text-xl text-lg 1x1:w-[50%] md:w-[65%] mx-auto mt-[1.2rem] mb-[2.3rem]'>
+                        </motion.div>
+                        <motion.p variants={textVariant(0.9)} style={{ lineHeight: '35px' }} className='text-center xsxs:text-xl text-lg 1x1:w-[50%] md:w-[65%] mx-auto mt-[1.2rem] mb-[2.3rem]'>
                             {description}
-                        </p>
-                        <Link href={projectslinks && projectslinks} title={`Click to view Project Details`} aria-label="Project Details" target='_black' className='font-[500] xsxs:text-xl text-lg w-max flex items-center justify-center h-max xsxs:px-[3.5rem] px-[2.5rem] xsxs:py-[0.8rem] py-[0.6rem] rounded-full shadow-md bg-[#037ADE] hover:bg-[#037cded8] text-[#e7edef] select-none cursor-pointer'>
-                            View Site Demo
-                        </Link>
+                        </motion.p>
+                        <motion.div variants={textVariant(0.9)}>
+                            <Link href={projectslinks && projectslinks} title={`Click to view Project Details`} aria-label="Project Details" target='_black' className='font-[500] xsxs:text-xl text-lg w-max flex items-center justify-center h-max xsxs:px-[3.5rem] px-[2.5rem] xsxs:py-[0.8rem] py-[0.6rem] rounded-full shadow-md bg-[#037ADE] hover:bg-[#037cded8] text-[#e7edef] select-none cursor-pointer'>
+                                View Site Demo
+                            </Link>
+                        </motion.div>
                     </div>
 
 
@@ -72,18 +75,19 @@ function Index({ projects }) {
                             <div className='h-max w-full flex xl:flex-row flex-col gap-7 items-center justify-between'>
                                 {/* left side */}
                                 <div className='xl:w-[30%] w-full h-full flex xl:items-start text-center flex-col'>
-                                    <h1 className='capitalize xsxs:text-[1.8rem] text-[1.6rem] font-bold flex items-center justify-center mb-[30px]'>
+                                    <motion.h1 variants={textVariant(0.9)} className='capitalize xsxs:text-[1.8rem] text-[1.6rem] font-bold flex items-center justify-center mb-[30px]'>
                                         Project Pages
-                                    </h1>
+                                    </motion.h1>
                                     {/* tabs */}
                                     <div id="overFlowXAxies" className='w-full flex xl:flex-col gap-7 py-2 items-start xl:overflow-none overflow-scroll'>
                                         {
-                                            projectstabs?.map((ele) => {
+                                            projectstabs?.map((ele, index) => {
                                                 const { _key, projectstabsname } = ele;
 
                                                 return (
                                                     <div key={_key} className={`h-max flex items-center justify-center`}>
-                                                        <button
+                                                        <motion.button
+                                                            variants={textVariant(0.9 * index)}
                                                             onClick={() => { setIsActive(projectstabsname) }}
                                                             type='button'
                                                             title={projectstabsname}
@@ -91,7 +95,7 @@ function Index({ projects }) {
                                                             <span className={`xsxs:text-xl text-lg font-[500] whitespace-nowrap`}>
                                                                 {projectstabsname}
                                                             </span>
-                                                        </button>
+                                                        </motion.button>
                                                     </div>
                                                 )
                                             })
@@ -100,9 +104,9 @@ function Index({ projects }) {
                                 </div>
                                 {/* right side */}
                                 <div className='xl:w-[70%] w-full'>
-                                    <div className='overflow-hidden w-full h-max rounded-md'>
+                                    <motion.div variants={zoomIn(0.5, 1)} className='overflow-hidden w-full h-max rounded-md'>
                                         <SwiperComponents name={isActive} data={projectstabs} />
-                                    </div>
+                                    </motion.div>
                                 </div>
                             </div>
                         </div>
@@ -112,11 +116,8 @@ function Index({ projects }) {
                     <div className='w-full h-max mt-[3rem] mb-6'>
                         <SkillsTabs skills={projects} />
                     </div>
-                </div>
-            </div>
-
-            {/* theme changes */}
-            <ThemeSet />
+                </motion.div>
+            </motion.div>
         </>
     )
 }

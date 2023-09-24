@@ -1,8 +1,10 @@
+import { motion } from 'framer-motion';
 import React, { useEffect, useState } from 'react'
 import Buttons from './Buttons'
 import Link from 'next/link'
 import { FiGithub, FiLinkedin, FiTwitter } from 'react-icons/fi'
 import Image from 'next/image'
+import { slideIn, staggerContainer, textVariant, zoomIn } from '@/utils/motion';
 
 function Banner() {
 
@@ -21,16 +23,16 @@ function Banner() {
     }, [])
 
     return (
-        <div id="banner" className='w-full min-h-screen flex items-center justify-center gap-5 xl:px-0 px-[15px] relative'>
+        <motion.div variants={staggerContainer} initial="hidden" whileInView="show" viewport={{ once: 'false', amount: 0.25 }} id="banner" className='w-full min-h-screen flex items-center justify-center gap-5 xl:px-0 px-[15px] relative'>
             {/* h-[800px] */}
-            <div className='xl:w-[70%] h-full flex xl:items-start items-center flex-col justify-center'>
-                <h6 className={`dark:text-[#B6BCCA] text-[#0B0B0C] uppercase tracking-[2px] xsxs:text-[18px] text-[16px] font-[600]`}>👋 Hi, My name is</h6>
+            <div className='xl:w-[70%] h-full flex xl:items-start items-center flex-col justify-center overflow-hidden'>
+                <motion.h6 variants={textVariant(0.5)} className={`dark:text-[#B6BCCA] text-[#0B0B0C] uppercase tracking-[2px] xsxs:text-[18px] text-[16px] font-[600]`}>👋 Hi, My name is</motion.h6>
                 {/* name and roles */}
                 {/* md:mt-[1.8rem] mt-[1.5rem] */}
-                <div className='block xl:text-left text-center 1x1:my-[2rem] mt-[1.2rem] md:mb-[2rem] mb-[1.8rem] md:leading-[38px] small-device:leading-[54px] leading-[40px] tracking-[1px] text-transparent bg-clip-text bg-gradient-to-r from-[#037ADE] to-[#03E5B7]'>
+                <motion.div variants={textVariant(0.7)} className='block xl:text-left text-center 1x1:my-[2rem] mt-[1.2rem] md:mb-[2rem] mb-[1.8rem] md:leading-[38px] small-device:leading-[54px] leading-[40px] tracking-[1px] text-transparent bg-clip-text bg-gradient-to-r from-[#037ADE] to-[#03E5B7]'>
                     <h1 id='fontWeight' style={{ fontWeight: '900' }} className='font-black lg:text-6xl md:text-5xl xs:text-[48px] small-device:text-[45px] text-[35px]'>Nilesh Rathod</h1>
                     <h1 id='fontWeight' style={{ fontWeight: '900' }} className='font-black lg:text-6xl md:text-5xl xs:text-[48px] small-device:text-[45px] text-[35px] md:mt-[1rem] capitalize'>Full-Stack developer</h1>
-                </div>
+                </motion.div>
 
                 {/* small definations about */}
                 <div className='1x1:w-[90%] xs:w-[80%] xl:mr-auto xl:mx-0 mx-auto'>
@@ -39,17 +41,16 @@ function Banner() {
                     {/* xl:block hidden */}
 
                     {/* leading-[45px] */}
-                    <p className='font-[500] dark:text-[#B6BCCA] text-[#0B0B0C] flex items-start flex-col'>
+                    <motion.p variants={textVariant(0.9)} className='font-[500] dark:text-[#B6BCCA] text-[#0B0B0C] flex items-start flex-col'>
                         {/* <span className='text-xl'>Passionate in Full Stack Developer 🚀 having a special</span>
                             <span className='text-xl my-3'>interest in Front-end technologies and experience of</span>
                             <span className='flex items-baseline text-xl'>building Web applications 👨‍💻</span> */}
-
 
                         <span className='xss:text-xl small-device:text-lg text-md xl:text-left text-center w-full mx-auto' style={{ lineHeight: '35px' }}>
                             {/* lg:w-[60%] md:w-[80%] sm:w-[85%] */}
                             Passionate full-stack web developer 🚀 with a special interest in front-end technologies and experience building responsive web applications 👨‍💻
                         </span>
-                    </p>
+                    </motion.p>
                     {/* mobile view */}
                     {/* <div className='xl:hidden block'>
                         <p className='dark:text-[#B6BCCA] text-[#0B0B0C] font-[500] text-center xsxs:text-xl text-[14px]' style={{ lineHeight: '36px' }}>
@@ -68,7 +69,7 @@ function Banner() {
                 </div>
             </div>
 
-            <div className='w-max xl:block hidden 1x1:h-[70vh] lg:h-[480px] xsxs:h-[420px] h-[300px] mx-auto'>
+            <motion.div variants={zoomIn(0.4, 1)} className='w-max xl:block hidden 1x1:h-[70vh] lg:h-[480px] xsxs:h-[420px] h-[300px] mx-auto'>
                 <Image
                     width={300}
                     height={200}
@@ -81,14 +82,14 @@ function Banner() {
                     rel="none"
                     className='w-full h-full object-contain'
                     alt="aboutMe" />
-            </div>
+            </motion.div>
 
             {/* fixed links */}
             {/* md:block hidden */}
             <div className={`fixed xl:left-[25px] xs:left-2 left-0 bottom-[40px] z-[10]`}>
                 {/* dark:text-[#B6BCCA] text-[#0B0B0C] */}
                 <ul className={`relative flex items-center ${socialMediaIconDirection ? 'flex-col' : 'flex-row'} transition-all duration-500 text-[#037ADE]`}>
-                    <li className='p-[10px]'>
+                    <motion.li variants={zoomIn(0.8, 1)} className='p-[10px]'>
                         <Link
                             href="https://github.com/nilesh01011"
                             target="_blank"
@@ -98,9 +99,9 @@ function Banner() {
                         >
                             <FiGithub className='hover:text-[#037cded8] transition-all ease-in xsxs:text-[25px] text-[18px] hover:scale-95 scale-100' />
                         </Link>
-                    </li>
+                    </motion.li>
 
-                    <li className='p-[10px]'>
+                    <motion.li variants={zoomIn(0.9, 1)} className='p-[10px]'>
                         <Link
                             href="https://www.linkedin.com/in/nilesh-rathod-0bb62b223/"
                             target="_blank"
@@ -110,9 +111,9 @@ function Banner() {
                         >
                             <FiLinkedin className='hover:text-[#037cded8] transition-all ease-in xsxs:text-[25px] text-[18px] hover:scale-95 scale-100' />
                         </Link>
-                    </li>
+                    </motion.li>
 
-                    <li className='p-[10px]'>
+                    <motion.li variants={zoomIn(1, 1)} className='p-[10px]'>
                         <Link
                             href="https://twitter.com/Nilesh1011000/"
                             target="_blank"
@@ -122,12 +123,12 @@ function Banner() {
                         >
                             <FiTwitter className='hover:text-[#037cded8] transition-all ease-in xsxs:text-[25px] text-[18px] hover:scale-95 scale-100' />
                         </Link>
-                    </li>
+                    </motion.li>
                     {/* bg-[#0B0B0C] dark:bg-[#B6BCCA] */}
-                    <li className={`${socialMediaIconDirection ? 'w-[2px] h-[100px]' : 'w-[100px] h-[2px]'} mt-[10px] rounded-full bg-[#037ADE]`}></li>
+                    <motion.li variants={slideIn('left', 'tween', 1.1, 0.9)} className={`${socialMediaIconDirection ? 'w-[2px] h-[100px]' : 'w-[100px] h-[2px]'} mt-[10px] rounded-full bg-[#037ADE]`}></motion.li>
                 </ul>
             </div>
-        </div>
+        </motion.div>
     )
 }
 

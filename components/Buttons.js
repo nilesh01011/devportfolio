@@ -1,4 +1,5 @@
-import Link from 'next/link'
+import { motion } from 'framer-motion';
+import { textVariant } from '@/utils/motion';
 import React from 'react'
 
 function Buttons({ title, link }) {
@@ -11,9 +12,9 @@ function Buttons({ title, link }) {
     }
 
     return (
-        <button onClick={(e) => handleClicks(e)} aria-label={title} title={title} className='font-[600] w-full h-max py-[0.8rem] px-[3.5rem] md:text-xl xss:text-lg text-sm rounded-full shadow-md hover:shadow-none bg-[#037ADE] hover:bg-[#037cded8] text-[#e7edef] select-none cursor-pointer'>
+        <motion.button variants={textVariant(1)} onClick={(e) => handleClicks(e)} aria-label={title} title={title} className='font-[600] w-full h-max py-[0.8rem] px-[3.5rem] md:text-xl xss:text-lg text-sm rounded-full shadow-md hover:shadow-none bg-[#037ADE] hover:bg-[#037cded8] text-[#e7edef] select-none cursor-pointer'>
             {title}
-        </button>
+        </motion.button>
     )
 }
 

@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react'
+import { motion } from 'framer-motion'
 import SideBar from './Sidebar';
 import { useRouter } from 'next/router';
+import { navVariants } from '@/utils/motion';
 
 function Header({ topProjects }) {
     const [isActive, setIsActive] = useState("");
@@ -89,7 +91,8 @@ function Header({ topProjects }) {
 
     return (
         <>
-            <div className={`w-full flex items-center justify-between fixed top-0 bg-[#E7EDEF] dark:bg-[#0E1623] z-[10] ${headerShadow && 'shadow-md'}`}>
+            <motion.div variants={navVariants} initial="hidden"
+                whileInView="show" className={`w-full flex items-center justify-between fixed top-0 bg-[#E7EDEF] dark:bg-[#0E1623] z-[10] ${headerShadow && 'shadow-md'}`}>
                 {/* md:p-[1rem_3rem] p-[1rem_1.5rem] */}
                 {/* 1x1:max-w-[1280px] max-w-[1200px] mx-auto */}
                 <nav className='w-full flex items-center justify-between small-device:py-[1.3rem] py-[0.8rem] xl:px-[2rem] px-[15px]'>
@@ -120,7 +123,7 @@ function Header({ topProjects }) {
                         </div>
                     </div>
                 </nav>
-            </div>
+            </motion.div>
             {/* sidebar */}
             <SideBar isOpen={isOpen} setIsOpen={setIsOpen} topProjects={topProjects} items={items} activeItems={isActive} handleRedirect={handleRedirect} />
         </>

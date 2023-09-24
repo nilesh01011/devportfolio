@@ -1,26 +1,21 @@
-// import { skills } from '@/pages/api/Skills';
+import { motion } from 'framer-motion';
 import React, { useState } from 'react'
 import SkillsImage from './skillsImage';
+import { staggerContainer, textVariant } from '@/utils/motion';
 
 function Tabs({ skills }) {
-
-    // const handleIdContent = (id) => {
-    //     setActiveSkills(id)
-    // }
-
-    // const { theme, setTheme } = useTheme();
 
     const [activeSkills, setActiveSkills] = useState('languages');
 
     return (
-        <>
+        <motion.div variants={staggerContainer} initial="hidden" whileInView="show">
             <nav className='w-full h-max flex items-center gap-5 justify-center flex-wrap' aria-label="Tabs">
                 {
                     skills?.skillstabs?.map((ele) => {
                         const { _key, tabsname } = ele;
 
                         return (
-                            <button type='button' title={tabsname} onClick={() => setActiveSkills(tabsname)} key={_key} className={`h-max whitespace-nowrap font-semibold relative w-max xsxs:text-xl text-lg xsxs:px-[3.5rem] px-[2.5rem] xsxs:py-[0.8rem] py-[0.6rem] rounded-full shadow-md ${activeSkills === tabsname ? `bg-[#037ADE] text-white` : `hover:text-black dark:hover:text-white text-black/50 dark:text-white/50 bg-[#037ADE]/10 dark:bg-[#037ADE]/20`} capitalize`}>
+                            <button variants={textVariant(0.9)} type='button' title={tabsname} onClick={() => setActiveSkills(tabsname)} key={_key} className={`h-max whitespace-nowrap font-semibold relative w-max xsxs:text-xl text-lg xsxs:px-[3.5rem] px-[2.5rem] xsxs:py-[0.8rem] py-[0.6rem] rounded-full shadow-md ${activeSkills === tabsname ? `bg-[#037ADE] text-white` : `hover:text-black dark:hover:text-white text-black/50 dark:text-white/50 bg-[#037ADE]/10 dark:bg-[#037ADE]/20`} capitalize`}>
                                 {tabsname}
                             </button>
                         )
@@ -32,7 +27,6 @@ function Tabs({ skills }) {
 
             <div className='md:w-[80%] w-full md:mx-auto h-full'>
                 {
-
                     skills?.skillstabs?.map((ele) => {
 
                         if (ele.tabsname === activeSkills) {
@@ -57,7 +51,7 @@ function Tabs({ skills }) {
                     })
                 }
             </div>
-        </>
+        </motion.div>
     )
 }
 
