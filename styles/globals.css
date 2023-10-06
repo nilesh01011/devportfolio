@@ -9,10 +9,15 @@
   padding: 0;
   margin: 0;
   scroll-behavior: smooth;
-  /* font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
-    Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; */
   font-family: 'Ubuntu', sans-serif;
   letter-spacing: 1px;
+}
+
+.mainText h1 {
+  background: -webkit-linear-gradient(to right, #037ade, #03e5b7);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 #fontWeight,
