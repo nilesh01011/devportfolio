@@ -12,6 +12,7 @@ import SwiperComponents from '@/components/SwiperComponents';
 import SkillsTabs from '@/components/SkillsTabs';
 import { createClient } from "next-sanity";
 import { staggerContainer, textVariant, zoomIn } from '@/utils/motion';
+import ThemeSet from '@/components/ThemeSet';
 
 function Index({ projects }) {
     const router = useRouter();
@@ -118,6 +119,8 @@ function Index({ projects }) {
                     </div>
                 </motion.div>
             </motion.div>
+            {/* theme changes */}
+            <ThemeSet />
         </>
     )
 }
