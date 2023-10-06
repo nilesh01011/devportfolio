@@ -52,7 +52,7 @@ function Index({ projects }) {
                 <motion.div variants={staggerContainer} initial="hidden" whileInView="show" className='h-full w-full relative mt-10'>
                     {/* Projects Title*/}
                     <div className='flex items-center justify-center flex-col'>
-                        <motion.div variants={textVariant(0.9)} className='text-transparent bg-clip-text bg-gradient-to-r from-[#037ADE] to-[#03E5B7]'>
+                        <motion.div variants={textVariant(0.9)} className='mainText text-transparent bg-clip-text bg-gradient-to-r from-[#037ADE] to-[#03E5B7]'>
                             <h1 className='xsxs:text-[2.6rem] text-[2.2rem] leading-[45px] font-semibold text-center'>
                                 <span className=''>{name}</span> Projects
                             </h1>
