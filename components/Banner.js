@@ -23,7 +23,7 @@ function Banner() {
     }, [])
 
     return (
-        <motion.div variants={staggerContainer} initial="hidden" whileInView="show" viewport={{ once: 'false', amount: 0.25 }} id="banner" className='w-full min-h-screen flex items-center justify-center gap-5 xl:px-0 px-[15px] relative'>
+        <motion.div variants={staggerContainer} initial="hidden" whileInView="show" viewport={{ once: 'false', amount: 0.25 }} id="banner" className='xss:pt-0 pt-20 w-full min-h-screen flex items-center justify-center gap-5 xl:px-0 px-[15px] relative'>
             {/* h-[800px] */}
             <div className='xl:w-[70%] h-full flex xl:items-start items-center flex-col justify-center overflow-hidden'>
                 <motion.h6 variants={textVariant(0.5)} className={`dark:text-[#B6BCCA] text-[#0B0B0C] uppercase tracking-[2px] xsxs:text-[18px] text-[16px] font-[600]`}>👋 Hi, My name is</motion.h6>
@@ -125,7 +125,7 @@ function Banner() {
                         </Link>
                     </motion.li>
                     {/* bg-[#0B0B0C] dark:bg-[#B6BCCA] */}
-                    <motion.li variants={slideIn('left', 'tween', 1.1, 0.9)} className={`${socialMediaIconDirection ? 'w-[2px] h-[100px]' : 'w-[100px] h-[2px]'} mt-[10px] rounded-full bg-[#037ADE]`}></motion.li>
+                    <motion.li variants={slideIn('left', 'tween', 1.1, 0.9)} className={`${socialMediaIconDirection ? 'w-[2px] h-[100px]' : 'w-[100px] h-[2px]'} rounded-full bg-[#037ADE]`}></motion.li>
                 </ul>
             </div>
         </motion.div>

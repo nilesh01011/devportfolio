@@ -17,19 +17,15 @@ function AboutSections({ skills }) {
             </motion.h1>
             <div className='w-full flex items-center lg:flex-row flex-col justify-between gap-[30px]'>
                 {/* left sides content */}
-                <div className='lg:w-[55%] w-full text-left lg:order-1 order-2'>
-                    <div className="w-full text-left">
-
+                <div className='lg:w-[55%] lg:text-left text-center w-full lg:order-1 order-2'>
+                    <div className="w-full lg:text-left text-center">
                         <motion.p variants={textVariant(0.9)} className='mb-[1rem] mt-[0.5rem] font-bold xsxs:text-[1.7rem] text-[1.2rem]'>Developer ? <span className='text-[#01D9D2]'>Front </span>End : <span className='text-[#01D9D2]'>Back </span>End</motion.p>
                         <motion.p variants={textVariant(0.9)} className='dark:text-[#B6BCCA] font-bold text-[#0B0B0C] md:leading-[40px] leading-[34px] flex items-center flex-col xsxs:text-[18px] text-[14px]'>
-                            {/* 👨‍💻 I&apos;ve been coding for nearly 1+ years. I&apos;m a Software Developer who loves to build a full-stack applications & learn new technologies. */}
                             ✨ I've been coding for over a year now. I'm a Software Developer who enjoys building
                             full-stack applications and learning new technologies. ✨
                         </motion.p>
 
                         <motion.p variants={textVariant(0.9)} className='mt-[0.7rem] dark:text-[#B6BCCA] text-[#0B0B0C] md:leading-[40px] leading-[34px] xsxs:text-[18px] text-[14px]'>
-                            {/* 👨 */}
-                            {/* 💪 To get opportunity to work with an creative ideas, Where i can enhance my knowledge, skills and attitude and to achieve new skills with learning goals. Debug website to fix mistakes in the code to make sure they are errorFree for network administrator and end-users. */}
                             I'm looking for an opportunity to work on <b>creative 🎨 and innovative 💡 projects</b>, where I can improve my programming knowledge and skills. I want to <b>learn 📚 new things</b> while also developing my abilities.
                         </motion.p>
 
@@ -55,13 +51,12 @@ function AboutSections({ skills }) {
                 {/* right sides images */}
                 <div className='lg:w-[40%] w-full lg:order-2 order-1'>
                     {/* md:h-[480px] */}
-                    <motion.div variants={zoomIn(0.4, 1)} className='w-full 1x1:h-[70vh] lg:h-[480px] xsxs:h-[420px] h-[300px] mx-auto'>
+                    <motion.div variants={zoomIn(0.4, 1)} className='w-full 1x1:h-[70vh] lg:h-[480px] xss:h-[420px] h-[300px] mx-auto'>
                         <Image
                             width={300}
                             height={200}
                             title="My Avatar Image"
                             src="/meLogo.svg"
-                            // src="/about_1.svg"
                             loading="lazy"
                             decoding="async"
                             quality={50}

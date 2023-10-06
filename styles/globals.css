@@ -13,6 +13,7 @@
   letter-spacing: 1px;
 }
 
+.mainLogoText,
 .mainText h1 {
   background: -webkit-linear-gradient(to right, #037ade, #03e5b7);
   background-clip: text;
