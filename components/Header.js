@@ -92,8 +92,8 @@ function Header({ topProjects }) {
     return (
         <>
             <motion.div variants={navVariants} initial="hidden"
-                whileInView="show" className={`w-full flex items-center justify-between fixed top-0 bg-[#E7EDEF] dark:bg-[#0E1623] z-[10] ${headerShadow && 'shadow-md'}`}>
-                <nav className='w-full flex items-center justify-between small-device:py-[1.3rem] py-[0.8rem] xl:px-[2rem] px-[15px]'>
+                whileInView="show" className={`w-full flex items-center justify-between fixed top-0 bg-[#E7EDEF] dark:bg-[#0E1623] z-[10] ${headerShadow && 'shadow-md dark:shadow-xl'}`}>
+                <nav className='w-full flex items-center justify-between 1x1:py-[1.3rem] py-[0.8rem] xl:px-[2rem] px-[15px]'>
                     {/* logo */}
                     <span
                         onClick={() => scrollToTop()}
@@ -105,7 +105,7 @@ function Header({ topProjects }) {
                         {
                             items.map((ele) => {
                                 return (
-                                    <li onClick={(e) => handleRedirect(e, ele.link)} key={ele._id} className={`text-lg cursor-pointer font-[500] ${isActive === ele.link && 'underline underline-offset-[7px] text-[#037ADE]'} transition-all ease-in hover:scale-95 scale-100 hover:text-[#037ADE]`}>{ele.projectsName}</li>
+                                    <li onClick={(e) => handleRedirect(e, ele.link)} key={ele._id} className={`text-lg cursor-pointer font-[500] ${isActive === ele.link ? 'underline underline-offset-[7px] text-[#037ADE]' : "dark:text-[#B6BCCA]"} transition-all ease-in hover:scale-95 scale-100 hover:text-[#037ADE]`}>{ele.projectsName}</li>
                                 )
                             })
                         }

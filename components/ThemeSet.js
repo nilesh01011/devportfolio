@@ -52,7 +52,7 @@ function ThemeSet() {
     return (
         <>
             {/* sm:right-[22px] right-[15px] */}
-            <motion.div variants={staggerContainer} initial="hidden" whileInView="show" viewport={{ once: 'false', amount: 0.25 }} className={`fixed bottom-[40px] 1x1:right-[42px] xl:right-[34px] sm:right-[22px] right-[15px] rounded-full z-50`}>
+            <motion.div variants={staggerContainer} initial="hidden" whileInView="show" viewport={{ once: 'false', amount: 0.25 }} className={`fixed 1x1:bottom-[40px] bottom-[20px] 1x1:right-[42px] xl:right-[34px] sm:right-[22px] right-[15px] rounded-full z-50`}>
                 <motion.button variants={zoomIn(0.4, 1)} onClick={() => handleThemeChange()} aria-label="theme changed button" title='Theme changed button' className='shadow-md xsxs:w-[60px] w-[50px] xsxs:h-[60px] h-[50px] bg-[#037ADE] hover:bg-[#037cded8] rounded-full flex items-center justify-center'>
                     {
                         currentTheme === "dark" ? (

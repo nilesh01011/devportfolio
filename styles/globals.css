@@ -48,9 +48,9 @@ body::-webkit-scrollbar {
   width: 8px;
 }
 
-body::-webkit-scrollbar-track {
+/* body::-webkit-scrollbar-track {
   background: #dfe5e7;
-}
+} */
 
 body::-webkit-scrollbar-thumb {
   border-radius: 10px;
