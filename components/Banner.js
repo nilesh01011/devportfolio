@@ -25,6 +25,7 @@ function Banner() {
   return (
     <motion.div
       variants={staggerContainer}
+      // variants={zoomIn(0.3, 1)}
       initial="hidden"
       whileInView="show"
       viewport={{ once: 'false', amount: 0.25 }}
@@ -32,9 +33,11 @@ function Banner() {
       className="xss:pt-0 pt-20 w-full min-h-screen flex items-center justify-center gap-5 xl:px-0 px-[15px] relative"
     >
       {/* h-[800px] */}
+      {/* left side */}
       <div className="xl:w-[70%] h-full flex xl:items-start items-center flex-col justify-center overflow-hidden">
         <motion.h6
-          variants={textVariant(0.5)}
+          // variants={textVariant(0.5)}
+          variants={zoomIn(0.3, 1)}
           className={`dark:text-[#B6BCCA] text-[#0B0B0C] uppercase tracking-[2px] xsxs:text-[18px] text-[16px] font-[600]`}
         >
           👋 Hi, My name is
@@ -42,20 +45,21 @@ function Banner() {
         {/* name and roles */}
         {/* md:mt-[1.8rem] mt-[1.5rem] */}
         <motion.div
-          variants={textVariant(0.7)}
+          // variants={textVariant(0.7)}
+          variants={zoomIn(0.3, 1)}
           className="mainText block xl:text-left text-center 1x1:my-[2rem] mt-[1.2rem] md:mb-[2rem] mb-[1.8rem] md:leading-[38px] small-device:leading-[54px] leading-[40px] tracking-[1px] text-transparent bg-clip-text bg-gradient-to-r from-[#037ADE] to-[#03E5B7]"
         >
           <h1
             id="fontWeight"
             style={{ fontWeight: '900' }}
-            className="font-black lg:text-6xl md:text-5xl xs:text-[48px] small-device:text-[45px] text-[35px]"
+            className="font-black select-none lg:text-6xl md:text-5xl xs:text-[48px] small-device:text-[45px] text-[35px]"
           >
             Nilesh Rathod
           </h1>
           <h1
             id="fontWeight"
             style={{ fontWeight: '900' }}
-            className="font-black lg:text-6xl md:text-5xl xs:text-[48px] small-device:text-[45px] text-[35px] md:mt-[1rem] capitalize"
+            className="font-black select-none lg:text-6xl md:text-5xl xs:text-[48px] small-device:text-[45px] text-[35px] md:mt-[1rem] capitalize"
           >
             Full-Stack developer
           </h1>
@@ -65,7 +69,8 @@ function Banner() {
         <div className="1x1:w-[90%] xs:w-[80%] xl:mr-auto xl:mx-0 mx-auto">
           {/* leading-[45px] */}
           <motion.p
-            variants={textVariant(0.9)}
+            // variants={textVariant(0.9)}
+            variants={zoomIn(0.3, 1)}
             className="font-[500] dark:text-[#B6BCCA] text-[#0B0B0C] flex items-start flex-col"
           >
             <span
@@ -90,7 +95,8 @@ function Banner() {
       </div>
 
       <motion.div
-        variants={zoomIn(0.4, 1)}
+        variants={zoomIn(0.3, 1)}
+        // variants={zoomIn(0.4, 1)}
         className="w-max xl:block hidden 1x1:h-[70vh] lg:h-[480px] xsxs:h-[420px] h-[300px] mx-auto"
       >
         <Image
@@ -111,7 +117,7 @@ function Banner() {
       {/* fixed links */}
       {/* md:block hidden */}
       <div
-        className={`fixed xl:left-[25px] xs:left-2 left-0 1x1:bottom-[40px] bottom-[20px] z-[10]`}
+        className={`fixed hidden xl:left-[25px] xs:left-2 left-0 1x1:bottom-[40px] bottom-[20px] z-[10]`}
       >
         {/* dark:text-[#B6BCCA] text-[#0B0B0C] */}
         <ul
@@ -119,7 +125,11 @@ function Banner() {
             socialMediaIconDirection ? 'flex-col' : 'sm:flex-row flex-col'
           } transition-all duration-500 text-[#037ADE]`}
         >
-          <motion.li variants={zoomIn(0.8, 1)} className="p-[10px]">
+          <motion.li
+            variants={zoomIn(0.3, 1)}
+            // variants={zoomIn(0.8, 1)}
+            className="p-[10px]"
+          >
             <Link
               href="https://github.com/nilesh01011"
               target="_blank"
@@ -131,7 +141,11 @@ function Banner() {
             </Link>
           </motion.li>
 
-          <motion.li variants={zoomIn(0.9, 1)} className="p-[10px]">
+          <motion.li
+            variants={zoomIn(0.3, 1)}
+            // variants={zoomIn(0.9, 1)}
+            className="p-[10px]"
+          >
             <Link
               href="https://www.linkedin.com/in/nilesh-rathod-0bb62b223/"
               target="_blank"
@@ -143,7 +157,11 @@ function Banner() {
             </Link>
           </motion.li>
 
-          <motion.li variants={zoomIn(1, 1)} className="p-[10px]">
+          <motion.li
+            variants={zoomIn(0.3, 1)}
+            // variants={zoomIn(1, 1)}
+            className="p-[10px]"
+          >
             <Link
               href="https://twitter.com/Nilesh1011000/"
               target="_blank"
@@ -156,7 +174,8 @@ function Banner() {
           </motion.li>
           {/* bg-[#0B0B0C] dark:bg-[#B6BCCA] */}
           <motion.li
-            variants={slideIn('left', 'tween', 1.1, 0.9)}
+            variants={slideIn('left', 'tween', 0.7, 0.9)}
+            // variants={zoomIn(0.3, 1)}
             className={`${
               socialMediaIconDirection
                 ? 'w-[2px] h-[100px]'

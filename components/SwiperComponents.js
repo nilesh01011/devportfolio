@@ -4,10 +4,10 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 
 // Import Swiper styles
 import 'swiper/css';
-import Image from 'next/image';
+
 import ProjectCarouselImage from './ProjectCarouselImage';
 
-function SwiperComponents({ name, data }) {
+function SwiperComponents({ name, data,height }) {
 
     const [carouselImages, setCarouselImages] = useState([])
 
@@ -34,7 +34,7 @@ function SwiperComponents({ name, data }) {
                 carouselImages?.map((ele) => {
                     return (
                         <SwiperSlide key={ele._key} className='h-full w-full rounded-[15px] py-2'>
-                            <div className='cursor-grab w-[98%] xl:h-[500px] xsxs:h-[450px] h-[200px] mx-auto dark:bg-[#1d2738] rounded-[15px] bg-gray-100 shadow-md flex items-center justify-center dark:text-white text-black'>
+                            <div className={`cursor-grab w-[98%] xl:h-[500px] xsxs:h-[450px] h-[200px] mx-auto dark:bg-[#1d2738] rounded-[15px] bg-gray-100 shadow-md flex items-center justify-center dark:text-white text-black`}>
                                 <ProjectCarouselImage key={ele._key} imgSrc={ele.asset._ref} />
                             </div>
                         </SwiperSlide>

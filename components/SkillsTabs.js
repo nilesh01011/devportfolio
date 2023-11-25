@@ -9,7 +9,7 @@ function Tabs({ skills }) {
 
     return (
         <motion.div variants={staggerContainer} initial="hidden" whileInView="show">
-            <nav className='w-full h-max flex items-center gap-5 justify-center flex-wrap' aria-label="Tabs">
+            <nav className='w-full h-max flex items-center gap-5 justify-start flex-wrap' aria-label="Tabs">
                 {
                     skills?.skillstabs?.map((ele) => {
                         const { _key, tabsname } = ele;
@@ -25,13 +25,13 @@ function Tabs({ skills }) {
 
             {/* contents */}
 
-            <div className='md:w-[80%] w-full md:mx-auto h-full'>
+            <div className='w-full md:mx-auto h-full'>
                 {
                     skills?.skillstabs?.map((ele) => {
 
                         if (ele.tabsname === activeSkills) {
                             return (
-                                <div key={ele._key} className=" w-full flex flex-wrap items-center justify-center gap-[20px] mt-[45px]">
+                                <div key={ele._key} className=" w-full flex flex-wrap items-center justify-start gap-[20px] mt-[45px]">
                                     {
                                         ele.tabsarray?.map((el) => {
                                             const { skillstabsname, _key, skillstabsimage } = el;

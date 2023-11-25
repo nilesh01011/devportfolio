@@ -8,7 +8,7 @@ function ProjectsTabs({ tabs, allProjects }) {
 
     return (
         <>
-            <nav className='w-full h-auto flex items-center justify-center flex-wrap gap-5' aria-label="Tabs">
+            <nav className='w-full h-auto flex items-center justify-start flex-wrap gap-5' aria-label="Tabs">
                 {
                     tabs?.map((ele) => {
                         const { _id, projecttabsname } = ele;

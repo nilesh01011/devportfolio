@@ -73,33 +73,41 @@ function Index({ projects }) {
           className="h-full w-full relative mt-10"
         >
           {/* Projects Title*/}
-          <div className="flex items-center justify-center flex-col">
-            <motion.div
-              variants={textVariant(0.9)}
-              className="mainText text-transparent bg-clip-text bg-gradient-to-r from-[#037ADE] to-[#03E5B7]"
-            >
-              <h1 className="xsxs:text-[2.6rem] text-[2.2rem] leading-[45px] font-semibold text-center">
-                <span className="">{name}</span> Projects
-              </h1>
-            </motion.div>
-            <motion.p
-              variants={textVariant(0.9)}
-              style={{ lineHeight: '35px' }}
-              className="text-center xsxs:text-xl text-lg 1x1:w-[50%] md:w-[65%] mx-auto mt-[1.2rem] mb-[2.3rem]"
-            >
-              {description}
-            </motion.p>
-            <motion.div variants={textVariant(0.9)}>
-              <Link
-                href={projectslinks && projectslinks}
-                title={`Click to view Project Details`}
-                aria-label="Project Details"
-                target="_black"
-                className="font-[500] xsxs:text-xl text-lg w-max flex items-center justify-center h-max xsxs:px-[3.5rem] px-[2.5rem] xsxs:py-[0.8rem] py-[0.6rem] rounded-full shadow-md bg-[#037ADE] hover:bg-[#037cded8] text-[#e7edef] select-none cursor-pointer"
+          <div className="flex items-start gap-5">
+            <div className="w-full flex items-center justify-start flex-col">
+              <motion.div
+                variants={textVariant(0.9)}
+                className="mainText w-full text-left text-transparent bg-clip-text bg-gradient-to-r from-[#037ADE] to-[#03E5B7]"
               >
-                View Site Demo
-              </Link>
-            </motion.div>
+                <h1 className="xsxs:text-[2.6rem] text-[2.2rem] leading-[45px] font-semibold text-left">
+                  <span className="">{name}</span> Projects
+                </h1>
+              </motion.div>
+              <motion.p
+                variants={textVariant(0.9)}
+                style={{ lineHeight: '35px' }}
+                className="xsxs:text-xl text-lg w-full mt-[1.2rem] mb-[2.3rem]"
+                // 1x1:w-[50%] md:w-[65%] mr-auto
+              >
+                {description}
+              </motion.p>
+              <motion.div variants={textVariant(0.9)} className='w-full flex items-center justify-start'>
+                <Link
+                  href={projectslinks && projectslinks}
+                  title={`Click to view Project Details`}
+                  aria-label="Project Details"
+                  target="_black"
+                  className="font-[500] xsxs:text-xl text-lg w-max flex items-center justify-start h-max xsxs:px-[3.5rem] px-[2.5rem] xsxs:py-[0.8rem] py-[0.6rem] rounded-full shadow-md bg-[#037ADE] hover:bg-[#037cded8] text-[#e7edef] select-none cursor-pointer"
+                >
+                  View Site Demo
+                </Link>
+              </motion.div>
+            </div>
+
+            {/* languages uses with tabs views */}
+            {/* <div className="w-1/2 h-max xl:block hidden">
+              <SkillsTabs skills={projects} />
+            </div> */}
           </div>
 
           {/* main contents */}
@@ -157,7 +165,11 @@ function Index({ projects }) {
                     variants={zoomIn(0.5, 1)}
                     className="overflow-hidden w-full h-max rounded-md"
                   >
-                    <SwiperComponents name={isActive} data={projectstabs} />
+                    <SwiperComponents
+                      name={isActive}
+                      data={projectstabs}
+                      // height="xl:h-[500px] xsxs:h-[450px] h-[200px]"
+                    />
                   </motion.div>
                 </div>
               </div>
@@ -165,6 +177,7 @@ function Index({ projects }) {
           </div>
 
           {/* languages uses with tabs views */}
+          {/* xl:hidden block */}
           <div className="w-full h-max mt-[3rem] mb-6">
             <SkillsTabs skills={projects} />
           </div>
