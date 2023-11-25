@@ -20,7 +20,7 @@ function ExperienceTabs({ positionImg, company }) {
         {/* company name */}
         <motion.h2
           //   variants={textVariant(0.9)}
-          variants={zoomIn(0.3, 1)}
+          variants={zoomIn(0.1, 1)}
           //   text-center
           className="xs:text-[32px] xsxs:text-[28px] text-[24px] font-bold xs:mt-[1.5rem] mt-[0.8rem] flex items-center sm:gap-[10px] group"
         >
@@ -38,7 +38,7 @@ function ExperienceTabs({ positionImg, company }) {
         {/* company role jobs */}
         <motion.span
           //   variants={textVariant(0.9)}
-          variants={zoomIn(0.3, 1)}
+          variants={zoomIn(0.1, 1)}
           //   text-center
           className="text-[20px] mt-[8px] capitalize text-[#8ca6c9] font-bold"
         >
@@ -56,14 +56,14 @@ function ExperienceTabs({ positionImg, company }) {
         {/* company months */}
         <motion.span
           //   variants={textVariant(0.9)}
-          variants={zoomIn(0.3, 1)}
+          variants={zoomIn(0.1, 1)}
           className="text-[16px] mt-[8px] dark:text-[#B6BCCA] text-[#0B0B0C]"
         >
           {company.months} {company.year ? '|' : ''} {company.year}
         </motion.span>
         {/* company images */}
         <motion.div
-          variants={zoomIn(0.3, 1)}
+          variants={zoomIn(0.1, 1)}
           className="flex items-start justify-start h-full mt-[1.5rem]"
         >
           <Link

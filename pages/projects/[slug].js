@@ -54,7 +54,8 @@ function Index({ projects }) {
       >
         {/* back buttons */}
         <motion.button
-          variants={textVariant(0.9)}
+          // variants={textVariant(0.9)}
+          variants={zoomIn(0.1, 1)}
           onClick={() => router.push('/')}
           className="capitalize text-[16px] xsxs:px-[2.5rem] px-[2rem] xsxs:py-[0.8rem] py-[0.5rem] font-[500] shadow-md hover:shadow-none border-[1px] border-[#037ADE] text-black dark:text-white hover:text-white rounded-full hover:bg-[#037cded8] flex items-center gap-[6px] w-max"
         >
@@ -76,7 +77,8 @@ function Index({ projects }) {
           <div className="flex items-start gap-5">
             <div className="w-full flex items-center justify-start flex-col">
               <motion.div
-                variants={textVariant(0.9)}
+                // variants={textVariant(0.9)}
+                variants={zoomIn(0.1, 1)}
                 className="mainText w-full text-left text-transparent bg-clip-text bg-gradient-to-r from-[#037ADE] to-[#03E5B7]"
               >
                 <h1 className="xsxs:text-[2.6rem] text-[2.2rem] leading-[45px] font-semibold text-left">
@@ -84,14 +86,19 @@ function Index({ projects }) {
                 </h1>
               </motion.div>
               <motion.p
-                variants={textVariant(0.9)}
+                // variants={textVariant(0.9)}
+                variants={zoomIn(0.1, 1)}
                 style={{ lineHeight: '35px' }}
                 className="xsxs:text-xl text-lg w-full mt-[1.2rem] mb-[2.3rem]"
                 // 1x1:w-[50%] md:w-[65%] mr-auto
               >
                 {description}
               </motion.p>
-              <motion.div variants={textVariant(0.9)} className='w-full flex items-center justify-start'>
+              <motion.div
+                // variants={textVariant(0.9)}
+                variants={zoomIn(0.1, 1)}
+                className="w-full flex items-center justify-start"
+              >
                 <Link
                   href={projectslinks && projectslinks}
                   title={`Click to view Project Details`}
@@ -117,7 +124,8 @@ function Index({ projects }) {
                 {/* left side */}
                 <div className="xl:w-[30%] w-full h-full flex xl:items-start text-center flex-col">
                   <motion.h1
-                    variants={textVariant(0.9)}
+                    // variants={textVariant(0.9)}
+                    variants={zoomIn(0.1, 1)}
                     className="capitalize xsxs:text-[1.8rem] text-[1.6rem] font-bold flex items-center justify-center mb-[30px]"
                   >
                     Project Pages
@@ -162,7 +170,8 @@ function Index({ projects }) {
                 {/* right side */}
                 <div className="xl:w-[70%] w-full">
                   <motion.div
-                    variants={zoomIn(0.5, 1)}
+                    variants={zoomIn(0.1, 1)}
+                    // variants={zoomIn(0.5, 1)}
                     className="overflow-hidden w-full h-max rounded-md"
                   >
                     <SwiperComponents

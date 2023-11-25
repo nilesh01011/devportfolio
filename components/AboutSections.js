@@ -17,7 +17,7 @@ function AboutSections({ skills }) {
     >
       <motion.div
         // variants={textVariant(0.9)}
-        variants={zoomIn(0.3, 1)}
+        variants={zoomIn(0.1, 1)}
         className="w-max capitalize sm:text-[2.5rem] xss:text-[2.2rem] text-[2rem] font-bold flex items-center justify-start sm:gap-[15px] gap-[7px] sm:mb-[100px] mb-[50px]"
       >
         About Me
@@ -34,10 +34,10 @@ function AboutSections({ skills }) {
       <div className="w-full flex items-center xl:flex-row flex-col justify-between gap-[30px]">
         {/* left sides content */}
         <div className="xl:w-[55%] text-left w-full xl:order-1 order-2">
-          <div className="w-full lg:text-left text-center">
+          <div className="w-full text-left">
             <motion.p
               //   variants={textVariant(0.9)}
-              variants={zoomIn(0.3, 1)}
+              variants={zoomIn(0.1, 1)}
               className="mb-[1rem] mt-[0.5rem] font-bold xsxs:text-[1.7rem] text-[1.2rem]"
             >
               Developer ? <span className="text-[#01D9D2]">Front </span>End :{' '}
@@ -45,7 +45,7 @@ function AboutSections({ skills }) {
             </motion.p>
             <motion.p
               //   variants={textVariant(0.9)}
-              variants={zoomIn(0.3, 1)}
+              variants={zoomIn(0.1, 1)}
               className="dark:text-[#B6BCCA] text-[#0B0B0C] md:leading-[40px] leading-[34px] flex items-center flex-col xsxs:text-[18px] text-[14px]"
             >
               {/* font-bold */}
@@ -57,7 +57,7 @@ function AboutSections({ skills }) {
 
             <motion.p
               //   variants={textVariant(0.9)}
-              variants={zoomIn(0.3, 1)}
+              variants={zoomIn(0.1, 1)}
               className="mt-[0.7rem] dark:text-[#B6BCCA] text-[#0B0B0C] md:leading-[40px] leading-[34px] xsxs:text-[18px] text-[14px]"
             >
               {/* I'm looking for an opportunity to work on{' '}
@@ -71,7 +71,7 @@ function AboutSections({ skills }) {
 
             <motion.p
               //   variants={textVariant(0.9)}
-              variants={zoomIn(0.3, 1)}
+              variants={zoomIn(0.1, 1)}
               className="mt-[0.7rem] dark:text-[#B6BCCA] text-[#0B0B0C] md:leading-[40px] leading-[34px] xsxs:text-[18px] text-[14px]"
             >
               {/* One thing I'm good at is <b>debugging</b> 🔍 - finding and fixing
@@ -86,7 +86,7 @@ function AboutSections({ skills }) {
 
             <motion.p
               //   variants={textVariant(0.9)}
-              variants={zoomIn(0.3, 1)}
+              variants={zoomIn(0.1, 1)}
               className="mt-[0.7rem] dark:text-[#B6BCCA] text-[#0B0B0C] md:leading-[40px] leading-[34px] xsxs:text-[18px] text-[14px]"
             >
               {/* Overall, I'm eager to use my skills to contribute to interesting
@@ -100,7 +100,7 @@ function AboutSections({ skills }) {
           {/* buttons */}
           <motion.button
             // variants={textVariant(0.9)}
-            variants={zoomIn(0.3, 1)}
+            variants={zoomIn(0.1, 1)}
             className="font-[500] my-10 w-max h-max"
           >
             <Link
@@ -122,7 +122,7 @@ function AboutSections({ skills }) {
           {/* md:h-[480px] */}
           <motion.div
             // variants={zoomIn(0.4, 1)}
-            variants={zoomIn(0.3, 1)}
+            variants={zoomIn(0.1, 1)}
             className="w-full 1x1:h-[70vh] lg:h-[480px] xss:h-[420px] h-[300px] mx-auto"
           >
             <Image
@@ -145,7 +145,7 @@ function AboutSections({ skills }) {
       {/* tabs views */}
       <motion.div
         // variants={zoomIn(0.4, 1)}
-        variants={zoomIn(0.3, 1)}
+        variants={zoomIn(0.1, 1)}
         // md:mt-[100px]
         className="w-full h-max mt-[60px]"
       >

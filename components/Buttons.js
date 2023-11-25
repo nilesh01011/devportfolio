@@ -14,7 +14,7 @@ function Buttons({ title, link }) {
   return (
     <motion.button
       // variants={textVariant(1)}
-      variants={zoomIn(0.3, 1)}
+      variants={zoomIn(0.1, 1)}
       onClick={(e) => handleClicks(e)}
       aria-label={title}
       title={title}

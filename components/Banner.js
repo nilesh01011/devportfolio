@@ -30,14 +30,15 @@ function Banner() {
       whileInView="show"
       viewport={{ once: 'false', amount: 0.25 }}
       id="banner"
-      className="xss:pt-0 pt-20 w-full min-h-screen flex items-center justify-center gap-5 xl:px-0 px-[15px] relative"
+      // xss:pt-0 pt-20
+      className="pt-[71px] w-full min-h-screen flex items-center justify-center gap-5 xl:px-0 px-[15px] relative"
     >
       {/* h-[800px] */}
       {/* left side */}
-      <div className="xl:w-[70%] h-full flex xl:items-start items-center flex-col justify-center overflow-hidden">
+      <div className="xl:w-[70%] w-full h-full flex items-start flex-col overflow-hidden">
         <motion.h6
           // variants={textVariant(0.5)}
-          variants={zoomIn(0.3, 1)}
+          variants={zoomIn(0.1, 1)}
           className={`dark:text-[#B6BCCA] text-[#0B0B0C] uppercase tracking-[2px] xsxs:text-[18px] text-[16px] font-[600]`}
         >
           👋 Hi, My name is
@@ -46,8 +47,8 @@ function Banner() {
         {/* md:mt-[1.8rem] mt-[1.5rem] */}
         <motion.div
           // variants={textVariant(0.7)}
-          variants={zoomIn(0.3, 1)}
-          className="mainText block xl:text-left text-center 1x1:my-[2rem] mt-[1.2rem] md:mb-[2rem] mb-[1.8rem] md:leading-[38px] small-device:leading-[54px] leading-[40px] tracking-[1px] text-transparent bg-clip-text bg-gradient-to-r from-[#037ADE] to-[#03E5B7]"
+          variants={zoomIn(0.1, 1)}
+          className="mainText block text-left 1x1:my-[2rem] mt-[1.2rem] md:mb-[2rem] mb-[1.8rem] md:leading-[38px] small-device:leading-[54px] leading-[40px] tracking-[1px] text-transparent bg-clip-text bg-gradient-to-r from-[#037ADE] to-[#03E5B7]"
         >
           <h1
             id="fontWeight"
@@ -66,15 +67,15 @@ function Banner() {
         </motion.div>
 
         {/* small definations about */}
-        <div className="1x1:w-[90%] xs:w-[80%] xl:mr-auto xl:mx-0 mx-auto">
+        <div className="1x1:w-[90%] w-full mr-auto text-left">
           {/* leading-[45px] */}
           <motion.p
             // variants={textVariant(0.9)}
-            variants={zoomIn(0.3, 1)}
+            variants={zoomIn(0.1, 1)}
             className="font-[500] dark:text-[#B6BCCA] text-[#0B0B0C] flex items-start flex-col"
           >
             <span
-              className="xss:text-xl small-device:text-lg text-md xl:text-left text-center w-full mx-auto"
+              className="xss:text-xl small-device:text-lg text-md text-left w-full mx-auto"
               style={{ lineHeight: '35px' }}
             >
               {/* lg:w-[60%] md:w-[80%] sm:w-[85%] */}
@@ -92,10 +93,70 @@ function Banner() {
           <Buttons title="Collaborate With Me?" link="#about" />
           {/* <Buttons title="Do You Want to Work With Me" link='#about' /> */}
         </div>
+
+        {/* social links */}
+        <motion.ul
+          variants={zoomIn(0.1, 1)}
+          className={`relative flex items-center transition-all duration-500 text-[#037ADE] mt-[1.5rem]`}
+        >
+          <li
+            // variants={zoomIn(0.3, 1)}
+            // variants={zoomIn(0.8, 1)}
+            className="p-[10px]"
+          >
+            <Link
+              href="https://github.com/nilesh01011"
+              target="_blank"
+              rel="noreferrer"
+              aria-label="Github repository"
+              title="Github repository"
+            >
+              <FiGithub className="hover:text-[#037cded8] transition-all ease-in xsxs:text-[25px] text-[18px] hover:scale-95 scale-100" />
+            </Link>
+          </li>
+
+          <li
+            // variants={zoomIn(0.3, 1)}
+            // variants={zoomIn(0.9, 1)}
+            className="p-[10px]"
+          >
+            <Link
+              href="https://www.linkedin.com/in/nilesh-rathod-0bb62b223/"
+              target="_blank"
+              rel="noreferrer"
+              aria-label="Linkedin Profile"
+              title="Linkedin Profile"
+            >
+              <FiLinkedin className="hover:text-[#037cded8] transition-all ease-in xsxs:text-[25px] text-[18px] hover:scale-95 scale-100" />
+            </Link>
+          </li>
+
+          <li
+            // variants={zoomIn(0.3, 1)}
+            // variants={zoomIn(1, 1)}
+            className="p-[10px]"
+          >
+            <Link
+              href="https://twitter.com/Nilesh1011000/"
+              target="_blank"
+              rel="noreferrer"
+              aria-label="Twitter Profile"
+              title="Twitter Profile"
+            >
+              <FiTwitter className="hover:text-[#037cded8] transition-all ease-in xsxs:text-[25px] text-[18px] hover:scale-95 scale-100" />
+            </Link>
+          </li>
+          {/* bg-[#0B0B0C] dark:bg-[#B6BCCA] */}
+          <li
+            // variants={slideIn('left', 'tween', 0.7, 0.9)}
+            // variants={zoomIn(0.3, 1)}
+            className={`w-[100px] h-[2px] rounded-full bg-[#037ADE]`}
+          ></li>
+        </motion.ul>
       </div>
 
       <motion.div
-        variants={zoomIn(0.3, 1)}
+        variants={zoomIn(0.1, 1)}
         // variants={zoomIn(0.4, 1)}
         className="w-max xl:block hidden 1x1:h-[70vh] lg:h-[480px] xsxs:h-[420px] h-[300px] mx-auto"
       >

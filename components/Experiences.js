@@ -18,7 +18,7 @@ function Experiences() {
       {/* titles */}
       <motion.div
         // variants={textVariant(0.9)}
-        variants={zoomIn(0.3, 1)}
+        variants={zoomIn(0.1, 1)}
         className="w-max capitalize sm:text-[2.5rem] xss:text-[2.2rem] text-[2rem] font-bold flex items-center justify-start sm:gap-[15px] gap-[7px] sm:mb-[100px] mb-[50px]"
       >
         Experiences
