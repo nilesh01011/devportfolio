@@ -13,7 +13,8 @@ export const companyName = [
       },
       {
         id: 2,
-        text: 'Optimized application performance by integrating modern frameworks and libraries.',
+        text: 'Implemented Agile development of key project and consulted with client developers to optimize application performance by 30x to 40x over 6 months.',
+        // text: 'Optimized application performance by integrating modern frameworks and libraries.',
       },
       {
         id: 3,
@@ -26,7 +27,7 @@ export const companyName = [
     ],
     // links: 'https://auto.mahindra.com/',
     links: 'https://mahindra-booking.vercel.app/',
-    companyImg: '/company/mahindra_img.png',
+    companyImg: '/company/mahindra/mahindra_img.png',
     companyProjectImg: [
       {
         srcImg: '/company/mahindra/mahindra_img.png',
@@ -91,7 +92,7 @@ export const companyName = [
       },
     ],
     links: 'https://tacnique.com/',
-    companyImg: '/company/tacnique_img.png',
+    companyImg: '/company/tacnique/tacnique_img.png',
     // companyProjectImg: [
     //   {
     //     srcImg: '/company/tacnique/tacnique_img.png',

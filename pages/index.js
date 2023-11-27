@@ -25,7 +25,8 @@ export default function Home({ skills, projects_tabs, projects, topProjects }) {
       </Head>
 
       <Header topProjects={topProjects} />
-      <main className={`w-full h-full 1x1:max-w-[1280px] max-w-[1200px] mx-auto`}>
+      {/* 1x1:max-w-[1280px] */}
+      <main className={`w-full h-full 1x1:max-w-full 1x1:px-[32px] max-w-[1200px] mx-auto`}>
         <Banner />
         <AboutSections skills={skills} />
         <ProjectsWorks allProjects={projects} tabs={projects_tabs} />

@@ -8,7 +8,7 @@ import SwiperImage from './experienceProjects/SwiperImage';
 
 function ExperienceTabs({ positionImg, company }) {
   return (
-    <div className="w-full h-full flex xl:flex-row flex-col gap-10 items-center">
+    <div className="w-full h-full flex xl:flex-row flex-col gap-10">
       {/* flex-col gap-[50px] items-center justify-center */}
       {/* company */}
       {/* left side */}
@@ -21,8 +21,8 @@ function ExperienceTabs({ positionImg, company }) {
         <motion.h2
           //   variants={textVariant(0.9)}
           variants={zoomIn(0.1, 1)}
-          //   text-center
-          className="xs:text-[32px] xsxs:text-[28px] text-[24px] font-bold xs:mt-[1.5rem] mt-[0.8rem] flex items-center sm:gap-[10px] group"
+          //   text-center xs:mt-[1.5rem] mt-[0.8rem]
+          className="w-max xs:text-[32px] xsxs:text-[28px] text-[24px] font-bold flex items-center sm:gap-[10px] group"
         >
           {company.company}{' '}
           <Link
@@ -101,7 +101,7 @@ function ExperienceTabs({ positionImg, company }) {
                 className="text-left xsxs:text-[18px] text-[16px] list-inside md:leading-[40px] leading-[34px]"
               >
                 {/* • */}
-                {index + 1}. {text}
+                <span className='font-semibold dark:text-white text-black'>{index + 1}.</span> {text}
               </motion.li>
             );
           })}
