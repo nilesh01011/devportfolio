@@ -22,7 +22,7 @@ function ExperienceTabs({ positionImg, company }) {
           //   variants={textVariant(0.9)}
           variants={zoomIn(0.1, 1)}
           //   text-center xs:mt-[1.5rem] mt-[0.8rem]
-          className="w-max xs:text-[32px] xsxs:text-[28px] text-[24px] font-bold flex items-center sm:gap-[10px] group"
+          className="sm:w-max xs:text-[32px] xsxs:text-[28px] text-[24px] font-bold flex items-center sm:gap-[10px] group whitespace-normal"
         >
           {company.company}{' '}
           <Link
