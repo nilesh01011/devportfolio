@@ -1,11 +1,28 @@
 import { motion } from 'framer-motion';
 import Image from 'next/image';
-import React from 'react';
+import React, { useState } from 'react';
 import ProjectsTabs from './ProjectsTabs';
 import { staggerContainer, textVariant, zoomIn } from '@/utils/motion';
+import ProjectItems from './ProjectItems';
 
 function ProjectsWorks({ allProjects, tabs }) {
   const hammerImg = '/hammerImg.svg';
+  const [projectFilter, setProjectFilter] = useState(allProjects.slice(0, 4));
+
+  // more data load
+  const handleLoadMoreProjects = () => {
+    setProjectFilter((prev) => [
+      ...prev,
+      ...allProjects.slice(prev.length, prev.length + 4),
+    ]);
+  };
+
+  // less data show
+  const handleLessDataProjects = () => {
+    setProjectFilter(allProjects.slice(0, 4));
+    window.location.href = "/#project"
+  };
+
   return (
     <motion.div
       variants={staggerContainer}
@@ -36,10 +53,53 @@ function ProjectsWorks({ allProjects, tabs }) {
       <motion.div
         //   variants={zoomIn(0.4, 1)}
         variants={zoomIn(0.1, 1)}
-        className="w-full h-auto"
+        className="w-full h-auto flex flex-col gap-24"
       >
-        <ProjectsTabs allProjects={allProjects} tabs={tabs} />
+        {/* {console.log(allProjects)} */}
+        {projectFilter.map((ele, index) => (
+          <ProjectItems
+            key={index}
+            {...ele}
+            directions={index % 2 === 0 ? 'left' : 'right'}
+          />
+        ))}
+        {/* <ProjectsTabs allProjects={allProjects} tabs={tabs} /> */}
       </motion.div>
+      {/* load more button */}
+
+      <div className="mt-24 w-full flex items-center justify-center">
+        {projectFilter.length < allProjects.length ? (
+          <button
+            aria-label={
+              projectFilter.length < allProjects.length
+                ? 'show more'
+                : 'less data'
+            }
+            title={
+              projectFilter.length < allProjects.length
+                ? 'show more'
+                : 'less data'
+            }
+            className="font-[600] w-[400px] h-max py-[0.8rem] capitalize px-[3.5rem] md:text-xl xss:text-lg text-sm rounded-full shadow-md hover:shadow-none border-[1px] border-[#037ADE] hover:bg-[#037cded8] text-[#037ADE] hover:text-[#e7edef] select-none cursor-pointer"
+            // onClick={() => setLoadItems(loadItems + 4)}
+            onClick={() => handleLoadMoreProjects()}
+          >
+            {/* {projectFilter.length < allProjects.length ? "show more" : "less data"} */}
+            show more
+          </button>
+        ) : (
+          <button
+            aria-label="collapse data"
+            title="collapse data"
+            className="font-[600] w-[400px] h-max py-[0.8rem] capitalize px-[3.5rem] md:text-xl xss:text-lg text-sm rounded-full shadow-md hover:shadow-none border-[1px] border-[#037ADE] hover:bg-[#037cded8] text-[#037ADE] hover:text-[#e7edef] select-none cursor-pointer"
+            // onClick={() => setLoadItems(loadItems + 4)}
+            onClick={() => handleLessDataProjects()}
+          >
+            {/* {projectFilter.length < allProjects.length ? "show more" : "less data"} */}
+            collapse data
+          </button>
+        )}
+      </div>
     </motion.div>
   );
 }

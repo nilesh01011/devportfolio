@@ -33,8 +33,17 @@ function AboutSections({ skills }) {
       </motion.div>
       <div className="w-full flex items-center xl:flex-row flex-col justify-between gap-[30px]">
         {/* left sides content */}
-        <div className="xl:w-[55%] text-left w-full xl:order-1 order-2">
-          <div className="w-full text-left">
+        {/* xl:order-1 order-2 */}
+        <div className="xl:w-[55%] text-left w-full order-2">
+          <div
+            className="w-full text-left"
+            // style={{
+            //   WebkitLineClamp: 6,
+            //   WebkitBoxOrient: 'vertical',
+            //   overflow: 'hidden',
+            //   display: '-webkit-box',
+            // }}
+          >
             <motion.p
               //   variants={textVariant(0.9)}
               variants={zoomIn(0.1, 1)}
@@ -118,7 +127,8 @@ function AboutSections({ skills }) {
         </div>
 
         {/* right sides images */}
-        <div className="xl:w-[40%] w-full xl:order-2 order-1">
+        {/* xl:order-2 order-1 */}
+        <div className="xl:w-[40%] w-full order-1">
           {/* md:h-[480px] */}
           <motion.div
             // variants={zoomIn(0.4, 1)}

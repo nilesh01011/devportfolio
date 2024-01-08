@@ -188,6 +188,7 @@ function Index({ projects }) {
           {/* languages uses with tabs views */}
           {/* xl:hidden block */}
           <div className="w-full h-max mt-[3rem] mb-6">
+            {console.log(projects)}
             <SkillsTabs skills={projects} />
           </div>
         </motion.div>
