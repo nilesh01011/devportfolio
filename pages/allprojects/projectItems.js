@@ -1,9 +1,8 @@
+import SkillsImage from '@/components/skillsImage';
 import React, { useEffect, useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import imageUrlBuilder from '@sanity/image-url';
-import SkillsImage from './skillsImage';
-import { createClient } from 'next-sanity';
 
 const builder = imageUrlBuilder({
   projectId: process.env.NEXT_PUBLIC_SANITY_PROJECTID,
@@ -12,24 +11,7 @@ const builder = imageUrlBuilder({
 
 const urlFor = (source) => builder.image(source);
 
-function ProjectItems({ directions, topProjectsReference, allProjects }) {
-  // console.log(topProjectsReference._ref)
-  // console.log(allProjects);
-
-  const [projects, setProjects] = useState([]);
-
-  useEffect(() => {
-      const fetchProject = allProjects?.filter(
-        (ele) => ele._id === topProjectsReference._ref
-      );
-      setProjects(fetchProject[0]);
-
-  }, []);
-
-  const { name, image, description, skillstabs, projectslinks } = projects;
-
-  console.log(image);
-
+function projectItems({ image, name, description, skillstabs, projectslinks,directions }) {
   return (
     <div className="w-full flex xl:flex-row flex-col items-start gap-10">
       {/* images and button */}
@@ -64,9 +46,8 @@ function ProjectItems({ directions, topProjectsReference, allProjects }) {
           // variants={textVariant(0.9)}
           className="w-full flex items-center justify-start"
         >
-          {projects && (
             <Link
-              href={projectslinks ? projectslinks : ""}
+              href={projectslinks ? projectslinks : ''}
               title={`Click to view Project Details`}
               aria-label="Project Details"
               target="_black"
@@ -74,7 +55,6 @@ function ProjectItems({ directions, topProjectsReference, allProjects }) {
             >
               View Site Demo
             </Link>
-          )}
         </div>
       </div>
       {/* project details */}
@@ -134,4 +114,4 @@ function ProjectItems({ directions, topProjectsReference, allProjects }) {
   );
 }
 
-export default ProjectItems;
+export default projectItems;

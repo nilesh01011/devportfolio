@@ -9,6 +9,7 @@ import Head from 'next/head';
 import { createClient } from "next-sanity";
 import { useEffect } from 'react'
 import Header from '@/components/Header'
+import Expertise from '@/components/Expertise'
 
 export default function Home({ skills, projects_tabs, projects, topProjects }) {
   useEffect(() => {
@@ -28,8 +29,9 @@ export default function Home({ skills, projects_tabs, projects, topProjects }) {
       {/* 1x1:max-w-[1280px] */}
       <main className={`w-full h-full 1x1:max-w-full 1x1:px-[32px] max-w-[1200px] mx-auto`}>
         <Banner />
-        <AboutSections skills={skills} />
-        <ProjectsWorks allProjects={projects} tabs={projects_tabs} />
+        <AboutSections />
+        <Expertise skills={skills} />
+        <ProjectsWorks allProjects={projects} tabs={projects_tabs} topProjects={topProjects} />
         <Experiences />
       </main>
       {/* theme changes */}

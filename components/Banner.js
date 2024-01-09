@@ -38,7 +38,10 @@ function Banner() {
       <div className="xl:w-[70%] w-full h-full flex items-start flex-col overflow-hidden">
         <motion.h6
           // variants={textVariant(0.5)}
-          variants={zoomIn(0.1, 1)}
+          // variants={zoomIn(0.1, 1)}
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          transition={{ delay: 0.7 }}
           className={`dark:text-[#B6BCCA] text-[#0B0B0C] uppercase tracking-[2px] xsxs:text-[18px] text-[16px] font-[600]`}
         >
           👋 Hi, My name is
@@ -47,7 +50,10 @@ function Banner() {
         {/* md:mt-[1.8rem] mt-[1.5rem] */}
         <motion.div
           // variants={textVariant(0.7)}
-          variants={zoomIn(0.1, 1)}
+          // variants={zoomIn(0.1, 1)}
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          transition={{ delay: 0.7 }}
           className="mainText block text-left 1x1:my-[2rem] mt-[1.2rem] md:mb-[2rem] mb-[1.8rem] md:leading-[38px] small-device:leading-[54px] leading-[40px] tracking-[1px] text-transparent bg-clip-text bg-gradient-to-r from-[#037ADE] to-[#03E5B7]"
         >
           <h1
@@ -71,7 +77,10 @@ function Banner() {
           {/* leading-[45px] */}
           <motion.p
             // variants={textVariant(0.9)}
-            variants={zoomIn(0.1, 1)}
+            // variants={zoomIn(0.1, 1)}
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            transition={{ delay: 0.7 }}
             className="font-[500] dark:text-[#B6BCCA] text-[#0B0B0C] flex items-start flex-col"
           >
             <span
@@ -96,7 +105,10 @@ function Banner() {
 
         {/* social links */}
         <motion.ul
-          variants={zoomIn(0.1, 1)}
+          // variants={zoomIn(0.1, 1)}
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          transition={{ delay: 0.7 }}
           className={`relative flex items-center transition-all duration-500 text-[#037ADE] mt-[1.5rem]`}
         >
           <li
@@ -156,7 +168,10 @@ function Banner() {
       </div>
 
       <motion.div
-        variants={zoomIn(0.1, 1)}
+        // variants={zoomIn(0.1, 1)}
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        transition={{ delay: 0.7 }}
         // variants={zoomIn(0.4, 1)}
         className="w-max xl:block hidden 1x1:h-[70vh] lg:h-[480px] xsxs:h-[420px] h-[300px] mx-auto"
       >
@@ -187,7 +202,10 @@ function Banner() {
           } transition-all duration-500 text-[#037ADE]`}
         >
           <motion.li
-            variants={zoomIn(0.3, 1)}
+            // variants={zoomIn(0.3, 1)}
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            transition={{ delay: 0.7 }}
             // variants={zoomIn(0.8, 1)}
             className="p-[10px]"
           >
@@ -203,7 +221,10 @@ function Banner() {
           </motion.li>
 
           <motion.li
-            variants={zoomIn(0.3, 1)}
+            // variants={zoomIn(0.3, 1)}
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            transition={{ delay: 0.7 }}
             // variants={zoomIn(0.9, 1)}
             className="p-[10px]"
           >
@@ -219,7 +240,10 @@ function Banner() {
           </motion.li>
 
           <motion.li
-            variants={zoomIn(0.3, 1)}
+            // variants={zoomIn(0.3, 1)}
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            transition={{ delay: 0.7 }}
             // variants={zoomIn(1, 1)}
             className="p-[10px]"
           >

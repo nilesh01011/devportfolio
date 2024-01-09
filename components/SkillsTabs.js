@@ -5,17 +5,17 @@ import { staggerContainer, textVariant } from '@/utils/motion';
 
 function Tabs({ skills }) {
 
-    const [activeSkills, setActiveSkills] = useState('languages');
+    const [activeSkills, setActiveSkills] = useState("frontend");
 
     return (
-        <motion.div variants={staggerContainer} initial="hidden" whileInView="show">
+        <motion.div initial="hidden" whileInView="show">
             <nav className='w-full h-max flex items-center gap-5 justify-start flex-wrap' aria-label="Tabs">
                 {
                     skills?.skillstabs?.map((ele) => {
                         const { _key, tabsname } = ele;
 
                         return (
-                            <button variants={textVariant(0.9)} type='button' title={tabsname} onClick={() => setActiveSkills(tabsname)} key={_key} className={`h-max whitespace-nowrap font-semibold relative w-max xsxs:text-xl text-lg xsxs:px-[3.5rem] px-[2.5rem] xsxs:py-[0.8rem] py-[0.6rem] rounded-full shadow-md ${activeSkills === tabsname ? `bg-[#037ADE] text-white` : `hover:text-black dark:hover:text-white text-black/50 dark:text-white/50 bg-[#037ADE]/10 dark:bg-[#037ADE]/20`} capitalize`}>
+                            <button type='button' title={tabsname} onClick={() => setActiveSkills(tabsname)} key={_key} className={`h-max whitespace-nowrap font-semibold relative w-max xsxs:text-xl text-lg xss:px-[3.5rem] px-[2.8rem] xss:py-[0.8rem] py-[0.6rem] rounded-full shadow-md ${activeSkills === tabsname ? `bg-[#037ADE] text-white` : `hover:text-black dark:hover:text-white text-black/50 dark:text-white/50 bg-[#037ADE]/10 dark:bg-[#037ADE]/20`} capitalize`}>
                                 {tabsname}
                             </button>
                         )

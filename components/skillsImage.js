@@ -9,7 +9,7 @@ const builder = imageUrlBuilder({
 
 const urlFor = (source) => builder.image(source);
 
-function SkillsImage({ imgSrc, name }) {
+function SkillsImage({ imgSrc, name,size }) {
     return (
         <Image
             src={urlFor(imgSrc.asset._ref).url()}
@@ -21,7 +21,7 @@ function SkillsImage({ imgSrc, name }) {
             quality={50}
             importance="high"
             rel="none"
-            className={`w-full md:h-[50px] xsxs:h-[40px] h-[30px] object-contain group-hover:scale-100 scale-90 transition-transform ease-in`}
+            className={`w-full ${size ? size : "md:h-[50px] xsxs:h-[40px] h-[30px]"} object-contain group-hover:scale-100 scale-90 transition-transform ease-in`}
             title={name}
         />
     )

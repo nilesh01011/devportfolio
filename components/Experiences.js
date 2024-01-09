@@ -12,17 +12,21 @@ function Experiences() {
       variants={staggerContainer}
       initial="hidden"
       whileInView="show"
+      viewport={{ once: 'false', amount: 0.25 }}
       id="experience"
       className="w-full h-full xl:px-0 px-[15px] dark:text-white text-black md:mb-[80px] mb-[40px] py-[3rem] relative overflow-hidden sm:mt-[100px] mt-[50px]"
     >
       {/* titles */}
       <motion.div
         // variants={textVariant(0.9)}
-        variants={zoomIn(0.1, 1)}
+        // variants={zoomIn(0.1, 1)}
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        transition={{ delay: 0.7 }}
         className="w-max capitalize sm:text-[2.5rem] xss:text-[2.2rem] text-[2rem] font-bold flex items-center justify-start sm:gap-[15px] gap-[7px] sm:mb-[100px] mb-[50px]"
       >
         Experiences
-        <div className="sm:h-[45px] xs:h-[40px] h-[30px]">
+        {/* <div className="sm:h-[45px] xs:h-[40px] h-[30px]">
           <Image
             width={50}
             height={45}
@@ -30,10 +34,10 @@ function Experiences() {
             className="w-full h-full object-contain"
             alt="projects-works"
           />
-        </div>
+        </div> */}
       </motion.div>
       {/* contents */}
-      <div className="w-full h-auto mb-[70px] flex flex-col gap-16">
+      <div className="w-full h-auto mb-[70px] flex flex-col md:gap-28 gap-16">
         {companyName.map((ele) => {
           const { id, positionImg } = ele;
           return <ExperienceTabs key={id} positionImg={positionImg} company={ele} />;

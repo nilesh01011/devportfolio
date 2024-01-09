@@ -14,7 +14,11 @@ function Buttons({ title, link }) {
   return (
     <motion.button
       // variants={textVariant(1)}
-      variants={zoomIn(0.1, 1)}
+      // variants={zoomIn(0.1, 1)}
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
+      transition={{ delay: 0.7 }}
+      
       onClick={(e) => handleClicks(e)}
       aria-label={title}
       title={title}
