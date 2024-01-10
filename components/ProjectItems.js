@@ -3,7 +3,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import imageUrlBuilder from '@sanity/image-url';
 import SkillsImage from './skillsImage';
-import { createClient } from 'next-sanity';
+import { motion } from 'framer-motion';
 
 const builder = imageUrlBuilder({
   projectId: process.env.NEXT_PUBLIC_SANITY_PROJECTID,
@@ -19,11 +19,10 @@ function ProjectItems({ directions, topProjectsReference, allProjects }) {
   const [projects, setProjects] = useState([]);
 
   useEffect(() => {
-      const fetchProject = allProjects?.filter(
-        (ele) => ele._id === topProjectsReference._ref
-      );
-      setProjects(fetchProject[0]);
-
+    const fetchProject = allProjects?.filter(
+      (ele) => ele._id === topProjectsReference._ref
+    );
+    setProjects(fetchProject[0]);
   }, []);
 
   const { name, image, description, skillstabs, projectslinks } = projects;
@@ -31,7 +30,12 @@ function ProjectItems({ directions, topProjectsReference, allProjects }) {
   console.log(image);
 
   return (
-    <div className="w-full flex xl:flex-row flex-col items-start gap-10">
+    <motion.div
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
+      transition={{ delay: 0.4 }}
+      className="w-full flex xl:flex-row flex-col items-start gap-10"
+    >
       {/* images and button */}
       <div
         className={`xl:w-1/2 w-full flex flex-col gap-10 ${
@@ -66,7 +70,7 @@ function ProjectItems({ directions, topProjectsReference, allProjects }) {
         >
           {projects && (
             <Link
-              href={projectslinks ? projectslinks : ""}
+              href={projectslinks ? projectslinks : ''}
               title={`Click to view Project Details`}
               aria-label="Project Details"
               target="_black"
@@ -130,7 +134,7 @@ function ProjectItems({ directions, topProjectsReference, allProjects }) {
           })}
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 }
 

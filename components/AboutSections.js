@@ -9,19 +9,24 @@ import { staggerContainer, textVariant, zoomIn } from '@/utils/motion';
 function AboutSections() {
   return (
     <motion.div
-      variants={staggerContainer}
-      initial="hidden"
-      whileInView="show"
-      viewport={{ once: 'false', amount: 0.25 }}
+      // variants={staggerContainer}
+      // initial="hidden"
+      // whileInView="show"
+      // viewport={{ once: 'false', amount: 0.25 }}
+      
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
+      transition={{ delay: 0.4 }}
+
       id="about"
       className="h-full xl:px-0 px-[15px] sm:mt-[100px] mt-[50px]"
     >
       <motion.div
         // variants={textVariant(0.9)}
         // variants={zoomIn(0.1, 1)}
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
-        transition={{ delay: 1 }}
+        // initial={{ opacity: 0 }}
+        // whileInView={{ opacity: 1 }}
+        // transition={{ delay: 0.4 }}
         className="w-max capitalize sm:text-[2.5rem] xss:text-[2.2rem] text-[2rem] font-bold flex items-center justify-start sm:gap-[15px] gap-[7px] sm:mb-[100px] mb-[50px]"
       >
         About Me
@@ -59,9 +64,9 @@ function AboutSections() {
             <motion.p
               //   variants={textVariant(0.9)}
               // variants={zoomIn(0.1, 1)}
-              initial={{ opacity: 0 }}
-              whileInView={{ opacity: 1 }}
-              transition={{ delay: 1 }}
+              // initial={{ opacity: 0 }}
+              // whileInView={{ opacity: 1 }}
+              // transition={{ delay: 0.4 }}
               // md:leading-[40px] leading-[34px]
               className="dark:text-[#B6BCCA] text-[#0B0B0C] flex items-center flex-col xsxs:text-[18px] text-[14px]"
             >
@@ -75,9 +80,9 @@ function AboutSections() {
             <motion.p
               //   variants={textVariant(0.9)}
               // variants={zoomIn(0.1, 1)}
-              initial={{ opacity: 0 }}
-              whileInView={{ opacity: 1 }}
-              transition={{ delay: 1 }}
+              // initial={{ opacity: 0 }}
+              // whileInView={{ opacity: 1 }}
+              // transition={{ delay: 0.4 }}
               className="mt-[0.7rem] dark:text-[#B6BCCA] text-[#0B0B0C] xsxs:text-[18px] text-[14px]"
             >
               {/* I'm looking for an opportunity to work on{' '}
@@ -92,9 +97,9 @@ function AboutSections() {
             <motion.p
               //   variants={textVariant(0.9)}
               // variants={zoomIn(0.1, 1)}
-              initial={{ opacity: 0 }}
-              whileInView={{ opacity: 1 }}
-              transition={{ delay: 1 }}
+              // initial={{ opacity: 0 }}
+              // whileInView={{ opacity: 1 }}
+              // transition={{ delay: 0.4 }}
               className="mt-[0.7rem] dark:text-[#B6BCCA] text-[#0B0B0C] xsxs:text-[18px] text-[14px]"
             >
               {/* One thing I'm good at is <b>debugging</b> 🔍 - finding and fixing
@@ -110,9 +115,9 @@ function AboutSections() {
             <motion.p
               //   variants={textVariant(0.9)}
               // variants={zoomIn(0.1, 1)}
-              transition={{ delay: 1 }}
-              initial={{ opacity: 0 }}
-              whileInView={{ opacity: 1 }}
+              // transition={{ delay: 1 }}
+              // initial={{ opacity: 0 }}
+              // whileInView={{ opacity: 0.4 }}
               className="mt-[0.7rem] dark:text-[#B6BCCA] text-[#0B0B0C] xsxs:text-[18px] text-[14px]"
             >
               {/* Overall, I'm eager to use my skills to contribute to interesting
@@ -127,9 +132,9 @@ function AboutSections() {
           <motion.button
             // variants={textVariant(0.9)}
             // variants={zoomIn(0.1, 1)}
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            transition={{ delay: 1 }}
+            // initial={{ opacity: 0 }}
+            // whileInView={{ opacity: 1 }}
+            // transition={{ delay: 0.4 }}
             className="font-[500] my-10 w-max h-max"
           >
             <Link
@@ -153,9 +158,9 @@ function AboutSections() {
           <motion.div
             // variants={zoomIn(0.4, 1)}
             // variants={zoomIn(0.1, 1)}
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            transition={{ delay: 1.2 }}
+            // initial={{ opacity: 0 }}
+            // whileInView={{ opacity: 1 }}
+            // transition={{ delay: 0.4 }}
             // 1x1:h-[50vh] lg:h-[380px]
             className="w-full xss:h-[340px] h-[280px] mx-auto"
           >

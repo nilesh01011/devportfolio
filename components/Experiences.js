@@ -9,10 +9,15 @@ function Experiences() {
   const manTechEmoji = '/man-tech-emoji.png';
   return (
     <motion.div
-      variants={staggerContainer}
-      initial="hidden"
-      whileInView="show"
-      viewport={{ once: 'false', amount: 0.25 }}
+      // variants={staggerContainer}
+      // initial="hidden"
+      // whileInView="show"
+      // viewport={{ once: 'false', amount: 0.25 }}
+
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
+      transition={{ delay: 0.4 }}
+
       id="experience"
       className="w-full h-full xl:px-0 px-[15px] dark:text-white text-black md:mb-[80px] mb-[40px] py-[3rem] relative overflow-hidden sm:mt-[100px] mt-[50px]"
     >
@@ -22,7 +27,7 @@ function Experiences() {
         // variants={zoomIn(0.1, 1)}
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
-        transition={{ delay: 0.7 }}
+        transition={{ delay: 0.4 }}
         className="w-max capitalize sm:text-[2.5rem] xss:text-[2.2rem] text-[2rem] font-bold flex items-center justify-start sm:gap-[15px] gap-[7px] sm:mb-[100px] mb-[50px]"
       >
         Experiences

@@ -1,5 +1,9 @@
 import { motion } from 'framer-motion';
-import { staggerContainer, zoomIn } from '@/utils/motion';
+import {
+  fadeInAnimationVariants,
+  staggerContainer,
+  zoomIn,
+} from '@/utils/motion';
 import { useTheme } from 'next-themes';
 import { useRouter } from 'next/router';
 import React, { useEffect, useState } from 'react';
@@ -51,10 +55,11 @@ function ThemeSet() {
     <>
       {/* sm:right-[22px] right-[15px] */}
       <motion.div
-        variants={staggerContainer}
-        initial="hidden"
-        whileInView="show"
-        viewport={{ once: 'false', amount: 0.25 }}
+
+        // variants={staggerContainer}
+        // initial="hidden"
+        // whileInView="show"
+        // viewport={{ once: 'false', amount: 0.25 }}
         className={`fixed 1x1:bottom-[40px] bottom-[20px] 1x1:right-[42px] xl:right-[34px] sm:right-[22px] right-[15px] rounded-full z-50`}
       >
         <motion.button
@@ -62,7 +67,13 @@ function ThemeSet() {
 
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
-          transition={{ delay: 0.7 }}
+          transition={{ delay: 0.4 }}
+
+          // variants={fadeInAnimationVariants}
+          // initial="initial"
+          // animate="animate"
+
+          
           onClick={() => handleThemeChange()}
           aria-label="theme changed button"
           title="Theme changed button"

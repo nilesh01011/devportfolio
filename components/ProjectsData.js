@@ -3,6 +3,7 @@ import React from 'react'
 import imageUrlBuilder from '@sanity/image-url'
 import Image from 'next/image';
 import { useRouter } from 'next/router';
+import { motion } from 'framer-motion';
 
 const builder = imageUrlBuilder({
     projectId: process.env.NEXT_PUBLIC_SANITY_PROJECTID,
@@ -18,7 +19,12 @@ function ProjectsData({ data }) {
     const { _id, name, image, skillstabs } = data;
 
     return (
-        <div key={_id} className={`w-full h-max rounded-[8px] dark:bg-[#1d2738] bg-[#F4F4F4] shadow-md transition-all group`}>
+        <motion.div
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        transition={{ delay: 0.4 }}
+
+        key={_id} className={`w-full h-max rounded-[8px] dark:bg-[#1d2738] bg-[#F4F4F4] shadow-md transition-all group`}>
             {/* images */}
             <div className="h-[70%] w-full rounded-[8px_8px_0_0] bg-[#E1E9EB] dark:bg-[#131D2D] overflow-hidden">
                 <Image
@@ -66,7 +72,7 @@ function ProjectsData({ data }) {
                     <Link href={`/projects/${_id}`} title={`${name} Projects Details`} aria-label={`${name} Projects Details`} className='xsxs:text-lg text-md rounded-full font-[500] bg-[#037ADE] hover:bg-[#037cded8] slg:px-[3.5rem] px-[2.4rem] py-[0.8rem] capitalize shadow-md hover:shadow-none text-white'>view details</Link>
                 </div>
             </div>
-        </div>
+        </motion.div>
     )
 }
 

@@ -23,7 +23,7 @@ function ExperienceTabs({ positionImg, company }) {
           // variants={zoomIn(0.1, 1)}
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
-          transition={{ delay: 0.7 }}
+          transition={{ delay: 0.4 }}
           //   text-center xs:mt-[1.5rem] mt-[0.8rem]
           className="sm:w-max xs:text-[32px] xsxs:text-[28px] text-[24px] font-bold flex items-center sm:gap-[10px] group whitespace-normal"
         >
@@ -74,7 +74,7 @@ function ExperienceTabs({ positionImg, company }) {
         <motion.span
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
-          transition={{ delay: 0.7 }}
+          transition={{ delay: 0.4 }}
           //   text-center
           className="text-[20px] mt-[8px] capitalize text-[#8ca6c9] font-bold"
         >
@@ -86,7 +86,7 @@ function ExperienceTabs({ positionImg, company }) {
           // variants={zoomIn(0.1, 1)}
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
-          transition={{ delay: 0.7 }}
+          transition={{ delay: 0.4 }}
           className="text-[16px] mt-[8px] dark:text-[#B6BCCA] text-[#0B0B0C]"
         >
           {company.months} {company.year ? '|' : ''} {company.year}

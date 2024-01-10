@@ -52,9 +52,9 @@ function SideBar({
       )}
 
       <motion.div
-        variants={staggerContainer}
-        initial="hidden"
-        whileInView="show"
+        // variants={staggerContainer}
+        // initial="hidden"
+        // whileInView="show"
         id="SideBar"
         className={`md:hidden fixed top-0 ${
           isOpen === true ? 'left-0' : '-left-[200%]'
@@ -69,7 +69,10 @@ function SideBar({
           <div className="flex justify-between w-full items-center mb-4 sticky top-0 bg-white dark:bg-[#0E1623] px-[18px] pt-[18px]">
             <motion.div
               // variants={zoomIn(0.4, 1)}
-              variants={zoomIn(0.1, 1)}
+              // variants={zoomIn(0.1, 1)}
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              transition={{ delay: 0.4 }}
               className="sm:h-[70px] xs:h-[60px] h-[50px]"
             >
               <Image
@@ -95,7 +98,10 @@ function SideBar({
             <div className="w-full flex flex-col mt-4 text-black dark:text-white">
               <motion.h3
                 // variants={textVariant(0.9)}
-                variants={zoomIn(0.1, 1)}
+                // variants={zoomIn(0.1, 1)}
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                transition={{ delay: 0.4 }}
                 className="text-[26px] font-bold text-[#037ade] px-[18px]"
               >
                 Hot Projects
@@ -111,7 +117,10 @@ function SideBar({
             <div className="w-full flex flex-col mt-4 text-black dark:text-white">
               <motion.h3
                 // variants={textVariant(0.9)}
-                variants={zoomIn(0.1, 1)}
+                // variants={zoomIn(0.1, 1)}
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                transition={{ delay: 0.4 }}
                 className="text-[26px] font-bold text-[#037ade] px-[18px]"
               >
                 Links
