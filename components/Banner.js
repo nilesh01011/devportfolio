@@ -46,7 +46,9 @@ function Banner() {
       // viewport={{ once: 'false', amount: 0.25 }}
       id="banner"
       // xss:pt-0 pt-20
-      className="xs:pt-[71px] small-device:pt-[21px] pt-[71px] w-full min-h-screen flex items-center justify-center gap-5 xl:px-0 px-[15px] relative"
+      // xs:pt-[71px] small-device:pt-[21px] pt-[71px]
+      // sm:pt-[71px] pt-2 sm:items-center items-start
+      className="flex justify-center gap-5 xs:pt-[71px] small-device:pt-[21px] pt-[84px] items-center w-full min-h-screen xl:px-0 px-[15px] relative"
     >
       {/* h-[800px] */}
       {/* left side */}
@@ -180,7 +182,7 @@ function Banner() {
           <li
             // variants={slideIn('left', 'tween', 0.7, 0.9)}
             // variants={zoomIn(0.3, 1)}
-            className={`w-[100px] h-[2px] rounded-full bg-[#037ADE]`}
+            className={`w-[100px] h-[2px] rounded-full bg-[#037ADE] ml-2`}
           ></li>
         </motion.ul>
       </div>

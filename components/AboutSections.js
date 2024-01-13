@@ -27,7 +27,8 @@ function AboutSections() {
         // initial={{ opacity: 0 }}
         // whileInView={{ opacity: 1 }}
         // transition={{ delay: 0.4 }}
-        className="w-max capitalize sm:text-[2.5rem] xss:text-[2.2rem] text-[2rem] font-bold flex items-center justify-start sm:gap-[15px] gap-[7px] sm:mb-[100px] mb-[50px]"
+        // dark:text-[#B6BCCA] text-[#0B0B0C]
+        className=" w-max capitalize sm:text-[2.5rem] xss:text-[2.2rem] text-[2rem] font-bold flex items-center justify-start sm:gap-[15px] gap-[7px] sm:mb-[100px] mb-[50px]"
       >
         About Me
         {/* <div className="sm:h-[70px] xs:h-[60px] h-[50px]">

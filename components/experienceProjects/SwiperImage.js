@@ -16,7 +16,7 @@ function SwiperImage({ projects }) {
     >
       {/* xs:h-[98%] h-[250px] */}
       {projects?.map((ele, index) => {
-        console.log(ele.urlLinks);
+        // console.log(ele.urlLinks);
         return (
           <SwiperSlide key={index} className="h-full w-full rounded-[15px] p-2">
             <a

@@ -27,7 +27,7 @@ function ProjectItems({ directions, topProjectsReference, allProjects }) {
 
   const { name, image, description, skillstabs, projectslinks } = projects;
 
-  console.log(image);
+  // console.log(image);
 
   return (
     <motion.div
