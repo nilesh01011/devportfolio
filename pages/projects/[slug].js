@@ -9,7 +9,7 @@ import React, { useEffect, useState } from 'react';
 import { TiArrowLeft } from 'react-icons/ti';
 // import { projects } from './api/Projects'
 import SwiperComponents from '@/components/SwiperComponents';
-import SkillsTabs from '@/components/SkillsTabs';
+import SkillsTabs from '@/components/skills/SkillsTabs';
 import { createClient } from 'next-sanity';
 import { staggerContainer, textVariant, zoomIn } from '@/utils/motion';
 import ThemeSet from '@/components/ThemeSet';
@@ -122,7 +122,7 @@ function Index({ projects }) {
             <div className="w-full relative flex mt-[3rem]">
               <div className="h-max w-full flex xl:flex-row flex-col gap-7 items-center justify-between">
                 {/* left side */}
-                <div className="xl:w-[30%] w-full h-full flex xl:items-start text-center flex-col">
+                <div className="xl:w-[30%] w-full h-full flex items-start flex-col">
                   <motion.h1
                     // variants={textVariant(0.9)}
                     variants={zoomIn(0.1, 1)}

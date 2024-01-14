@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
-import SideBar from './Sidebar';
+import SideBar from '../sidebar/Sidebar';
 import { useRouter } from 'next/router';
 import { fadeInAnimationVariants, navVariants } from '@/utils/motion';
 

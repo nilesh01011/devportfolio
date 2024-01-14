@@ -5,7 +5,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 // Import Swiper styles
 import 'swiper/css';
 
-import ProjectCarouselImage from './ProjectCarouselImage';
+import ProjectCarouselImage from './projects/ProjectCarouselImage';
 
 function SwiperComponents({ name, data,height }) {
 

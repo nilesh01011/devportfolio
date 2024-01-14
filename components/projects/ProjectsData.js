@@ -18,6 +18,8 @@ function ProjectsData({ data }) {
 
     const { _id, name, image, skillstabs } = data;
 
+    console.log(data)
+
     return (
         <motion.div
         initial={{ opacity: 0 }}

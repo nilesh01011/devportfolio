@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import SkillsTabs from './SkillsTabs';
+import SkillsTabs from '../skills/SkillsTabs';
 import { staggerContainer } from '@/utils/motion';
 
 function Expertise({ skills }) {

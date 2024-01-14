@@ -2,7 +2,8 @@ import React, { useEffect, useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import imageUrlBuilder from '@sanity/image-url';
-import SkillsImage from './skillsImage';
+import SkillsImage from '../skills/skillsImage';
+import SkillsTabs from '../skills/SkillsTabs';
 import { motion } from 'framer-motion';
 
 const builder = imageUrlBuilder({
@@ -25,9 +26,8 @@ function ProjectItems({ directions, topProjectsReference, allProjects }) {
     setProjects(fetchProject[0]);
   }, []);
 
-  const { name, image, description, skillstabs, projectslinks } = projects;
-
-  // console.log(image);
+  const { name, image, description, skillstabs, projectslinks, expertise } =
+    projects;
 
   return (
     <motion.div
@@ -83,16 +83,20 @@ function ProjectItems({ directions, topProjectsReference, allProjects }) {
       </div>
       {/* project details */}
       <div
-        className={`xl:w-1/2 w-full flex items-center justify-start flex-col ${
+        className={`xl:w-1/2 w-full flex items-start justify-start flex-col ${
           directions === 'right' && 'order-1'
         } ${directions === 'left' && 'xl:order-none order-1'}`}
       >
         {/* project name */}
-        <div className="mainText w-full text-left text-transparent bg-clip-text bg-gradient-to-r from-[#037ADE] to-[#03E5B7]">
+        <div className="pb-1 mainText w-full text-left text-transparent bg-clip-text bg-gradient-to-r from-[#037ADE] to-[#03E5B7]">
           <h1 className="xsxs:text-[2.6rem] text-[2.2rem] select-none leading-[45px] font-semibold text-left">
             <span className="">{name}</span>
           </h1>
         </div>
+        {/* projects expertise */}
+        <span className="text-[22px] mt-1 capitalize dark:text-[#B6BCCA] text-[#0B0B0C] font-[500]">
+          {expertise} project
+        </span>
         {/* project descriptions */}
         <p
           style={{ lineHeight: '35px' }}
@@ -102,9 +106,14 @@ function ProjectItems({ directions, topProjectsReference, allProjects }) {
         </p>
         {/* languages uses with tabs views */}
         <div className="w-full flex flex-wrap items-end justify-start gap-[20px]">
-          {skillstabs?.map((ele) => {
+          <SkillsTabs
+            skills={projects}
+            itemsImageSize="xl:h-[32px] h-[30px]"
+            itemsTextSize="xl:text-md text-sm"
+            tabsSize="xl:text:lg xsxs:text-md text-sm px-[2.4rem] py-[0.6rem]"
+          />
+          {/* {skillstabs?.map((ele) => {
             if (ele.tabsname === 'languages') {
-              // ele.tabsarray.slice(0, 9)
               return ele.tabsarray.slice(0, 13).map((e, index) => {
                 const { skillstabsname, _key, skillstabsimage } = e;
                 return (
@@ -112,7 +121,6 @@ function ProjectItems({ directions, topProjectsReference, allProjects }) {
                     key={_key}
                     className="w-max py-[12px] px-[24px] h-max shadow-md rounded-2xl bg-[#e1e9eb] dark:bg-[#131d2d] cursor-pointer flex flex-col items-center justify-center gap-[8px] group"
                   >
-                    {/* index === 8 */}
                     {index === 12 ? (
                       <span>and more.</span>
                     ) : (
@@ -131,7 +139,7 @@ function ProjectItems({ directions, topProjectsReference, allProjects }) {
                 );
               });
             }
-          })}
+          })} */}
         </div>
       </div>
     </motion.div>

@@ -4,7 +4,7 @@ import { textVariant, zoomIn } from '@/utils/motion';
 import Link from 'next/link';
 import React from 'react';
 import Image from 'next/image';
-import SwiperImage from './experienceProjects/SwiperImage';
+import SwiperImage from '../SwiperImage';
 
 function ExperienceTabs({ positionImg, company }) {
   return (

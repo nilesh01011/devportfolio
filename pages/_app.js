@@ -1,6 +1,6 @@
 import { ThemeProvider } from 'next-themes'
 import '@/styles/globals.css';
-import Footer from '@/components/Footer';
+import Footer from '@/components/footer/Footer';
 // import { Poppins } from '@next/font/google'
 
 // const poppins = Poppins({

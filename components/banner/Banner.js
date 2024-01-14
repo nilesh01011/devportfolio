@@ -2,7 +2,7 @@
 
 import { motion, useScroll } from 'framer-motion';
 import React, { useEffect, useRef, useState } from 'react';
-import Buttons from './Buttons';
+import Buttons from '../Buttons';
 import Link from 'next/link';
 import { FiGithub, FiLinkedin, FiTwitter } from 'react-icons/fi';
 import Image from 'next/image';

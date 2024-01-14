@@ -1,4 +1,5 @@
-import SkillsImage from '@/components/skillsImage';
+import SkillsImage from '@/components/skills/skillsImage';
+import SkillsTabs from '@/components/skills/SkillsTabs';
 import React, { useEffect, useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -11,7 +12,15 @@ const builder = imageUrlBuilder({
 
 const urlFor = (source) => builder.image(source);
 
-function projectItems({ image, name, description, skillstabs, projectslinks,directions }) {
+function projectItems({
+  image,
+  name,
+  description,
+  skillstabs,
+  projectslinks,
+  directions,
+  allProjects
+}) {
   return (
     <div className="w-full flex xl:flex-row flex-col items-start gap-10">
       {/* images and button */}
@@ -46,15 +55,15 @@ function projectItems({ image, name, description, skillstabs, projectslinks,dire
           // variants={textVariant(0.9)}
           className="w-full flex items-center justify-start"
         >
-            <Link
-              href={projectslinks ? projectslinks : ''}
-              title={`Click to view Project Details`}
-              aria-label="Project Details"
-              target="_black"
-              className="font-[500] xsxs:text-xl text-lg w-max flex items-center justify-start h-max xsxs:px-[3.5rem] px-[2.5rem] xsxs:py-[0.8rem] py-[0.6rem] rounded-full shadow-md bg-[#037ADE] hover:bg-[#037cded8] text-[#e7edef] select-none cursor-pointer"
-            >
-              View Site Demo
-            </Link>
+          <Link
+            href={projectslinks ? projectslinks : ''}
+            title={`Click to view Project Details`}
+            aria-label="Project Details"
+            target="_black"
+            className="font-[500] xsxs:text-xl text-lg w-max flex items-center justify-start h-max xsxs:px-[3.5rem] px-[2.5rem] xsxs:py-[0.8rem] py-[0.6rem] rounded-full shadow-md bg-[#037ADE] hover:bg-[#037cded8] text-[#e7edef] select-none cursor-pointer"
+          >
+            View Site Demo
+          </Link>
         </div>
       </div>
       {/* project details */}
@@ -78,7 +87,13 @@ function projectItems({ image, name, description, skillstabs, projectslinks,dire
         </p>
         {/* languages uses with tabs views */}
         <div className="w-full flex flex-wrap items-end justify-start gap-[20px]">
-          {skillstabs?.map((ele) => {
+        <SkillsTabs
+            skills={allProjects}
+            itemsImageSize="xl:h-[32px] h-[30px]"
+            itemsTextSize="xl:text-md text-sm"
+            tabsSize="xl:text:lg xsxs:text-md text-sm px-[2.4rem] py-[0.6rem]"
+          />
+          {/* {skillstabs?.map((ele) => {
             if (ele.tabsname === 'languages') {
               // ele.tabsarray.slice(0, 9)
               return ele.tabsarray.slice(0, 13).map((e, index) => {
@@ -88,7 +103,6 @@ function projectItems({ image, name, description, skillstabs, projectslinks,dire
                     key={_key}
                     className="w-max py-[12px] px-[24px] h-max shadow-md rounded-2xl bg-[#e1e9eb] dark:bg-[#131d2d] cursor-pointer flex flex-col items-center justify-center gap-[8px] group"
                   >
-                    {/* index === 8 */}
                     {index === 12 ? (
                       <span>and more.</span>
                     ) : (
@@ -107,7 +121,7 @@ function projectItems({ image, name, description, skillstabs, projectslinks,dire
                 );
               });
             }
-          })}
+          })} */}
         </div>
       </div>
     </div>

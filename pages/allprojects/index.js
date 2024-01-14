@@ -81,6 +81,7 @@ function Index({ projects }) {
                 key={index}
                 {...ele}
                 directions={index % 2 === 0 ? 'left' : 'right'}
+                allProjects={ele}
               />
             ))}
           </motion.div>

@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion';
 import Image from 'next/image';
 import React from 'react';
-import SkillsTabs from './SkillsTabs';
+import SkillsTabs from '../skills/SkillsTabs';
 import { FaDownload } from 'react-icons/fa';
 import Link from 'next/link';
 import { staggerContainer, textVariant, zoomIn } from '@/utils/motion';

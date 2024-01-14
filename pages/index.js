@@ -1,15 +1,15 @@
 'use client'
 
-import AboutSections from '@/components/AboutSections'
-import Banner from '@/components/Banner'
-import Experiences from '@/components/Experiences'
-import ProjectsWorks from '@/components/ProjectsWorks'
+import AboutSections from '@/components/about/AboutSections'
+import Banner from '@/components/banner/Banner'
+import Experiences from '@/components/experience/Experiences'
+import ProjectsWorks from '@/components/projects/ProjectsWorks'
 import ThemeSet from '@/components/ThemeSet'
 import Head from 'next/head';
 import { createClient } from "next-sanity";
 import { useEffect } from 'react'
-import Header from '@/components/Header'
-import Expertise from '@/components/Expertise'
+import Header from '@/components/header/Header'
+import Expertise from '@/components/expertise/Expertise'
 
 export default function Home({ skills, projects_tabs, projects, topProjects }) {
   useEffect(() => {
