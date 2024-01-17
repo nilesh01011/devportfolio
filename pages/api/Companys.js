@@ -27,7 +27,8 @@ export const companyName = [
     ],
     // links: 'https://auto.mahindra.com/',
     links: 'https://mahindra-booking.vercel.app/',
-    companyImg: '/company/mahindra/mahindra_img.png',
+    companyImg: '/company/mahindra/logo.svg',
+    // companyImg: '/company/mahindra/mahindra_img.png',
     companyProjectImg: [
       {
         srcImg: '/company/mahindra/mahindra_img.png',
@@ -92,7 +93,8 @@ export const companyName = [
       },
     ],
     links: 'https://tacnique.com/',
-    companyImg: '/company/tacnique/tacnique_img.png',
+    companyImg: '/company/tacnique/logo.svg',
+    // companyImg: '/company/tacnique/tacnique_img.png',
     // companyProjectImg: [
     //   {
     //     srcImg: '/company/tacnique/tacnique_img.png',

@@ -94,7 +94,7 @@ function ProjectItems({ directions, topProjectsReference, allProjects }) {
           </h1>
         </div>
         {/* projects expertise */}
-        <span className="text-[22px] mt-1 capitalize dark:text-[#B6BCCA] text-[#0B0B0C] font-[500]">
+        <span className="text-[22px] mt-1 capitalize dark:text-[#B6BCCA] text-[#0B0B0C] font-[600]">
           {expertise} project
         </span>
         {/* project descriptions */}

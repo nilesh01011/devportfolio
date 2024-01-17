@@ -45,14 +45,14 @@ function ExperienceTabs({ positionImg, company }) {
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           transition={{ delay: 0.7 }}
-          className="flex items-start justify-start h-full mt-[1.5rem]"
+          className="flex items-center justify-center h-full mt-[1.5rem]"
         >
           <Link
             href={company.links}
             target="_blank"
             title={company.links}
             aria-label={`Read more about ${company.company}`}
-            className="h-[300px]"
+            className="max-h-[300px] h-max sm:py-0 py-3"
           >
             <Image
               src={company.companyImg}
