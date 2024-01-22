@@ -6,7 +6,13 @@ import Buttons from '../Buttons';
 import Link from 'next/link';
 import { FiGithub, FiLinkedin, FiTwitter } from 'react-icons/fi';
 import Image from 'next/image';
-import { fadeInAnimationVariants, slideIn, staggerContainer, textVariant, zoomIn } from '@/utils/motion';
+import {
+  fadeInAnimationVariants,
+  slideIn,
+  staggerContainer,
+  textVariant,
+  zoomIn,
+} from '@/utils/motion';
 
 function Banner() {
   const [socialMediaIconDirection, setSocialMediaIconDirection] =
@@ -26,16 +32,14 @@ function Banner() {
 
   return (
     <motion.div
+      // variants={fadeInAnimationVariants}
 
-    // variants={fadeInAnimationVariants}
+      // initial="initial"
+      // animate="animate"
 
-    // initial="initial"
-    // animate="animate"
-
-    initial={{ opacity: 0 }}
-    whileInView={{ opacity: 1 }}
-    transition={{ delay: 0.4 }}
-
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
+      transition={{ delay: 0.4 }}
       // variants={staggerContainer}
       // initial={{ opacity: 0 }}
       // whileInView={{ opacity: 1 }}
@@ -130,6 +134,7 @@ function Banner() {
           // whileInView={{ opacity: 1 }}
           // transition={{ delay: 0.4 }}
           className={`relative flex items-center transition-all duration-500 text-[#037ADE] mt-[1.5rem]`}
+          // style={{ display: 'none !important' }}
         >
           <li
             // variants={zoomIn(0.3, 1)}

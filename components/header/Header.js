@@ -3,6 +3,9 @@ import { motion } from 'framer-motion';
 import SideBar from '../sidebar/Sidebar';
 import { useRouter } from 'next/router';
 import { fadeInAnimationVariants, navVariants } from '@/utils/motion';
+import Link from 'next/link';
+import { FiGithub, FiLinkedin, FiTwitter } from 'react-icons/fi';
+import { FaGithub, FaLinkedin, FaTwitterSquare } from 'react-icons/fa';
 
 function Header({ topProjects }) {
   const [isActive, setIsActive] = useState('');
@@ -95,11 +98,10 @@ function Header({ topProjects }) {
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         transition={{ delay: 0.4 }}
-
         // variants={fadeInAnimationVariants}
         // initial="hidden"
         // whileInView="show"
-        
+
         className={`w-full flex items-center justify-between fixed top-0 bg-[#E7EDEF] dark:bg-[#0E1623] z-[10] ${
           headerShadow && 'shadow-md dark:shadow-xl'
         }`}
@@ -129,6 +131,44 @@ function Header({ topProjects }) {
                 </li>
               );
             })}
+            
+            {/* <li className="p-[10px] w-[26px] h-[26px] rounded-full flex items-center justify-center bg-gradient-to-r from-[#037ADE] to-[#03E5B7]">
+              <Link
+                href="https://github.com/nilesh01011"
+                target="_blank"
+                rel="noreferrer"
+                aria-label="Github repository"
+                title="Github repository"
+              >
+                text-[#037ADE] hover:text-[#037cded8]
+                <FaGithub className="text-white transition-all ease-in text-[26px] hover:scale-95 scale-100" />
+              </Link>
+            </li>
+
+            <li className="p-[10px] w-[25px] h-[25px] flex items-center justify-center bg-gradient-to-r from-[#037ADE] to-[#03E5B7]">
+              <Link
+                href="https://www.linkedin.com/in/nilesh-rathod-0bb62b223/"
+                target="_blank"
+                rel="noreferrer"
+                aria-label="Linkedin Profile"
+                title="Linkedin Profile"
+              >
+                <FaLinkedin className="text-white transition-all ease-in text-[26px] hover:scale-95 scale-100" />
+              </Link>
+            </li>
+
+            <li className="p-[10px] w-[25px] h-[25px] flex items-center justify-center bg-gradient-to-r from-[#037ADE] to-[#03E5B7]">
+              <Link
+                href="https://twitter.com/Nilesh1011000/"
+                target="_blank"
+                rel="noreferrer"
+                aria-label="Twitter Profile"
+                title="Twitter Profile"
+              >
+          
+                <FaTwitterSquare className="text-white transition-all ease-in text-[26px] hover:scale-95 scale-100" />
+              </Link>
+            </li> */}
           </ul>
 
           {/* mobile button */}
