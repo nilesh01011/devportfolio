@@ -4,7 +4,7 @@ export const companyName = [
     year: '',
     // 2022 - 2023
     months: 'Present',
-    company: 'Mahindra & Mahindra Ltd',
+    company: 'Mahindra',
     subtitle: 'Front End Developer',
     contents: [
       {

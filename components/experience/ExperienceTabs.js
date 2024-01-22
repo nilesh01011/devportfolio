@@ -45,7 +45,7 @@ function ExperienceTabs({ positionImg, company }) {
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           transition={{ delay: 0.7 }}
-          className="flex items-center justify-center h-full mt-[1.5rem]"
+          className="flex items-center justify-center h-max  mt-[1.5rem]"
         >
           <Link
             href={company.links}
@@ -60,7 +60,7 @@ function ExperienceTabs({ positionImg, company }) {
               width={300}
               alt={company.company}
               //    xl:h-[500px] xsxs:h-[450px]
-              className="w-full h-full object-contain shadow-md rounded-md"
+              className="w-full h-full object-contain"
             />
           </Link>
           {/* company projects with image carousel */}
