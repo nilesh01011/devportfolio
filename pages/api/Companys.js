@@ -13,7 +13,7 @@ export const companyName = [
       },
       {
         id: 2,
-        text: 'Implemented Agile development of key project and consulted with client developers to optimize application performance by 30x to 40x over 6 months.',
+        text: 'Implemented Agile development of key project and consulted with client developers to optimize application delivered.',
         // text: 'Optimized application performance by integrating modern frameworks and libraries.',
       },
       {
