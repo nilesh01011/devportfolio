@@ -74,7 +74,7 @@ function Header({ topProjects }) {
       _id: '2',
       projectsName: 'Projects',
       menuLinks: true,
-      link: '#project',
+      link: '/allprojects',
     },
     {
       _id: '3',

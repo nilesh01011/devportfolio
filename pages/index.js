@@ -55,10 +55,10 @@ export async function getServerSideProps() {
   const query_2 = `*[_type == "projectstabs"]`;
   const projects_tabs = await client.fetch(query_2);
 
-  const query_3 = `*[_type == "projects"] | order(name desc)`;
+  const query_3 = `*[_type == "projects"] | order(name asc)`;
   const projects = await client.fetch(query_3);
 
-  const query_4 = `*[_type == "topProjects"]`;
+  const query_4 = `*[_type == "topProjects"] | order(name asc)`;
   const topProjects = await client.fetch(query_4);
 
   return {

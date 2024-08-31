@@ -7,25 +7,9 @@ import ProjectItems from './ProjectItems';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 
-function ProjectsWorks({ allProjects, tabs, topProjects }) {
-  const hammerImg = '/hammerImg.svg';
-  const [projectFilter, setProjectFilter] = useState(allProjects.slice(0, 4));
+function ProjectsWorks({ allProjects, topProjects }) {
 
   const router = useRouter();
-
-  // // more data load
-  // const handleLoadMoreProjects = () => {
-  //   setProjectFilter((prev) => [
-  //     ...prev,
-  //     ...allProjects.slice(prev.length, prev.length + 4),
-  //   ]);
-  // };
-
-  // // less data show
-  // const handleLessDataProjects = () => {
-  //   setProjectFilter(allProjects.slice(0, 4));
-  //   window.location.href = '/#project';
-  // };
 
   return (
     <motion.div
@@ -74,41 +58,6 @@ function ProjectsWorks({ allProjects, tabs, topProjects }) {
           />
         ))}
       </motion.div>
-
-      {/* <ProjectsTabs allProjects={allProjects} tabs={tabs} /> */}
-      {/* load more button */}
-
-      {/* <div className="mt-24 w-full flex items-center justify-center">
-        {projectFilter.length < allProjects.length ? (
-          <button
-            aria-label={
-              projectFilter.length < allProjects.length
-                ? 'show more'
-                : 'less data'
-            }
-            title={
-              projectFilter.length < allProjects.length
-                ? 'show more'
-                : 'less data'
-            }
-            className="font-[600] w-[400px] h-max py-[0.8rem] capitalize px-[3.5rem] md:text-xl xss:text-lg text-sm rounded-full shadow-md hover:shadow-none border-[1px] border-[#037ADE] hover:bg-[#037cded8] text-[#037ADE] hover:text-[#e7edef] select-none cursor-pointer"
-            // onClick={() => setLoadItems(loadItems + 4)}
-            onClick={() => handleLoadMoreProjects()}
-          >
-            show more
-          </button>
-        ) : (
-          <button
-            aria-label="collapse data"
-            title="collapse data"
-            className="font-[600] w-[400px] h-max py-[0.8rem] capitalize px-[3.5rem] md:text-xl xss:text-lg text-sm rounded-full shadow-md hover:shadow-none border-[1px] border-[#037ADE] hover:bg-[#037cded8] text-[#037ADE] hover:text-[#e7edef] select-none cursor-pointer"
-            // onClick={() => setLoadItems(loadItems + 4)}
-            onClick={() => handleLessDataProjects()}
-          >
-            collapse data
-          </button>
-        )}
-      </div> */}
 
       <div className="mt-24 w-full flex items-center justify-center">
         <motion.button
