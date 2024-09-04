@@ -45,21 +45,21 @@ function ExperienceTabs({ positionImg, company }) {
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           transition={{ delay: 0.7 }}
-          className="flex items-center justify-center h-max mt-[1.5rem]"
+          className="flex items-center justify-center h-full mt-[1.5rem]"
         >
           <Link
             href={company.links}
             target="_blank"
             title={company.links}
             aria-label={`Read more about ${company.company}`}
-            className="max-h-[300px] h-max sm:py-0 py-3"
+            className="h-full sm:py-0 py-3 flex items-center justify-center"
           >
             <Image
               src={company.companyImg}
-              height={315}
-              width={300}
+              height={200}
+              width={200}
               alt={company.company}
-              className="w-full h-full object-contain max-h-[300px]"
+              className="w-full h-full object-contain max-h-[200px]"
             />
           </Link>
           {/* company projects with image carousel */}

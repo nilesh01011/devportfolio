@@ -93,20 +93,15 @@ function Header({ topProjects }) {
   return (
     <>
       <motion.div
-        // variants={navVariants}
-
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         transition={{ delay: 0.4 }}
-        // variants={fadeInAnimationVariants}
-        // initial="hidden"
-        // whileInView="show"
 
-        className={`w-full flex items-center justify-between fixed top-0 bg-[#E7EDEF] dark:bg-[#0E1623] z-[10] ${
-          headerShadow && 'shadow-md dark:shadow-xl'
-        }`}
+        className={`w-full flex items-center justify-between fixed top-0 bg-[#E7EDEF] dark:bg-[#0E1623] z-[10] 
+          ${headerShadow && 'shadow-md dark:shadow-xl'}
+          `}
       >
-        <nav className="w-full flex items-center justify-between 1x1:py-[1.3rem] py-[0.8rem] xl:px-[2rem] px-[15px]">
+        <nav className="w-full max-w-[1240px] mx-auto flex items-center justify-between 1x1:py-[1.3rem] py-[0.8rem] 1x1:px-[2rem] xl:px-0 px-[15px]">
           {/* logo */}
           <span
             onClick={() => scrollToTop()}

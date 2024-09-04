@@ -26,8 +26,7 @@ export default function Home({ skills, projects_tabs, projects, topProjects }) {
       </Head>
 
       <Header topProjects={topProjects} />
-      {/* 1x1:max-w-[1280px] */}
-      <main className={`w-full h-full 1x1:max-w-full 1x1:px-[32px] max-w-[1200px] mx-auto`}>
+      <main className={`h-full 1x1:px-[32px] max-w-[1240px] mx-auto`}>
         <Banner />
         <AboutSections />
         <Expertise skills={skills} />
@@ -36,6 +35,7 @@ export default function Home({ skills, projects_tabs, projects, topProjects }) {
       </main>
       {/* theme changes */}
       <ThemeSet />
+
     </>
   )
 }

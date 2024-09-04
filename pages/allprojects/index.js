@@ -26,7 +26,7 @@ function Index({ projects }) {
       </Head>
 
       <main
-        className={`w-full h-full 1x1:max-w-full 1x1:px-[32px] max-w-[1200px] mx-auto py-[3rem]`}
+        className={`h-full 1x1:px-[32px] max-w-[1200px] mx-auto py-[3rem]`}
       >
         {/* back buttons */}
         <motion.button
