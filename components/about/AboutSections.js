@@ -139,12 +139,12 @@ function AboutSections() {
             className="font-[500] my-10 w-max h-max"
           >
             <Link
-              href="/MyResume.pdf"
+              href="/Nilesh_Resume.pdf"
               title="Download Resume"
               className="font-semibold xsxs:text-xl text-lg w-full h-full xsxs:px-[3.5rem] px-[2.5rem] xsxs:py-[0.8rem] py-[0.6rem] flex items-center justify-center gap-[0.8rem] rounded-full shadow-md hover:shadow-none bg-[#037ADE] hover:bg-[#037cded8] text-[#e7edef] select-none cursor-pointer"
-              download="nrResume"
+              download="Nilesh_Resume"
             >
-              Download Resume
+              Download Resumes
               <span>
                 <FaDownload size={16} />
               </span>

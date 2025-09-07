@@ -94,7 +94,7 @@ function Banner() {
           </h1>
         </motion.div>
 
-        {/* small definations about */}
+        {/* small definitions about */}
         <div className="1x1:w-[90%] w-full mr-auto text-left">
           {/* leading-[45px] */}
           <motion.p
